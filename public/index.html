@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weekly Pulse Delivery</title>
+  <style>
+    :root {
+      --bg0: #0b1020;
+      --bg1: #10172a;
+      --card: #162039;
+      --border: rgba(255,255,255,0.22);
+      --text: #f8fafc;
+      --muted: #94a3b8;
+      --accent: #34d399;
+      --accent2: #059669;
+      --danger: #f87171;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: linear-gradient(180deg, var(--bg0) 0%, var(--bg1) 100%);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      font-size: 15px;
+      line-height: 1.55;
+    }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 3rem; }
+    h1 { font-weight: 600; letter-spacing: -0.02em; margin: 0 0 0.25rem; }
+    .sub { color: var(--muted); font-size: 14px; margin-bottom: 1.5rem; }
+    label { display: block; font-weight: 600; margin: 1rem 0 0.5rem; font-size: 14px; }
+    textarea {
+      width: 100%;
+      min-height: 90px;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      font: inherit;
+    }
+    .fund-toolbar { display: flex; gap: 10px; flex-wrap: wrap; margin: 0.5rem 0; }
+    button, .btn {
+      cursor: pointer;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: var(--card);
+      color: var(--text);
+      padding: 10px 16px;
+      font: inherit;
+      font-weight: 500;
+    }
+    button.primary {
+      background: linear-gradient(180deg, #10b981, var(--accent2));
+      border-color: rgba(16,185,129,0.5);
+      color: #042f1f;
+      font-weight: 650;
+    }
+    button.primary:disabled { opacity: 0.45; cursor: not-allowed; }
+    .fund-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      max-height: 220px;
+      overflow-y: auto;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--card);
+    }
+    .fund-grid label { margin: 0; font-weight: 400; display: inline-flex; align-items: center; gap: 6px; }
+    .cols { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin-top: 1.25rem; }
+    @media (max-width: 900px) { .cols { grid-template-columns: 1fr; } }
+    .panel h3 { margin: 0 0 12px; font-size: 1.125rem; font-weight: 650; }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 16px 18px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+      max-height: 440px;
+      overflow: auto;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-weight: 500;
+      -webkit-font-smoothing: antialiased;
+    }
+    .msg { margin-top: 1rem; padding: 12px 14px; border-radius: 10px; font-size: 14px; }
+    .msg.ok { background: rgba(16,185,129,0.15); border: 1px solid rgba(16,185,129,0.4); }
+    .msg.err { background: rgba(248,113,113,0.12); border: 1px solid rgba(248,113,113,0.35); color: #fecaca; }
+    .hint { color: var(--muted); font-size: 13px; margin-top: 0.35rem; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Weekly Pulse Delivery</h1>
+    <p class="sub">Report week · <span id="weekLabel">…</span></p>
+
+    <label for="recipients">Email recipients (comma or newline separated)</label>
+    <textarea id="recipients" placeholder="one@example.com, two@example.com"></textarea>
+    <p class="hint">Must be valid addresses before send.</p>
+
+    <label>Mutual funds (fee explainer)</label>
+    <div class="fund-toolbar">
+      <button type="button" id="selectAll">Select all funds</button>
+      <button type="button" id="clearFunds">Clear</button>
+    </div>
+    <div id="fundBox" class="fund-grid">Loading funds…</div>
+    <p id="fundWarn" class="hint" style="display:none;"></p>
+
+    <button type="button" class="primary" id="sendBtn" style="margin-top:1.25rem;width:100%;max-width:420px;padding:14px;">
+      Append to doc &amp; send email
+    </button>
+    <div id="msg"></div>
+
+    <div class="cols">
+      <div class="panel">
+        <h3>Weekly pulse preview</h3>
+        <div class="card" id="pulsePreview">Loading…</div>
+      </div>
+      <div class="panel">
+        <h3>Fee explainer preview</h3>
+        <div class="card" id="feePreview">None selected.</div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const API = "/api";
+
+    async function jget(path) {
+      const r = await fetch(API + path);
+      if (!r.ok) throw new Error((await r.json().catch(() => ({}))).detail || r.statusText);
+      return r.json();
+    }
+
+    async function jpost(path, body) {
+      const r = await fetch(API + path, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+      });
+      const data = await r.json().catch(() => ({}));
+      if (!r.ok) throw new Error(data.detail || r.statusText || "Request failed");
+      return data;
+    }
+
+    let fundNames = [];
+
+    function renderFunds() {
+      const box = document.getElementById("fundBox");
+      if (!fundNames.length) {
+        box.textContent = "No fee data yet — run Phase 4.5 or commit mf_fee_data_*.json.";
+        return;
+      }
+      box.innerHTML = fundNames.map((name) => {
+        const id = "f_" + encodeURIComponent(name).replace(/%/g, "_");
+        return `<label><input type="checkbox" class="fchk" value="${name.replace(/"/g, "&quot;")}" id="${id}" /> ${name.replace(/</g, "&lt;")}</label>`;
+      }).join("");
+      box.querySelectorAll(".fchk").forEach((el) => el.addEventListener("change", refreshFeePreview));
+    }
+
+    function selectedFunds() {
+      return [...document.querySelectorAll(".fchk:checked")].map((x) => x.value);
+    }
+
+    async function refreshFeePreview() {
+      const sel = selectedFunds();
+      const feeEl = document.getElementById("feePreview");
+      if (!sel.length) {
+        feeEl.textContent = "None selected.";
+        return;
+      }
+      try {
+        const q = new URLSearchParams({ fund_names: sel.join(",") });
+        const data = await jget("/preview/fee?" + q.toString());
+        feeEl.textContent = data.text || "";
+      } catch (e) {
+        feeEl.textContent = String(e.message || e);
+      }
+    }
+
+    function showMsg(text, ok) {
+      const m = document.getElementById("msg");
+      m.className = "msg " + (ok ? "ok" : "err");
+      m.textContent = text;
+      m.style.display = "block";
+    }
+
+    document.getElementById("selectAll").onclick = () => {
+      document.querySelectorAll(".fchk").forEach((c) => (c.checked = true));
+      refreshFeePreview();
+    };
+    document.getElementById("clearFunds").onclick = () => {
+      document.querySelectorAll(".fchk").forEach((c) => (c.checked = false));
+      refreshFeePreview();
+    };
+
+    document.getElementById("sendBtn").onclick = async () => {
+      const btn = document.getElementById("sendBtn");
+      btn.disabled = true;
+      document.getElementById("msg").style.display = "none";
+      try {
+        const recipients = document.getElementById("recipients").value;
+        const out = await jpost("/deliver", {
+          recipients,
+          fund_names: selectedFunds(),
+        });
+        showMsg(out.message + (out.doc_url ? " Doc: " + out.doc_url : ""), true);
+      } catch (e) {
+        showMsg(String(e.message || e), false);
+      } finally {
+        btn.disabled = false;
+      }
+    };
+
+    (async () => {
+      try {
+        const w = await jget("/meta/week");
+        document.getElementById("weekLabel").textContent = w.week || "—";
+      } catch {
+        document.getElementById("weekLabel").textContent = "?";
+      }
+      try {
+        const pulse = await jget("/latest/pulse");
+        document.getElementById("pulsePreview").textContent = pulse.markdown || "";
+      } catch {
+        document.getElementById("pulsePreview").textContent = "No pulse artifact (404).";
+      }
+      try {
+        const f = await jget("/funds");
+        fundNames = f.fund_names || [];
+        renderFunds();
+        document.getElementById("fundWarn").style.display = fundNames.length ? "none" : "block";
+        document.getElementById("fundWarn").textContent = "No funds list — run Phase 4.5 or add fee JSON under phase4_5_fee_scraper/outputs.";
+      } catch {
+        document.getElementById("fundBox").textContent = "Could not load funds.";
+      }
+    })();
+  </script>
+</body>
+</html>

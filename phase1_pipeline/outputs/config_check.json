@@ -1,0 +1,21 @@
+{
+  "generated_at_utc": "2026-03-24T08:45:59.249782+00:00",
+  "phase": "Phase 1 (Backend): Foundation + Ingestion + Cleaning (Combined)",
+  "status": "pass",
+  "config": {
+    "app_id": "com.nextbillion.groww",
+    "lookback_weeks": 12,
+    "theme_count": 5,
+    "max_themes": 5,
+    "top_reported_themes": 3,
+    "email_recipient": "owner@example.com",
+    "playstore_lang": "en",
+    "playstore_country": "in",
+    "batch_size": 200,
+    "max_fetch": 4000,
+    "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
+    "processed_json_path": "phase1_pipeline/outputs/processed_reviews.json",
+    "omitted_json_path": "phase1_pipeline/outputs/omitted_reviews.json"
+  },
+  "errors": []
+}

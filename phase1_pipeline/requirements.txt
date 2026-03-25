@@ -1,0 +1,5 @@
+google-play-scraper>=1.2.7
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+langdetect>=1.0.9
+rapidfuzz>=3.0.0

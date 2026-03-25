@@ -1,0 +1,8 @@
+# Vercel installs from this file (same directory as the Python entry).
+fastapi>=0.110.0
+mangum>=0.17.0
+pydantic>=2.0.0
+pydantic-settings>=2.0.0
+requests>=2.31.0
+mcp>=1.2.0
+urllib3>=2.0.0

@@ -1,0 +1,89 @@
+{
+  "generated_at_utc": "2026-03-25T17:15:15.545974+00:00",
+  "phase": "Phase 6 (Backend): Orchestration, Observability, and QA",
+  "week": "2026-03-24",
+  "status": "pass",
+  "inputs": {
+    "config_check": "phase1_pipeline/outputs/config_check.json",
+    "themes": "phase2_theming/outputs/themes_2026-03-24.json",
+    "insights": "phase4_insights/outputs/insights_2026-03-24.json",
+    "pulse": "phase4_insights/outputs/pulse_2026-03-24.md",
+    "combined_payload": "phase5_delivery/outputs/combined_payload_2026-03-24.json",
+    "doc_append_report": "phase5_delivery/outputs/doc_append_report_2026-03-24.json",
+    "email_delivery_report": "phase5_delivery/outputs/email_delivery_report.json"
+  },
+  "high_level_metrics": {
+    "theme_summary_counts": {
+      "User Experience": 749,
+      "Fees": 3,
+      "Investment": 43,
+      "Trading": 87,
+      "Support": 22
+    },
+    "word_count": 228,
+    "email_delivery_status": "sent"
+  },
+  "combined_payload_snapshot": {
+    "fee_scenario": "Mutual Fund Exit Load",
+    "last_checked": "2026-03-25",
+    "source_links": [
+      "https://groww.in/mutual-funds/quant-small-cap-fund-direct-plan-growth",
+      "https://groww.in/mutual-funds/quant-infrastructure-fund-direct-growth"
+    ]
+  },
+  "gates": [
+    {
+      "gate": "run_completeness",
+      "status": "pass",
+      "details": {
+        "missing": []
+      }
+    },
+    {
+      "gate": "themes_exactly_5",
+      "status": "pass",
+      "details": {
+        "theme_count": 5,
+        "themes": [
+          "User Experience",
+          "Fees",
+          "Investment",
+          "Trading",
+          "Support"
+        ]
+      }
+    },
+    {
+      "gate": "insights_3_quotes_3_actions",
+      "status": "pass",
+      "details": {
+        "quotes_count": 3,
+        "action_ideas_count": 3
+      }
+    },
+    {
+      "gate": "pulse_wordcount_and_pii",
+      "status": "pass",
+      "details": {
+        "word_count": 228,
+        "pii_pattern_matches": 0
+      }
+    },
+    {
+      "gate": "delivery_status",
+      "status": "pass",
+      "details": {
+        "email_report_status": "pass",
+        "delivery_status": "sent",
+        "doc_report_status": "pass",
+        "doc_id": "1s2O9Ui5UDNftzbugj_0P3EFqH4k5ezIt28ZeR3SNlzM",
+        "message_id": "successfully"
+      }
+    }
+  ],
+  "upstream_status": {
+    "phase1": "pass",
+    "phase4": "pass",
+    "phase5": "pass"
+  }
+}

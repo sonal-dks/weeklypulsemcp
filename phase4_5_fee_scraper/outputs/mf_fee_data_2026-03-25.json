@@ -1,0 +1,147 @@
+{
+  "generated_at_utc": "2026-03-25T15:48:39.464157+00:00",
+  "phase": "Phase 4.5 (Backend): Mutual Fund Fee Scraper",
+  "week": "2026-03-25",
+  "status": "partial",
+  "total_funds": 10,
+  "scraped_count": 9,
+  "failed_count": 1,
+  "funds": [
+    {
+      "fund_name": "Quant Small Cap Fund",
+      "status": "success",
+      "exit_load_bullets": [
+        "Exit load of 1% if redeemed within 1 year.",
+        "Nil exit load if redeemed after 1 year from the date of allotment.",
+        "Exit load of 1% is deducted from the redemption amount at the prevailing NAV."
+      ],
+      "parse_method": "next_data",
+      "fetch_method": "playwright",
+      "source_url": "https://groww.in/mutual-funds/quant-small-cap-fund-direct-plan-growth",
+      "last_scraped": "2026-03-25T15:48:39.464157+00:00",
+      "error": null
+    },
+    {
+      "fund_name": "Quant Infrastructure Fund",
+      "status": "success",
+      "exit_load_bullets": [
+        "No exit load (Nil) — redemption is free at any time.",
+        "ELSS funds have a mandatory 3-year statutory lock-in; units cannot be redeemed before lock-in ends.",
+        "After the lock-in period, redemption proceeds are credited at the prevailing NAV."
+      ],
+      "parse_method": "next_data",
+      "fetch_method": "playwright",
+      "source_url": "https://groww.in/mutual-funds/quant-infrastructure-fund-direct-growth",
+      "last_scraped": "2026-03-25T15:48:39.464157+00:00",
+      "error": null
+    },
+    {
+      "fund_name": "Quant Flexi Cap Fund",
+      "status": "success",
+      "exit_load_bullets": [
+        "Exit load of 1%, if redeemed within 15 days.",
+        "Nil exit load if redeemed after 15 day from the date of allotment.",
+        "Exit load of 1% is deducted from the redemption amount at the prevailing NAV."
+      ],
+      "parse_method": "next_data",
+      "fetch_method": "playwright",
+      "source_url": "https://groww.in/mutual-funds/quant-flexi-cap-fund-direct-growth",
+      "last_scraped": "2026-03-25T15:48:39.464157+00:00",
+      "error": null
+    },
+    {
+      "fund_name": "Quant ELSS Tax Saver Fund",
+      "status": "success",
+      "exit_load_bullets": [
+        "A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.",
+        "Nil exit load if redeemed after the specified period from the date of allotment.",
+        "Exit load of applicable is deducted from the redemption amount at the prevailing NAV."
+      ],
+      "parse_method": "html_table",
+      "fetch_method": "playwright",
+      "source_url": "https://groww.in/mutual-funds/quant-elss-tax-saver-fund-direct-growth",
+      "last_scraped": "2026-03-25T15:48:39.464157+00:00",
+      "error": null
+    },
+    {
+      "fund_name": "Quant Large Cap Fund",
+      "status": "success",
+      "exit_load_bullets": [
+        "Exit load of 1%, if redeemed within 15 days.",
+        "Nil exit load if redeemed after 15 day from the date of allotment.",
+        "Exit load of 1% is deducted from the redemption amount at the prevailing NAV."
+      ],
+      "parse_method": "next_data",
+      "fetch_method": "playwright",
+      "source_url": "https://groww.in/mutual-funds/quant-large-cap-fund-direct-growth",
+      "last_scraped": "2026-03-25T15:48:39.464157+00:00",
+      "error": null
+    },
+    {
+      "fund_name": "Quant ESG Integration Strategy Fund",
+      "status": "success",
+      "exit_load_bullets": [
+        "Exit load of 1%, if redeemed within 15 days.",
+        "Nil exit load if redeemed after 15 day from the date of allotment.",
+        "Exit load of 1% is deducted from the redemption amount at the prevailing NAV."
+      ],
+      "parse_method": "next_data",
+      "fetch_method": "playwright",
+      "source_url": "https://groww.in/mutual-funds/quant-esg-integration-strategy-fund-direct-growth",
+      "last_scraped": "2026-03-25T15:48:39.464157+00:00",
+      "error": null
+    },
+    {
+      "fund_name": "Quant Mid Cap Fund",
+      "status": "success",
+      "exit_load_bullets": [
+        "No exit load (Nil) — redemption is free at any time.",
+        "ELSS funds have a mandatory 3-year statutory lock-in; units cannot be redeemed before lock-in ends.",
+        "After the lock-in period, redemption proceeds are credited at the prevailing NAV."
+      ],
+      "parse_method": "next_data",
+      "fetch_method": "playwright",
+      "source_url": "https://groww.in/mutual-funds/quant-mid-cap-fund-direct-growth",
+      "last_scraped": "2026-03-25T15:48:39.464157+00:00",
+      "error": null
+    },
+    {
+      "fund_name": "Quant Multi Cap Fund",
+      "status": "success",
+      "exit_load_bullets": [
+        "Exit load of 1%, if redeemed within 15 days.",
+        "Nil exit load if redeemed after 15 day from the date of allotment.",
+        "Exit load of 1% is deducted from the redemption amount at the prevailing NAV."
+      ],
+      "parse_method": "next_data",
+      "fetch_method": "playwright",
+      "source_url": "https://groww.in/mutual-funds/quant-multi-cap-fund-direct-growth",
+      "last_scraped": "2026-03-25T15:48:39.464157+00:00",
+      "error": null
+    },
+    {
+      "fund_name": "Quant Aggressive Hybrid Fund",
+      "status": "parse_failed",
+      "exit_load_bullets": [],
+      "parse_method": null,
+      "fetch_method": "playwright",
+      "source_url": "https://groww.in/mutual-funds/quant-aggressive-hybrid-fund-direct-growth",
+      "last_scraped": "2026-03-25T15:48:39.464157+00:00",
+      "error": "Could not extract exit load for 'Quant Aggressive Hybrid Fund' — all parse strategies failed"
+    },
+    {
+      "fund_name": "Quant Focused Fund",
+      "status": "success",
+      "exit_load_bullets": [
+        "Exit load of 1%, if redeemed within 15 days.",
+        "Nil exit load if redeemed after 15 day from the date of allotment.",
+        "Exit load of 1% is deducted from the redemption amount at the prevailing NAV."
+      ],
+      "parse_method": "next_data",
+      "fetch_method": "playwright",
+      "source_url": "https://groww.in/mutual-funds/quant-focused-fund-direct-growth",
+      "last_scraped": "2026-03-25T15:48:39.464157+00:00",
+      "error": null
+    }
+  ]
+}

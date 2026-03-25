@@ -1,0 +1,32 @@
+{
+  "date": "2026-03-24",
+  "weekly_pulse": {
+    "themes": [
+      "User Experience",
+      "Trading",
+      "Fees"
+    ],
+    "quotes": [
+      "its very good app clean and simple but it will be more beneficial if they add grouping system in watchlists like kite have launched recently",
+      "Excellent application. unfortunately I closed my trading account. Now I want to reopen my trading account. But there are no option to reopen",
+      "Recently what I observed is generally liquid fund takes 1 working day exit but in groww it takes almost 2 to 3 days? what is the reason behind it?"
+    ],
+    "action_ideas": [
+      "Implement a watchlist grouping feature to enhance user organization and navigation within the app.",
+      "Develop a clear, accessible process for users to reopen previously closed trading accounts.",
+      "Investigate and optimize liquid fund exit processing times to meet industry standards and user expectations."
+    ]
+  },
+  "fee_scenario": "Mutual Fund Exit Load",
+  "explanation_bullets": [
+    "Exit load of 1% if redeemed within 1 year.",
+    "Nil exit load if redeemed after 1 year from the date of allotment.",
+    "Exit load of 1% is deducted from the redemption amount at the prevailing NAV.",
+    "No exit load (Nil) — redemption is free at any time."
+  ],
+  "source_links": [
+    "https://groww.in/mutual-funds/quant-small-cap-fund-direct-plan-growth",
+    "https://groww.in/mutual-funds/quant-infrastructure-fund-direct-growth"
+  ],
+  "last_checked": "2026-03-25"
+}
