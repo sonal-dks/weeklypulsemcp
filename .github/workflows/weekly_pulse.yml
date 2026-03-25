@@ -1,22 +1,37 @@
+# Weekly full pipeline on GitHub-hosted runners (no self-hosted machine required).
+#
+# Schedule: Monday 09:00 UTC
+#
+# Repository secrets to configure (Settings → Secrets and variables → Actions):
+#   GROQ_API_KEY          — Phase 2 & 3
+#   GEMINI_API_KEY        — Phase 4
+#   GDOCS_MCP_ENDPOINT    — e.g. https://your-bridge.example/docs/append
+#   GMAIL_MCP_ENDPOINT    — e.g. https://your-bridge.example/gmail/deliver
+#   MCP_BRIDGE_API_KEY    — Bearer token (same value as on mcp_bridge); used for both Docs and Gmail clients
+#   GOOGLE_DOC_ID         — target Google Doc
+#   EMAIL_RECIPIENT       — must appear in APPROVED_RECIPIENTS if you set an allowlist
+#   APPROVED_RECIPIENTS   — comma-separated allowlist (optional but required by Phase 5 validation if set)
+#
+# Phase 5 cannot use stdio MCP on GitHub VMs; use HTTP mcp_bridge (or compatible) only.
+
 name: groww-weekly-pulse
 
 on:
   workflow_dispatch:
   schedule:
-    # Every Monday 09:00 UTC
     - cron: "0 9 * * 1"
 
 jobs:
   run:
-    # For end-to-end delivery (Phase 5 MCP stdio), use a self-hosted runner with
-    # persisted OAuth token directories:
-    #   ~/.config/google-docs-mcp/
-    #   ~/.gmail-mcp/
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Week tag (UTC date)
+        id: week
+        run: echo "tag=$(date -u +%Y-%m-%d)" >> "$GITHUB_OUTPUT"
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -34,12 +49,11 @@ jobs:
           pip install -r phase5_delivery/requirements.txt
           pip install -r phase6_ops/requirements.txt
 
+      - name: Install Playwright (Phase 4.5)
+        run: python -m playwright install --with-deps chromium
+
       - name: Run Phase 1
         env:
-          # Set secrets / config as needed (example):
-          # PLAYSTORE_COUNTRY: in
-          # PLAYSTORE_LANG: en
-          # etc...
           PYTHONPATH: "."
         run: python3 phase1_pipeline/scripts/run_phase1.py
 
@@ -53,12 +67,15 @@ jobs:
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           PYTHONPATH: "."
+          THEMES_PATH: phase2_theming/outputs/themes_${{ steps.week.outputs.tag }}.json
+          REVIEW_THEME_MAP_PATH: phase2_theming/outputs/review_theme_map_${{ steps.week.outputs.tag }}.json
         run: python3 phase3_clustering/scripts/run_phase3.py
 
       - name: Run Phase 4 (Gemini)
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           PYTHONPATH: "."
+          THEMES_PATH: phase2_theming/outputs/themes_${{ steps.week.outputs.tag }}.json
         run: python3 phase4_insights/scripts/run_phase4.py
 
       - name: Run Phase 4.5 (Fee scraper)
@@ -66,13 +83,25 @@ jobs:
           PYTHONPATH: "."
         run: python -m phase4_5_fee_scraper.scripts.run_phase4_5
 
-      - name: Run Phase 5 (Docs+Gmail MCP)
+      - name: Run Phase 5 (Docs+Gmail HTTP bridge)
         env:
           PYTHONPATH: "."
+          DELIVERY_MODE: send
+          GDOCS_MCP_TRANSPORT: http
+          GMAIL_MCP_TRANSPORT: http
+          GDOCS_MCP_ENDPOINT: ${{ secrets.GDOCS_MCP_ENDPOINT }}
+          GMAIL_MCP_ENDPOINT: ${{ secrets.GMAIL_MCP_ENDPOINT }}
+          GDOCS_MCP_API_KEY: ${{ secrets.MCP_BRIDGE_API_KEY }}
+          GMAIL_MCP_API_KEY: ${{ secrets.MCP_BRIDGE_API_KEY }}
+          GOOGLE_DOC_ID: ${{ secrets.GOOGLE_DOC_ID }}
+          EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
+          APPROVED_RECIPIENTS: ${{ secrets.APPROVED_RECIPIENTS }}
+          PULSE_PATH: phase4_insights/outputs/pulse_${{ steps.week.outputs.tag }}.md
+          INSIGHTS_PATH: phase4_insights/outputs/insights_${{ steps.week.outputs.tag }}.json
         run: python3 phase5_delivery/scripts/run_phase5.py
 
       - name: Run Phase 6 (QA summary)
         env:
           PYTHONPATH: "."
+          WEEK_TAG: ${{ steps.week.outputs.tag }}
         run: python3 phase6_ops/scripts/run_phase6.py
-

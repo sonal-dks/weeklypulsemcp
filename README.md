@@ -73,6 +73,14 @@ Optional local Streamlit: see [phase7_ui/README.md](./phase7_ui/README.md).
 
 ---
 
+## Weekly automation (GitHub Actions)
+
+The workflow [`.github/workflows/weekly_pulse.yml`](.github/workflows/weekly_pulse.yml) runs on **GitHub’s servers** (`ubuntu-latest`) every **Monday 09:00 UTC** (and can be started manually under **Actions**). It does **not** require a self-hosted runner.
+
+Configure **repository secrets** for Groq, Gemini, and **HTTP** [mcp_bridge](./mcp_bridge) delivery (see the comment block at the top of that workflow file). **Artifacts** from the run exist only on the ephemeral runner unless you add steps to commit or upload them.
+
+---
+
 ## Security & secrets
 
 - **Do not commit** real OAuth client secrets, API keys, or `gcp-oauth.keys.json`. Use **`.env.example`** only as a template; keep **`.env`** local or in your host’s secret store (Vercel env, etc.).
