@@ -24,3 +24,4 @@ __pycache__/
 # Local run logs
 *.log
 phase7_ui/outputs/
+.vercel

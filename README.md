@@ -66,6 +66,8 @@ Phase scripts and READMEs under each `phase*/README.md` have details.
 2. Add **environment variables** matching `phase5_delivery/.env.example` (and any paths your deployment needs). Serverless **cannot rely on local `npx` + OAuth token dirs** the way a laptop can—prefer **`GMAIL_MCP_TRANSPORT=http`** / **`GDOCS_MCP_TRANSPORT=http`** pointing at a deployed **[mcp_bridge](./mcp_bridge)** (or equivalent).
 3. Deploy. Open the site: **`/`** = send console, **`/api/health`** = API check.
 
+**Live example:** [weeklypulsemcp.vercel.app](https://weeklypulsemcp.vercel.app) (set your own env vars in the Vercel project for doc/email delivery).
+
 Local API (no Vercel): `PYTHONPATH=. uvicorn phase7_ui.api:app --reload --port 8010`  
 Optional local Streamlit: see [phase7_ui/README.md](./phase7_ui/README.md).
 
