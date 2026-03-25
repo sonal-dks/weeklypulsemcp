@@ -1,7 +1,8 @@
 """
-Vercel serverless entry: ASGI app mounted at /api (see vercel.json rewrites).
+Vercel serverless ASGI entry — export a native ASGI ``app`` (no Mangum).
 
-Repository root must be the Vercel project root so `phase7_ui` and `phase5_delivery` resolve.
+Client calls ``/api/health``; we strip a leading ``/api`` when present so
+``phase7_ui.api`` routes (``/health``, …) match local ``uvicorn`` behavior.
 """
 
 from __future__ import annotations
@@ -13,20 +14,37 @@ _ROOT = Path(__file__).resolve().parent.parent
 if str(_ROOT) not in sys.path:
     sys.path.insert(0, str(_ROOT))
 
-from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from mangum import Mangum
 
-from phase7_ui.api import app as pulse_api
+from phase7_ui.api import app as pulse_app
 
-root_app = FastAPI(title="Groww Pulse Vercel", version="1.0.0")
-root_app.add_middleware(
+pulse_app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-root_app.mount("/api", pulse_api)
 
-app = Mangum(root_app, lifespan="off")
+
+class _StripApiPrefix:
+    """ASGI wrapper: /api/foo -> /foo."""
+
+    __slots__ = ("_app", "_prefix")
+
+    def __init__(self, app, prefix: str = "/api") -> None:
+        self._app = app
+        self._prefix = prefix.rstrip("/") or "/api"
+
+    async def __call__(self, scope, receive, send):  # type: ignore[no-untyped-def]
+        if scope.get("type") == "http":
+            path = scope.get("path") or ""
+            p = self._prefix
+            if path == p or path.startswith(p + "/"):
+                scope = dict(scope)
+                rest = path[len(p) :] or "/"
+                scope["path"] = rest if rest.startswith("/") else "/" + rest
+        return await self._app(scope, receive, send)
+
+
+app = _StripApiPrefix(pulse_app)

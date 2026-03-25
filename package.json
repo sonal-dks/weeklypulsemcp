@@ -1,0 +1,5 @@
+{
+  "name": "weeklypulsemcp",
+  "private": true,
+  "description": "Weekly Pulse — Vercel hosts public/ + api/*.py"
+}
