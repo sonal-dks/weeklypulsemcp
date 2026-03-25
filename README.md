@@ -73,12 +73,6 @@ Optional local Streamlit: see [phase7_ui/README.md](./phase7_ui/README.md).
 
 ---
 
-## CI
-
-GitHub Actions runs a small **unit test** suite (e.g. Phase 5 weekly doc idempotency helpers). See [.github/workflows/ci.yml](./.github/workflows/ci.yml).
-
----
-
 ## Security & secrets
 
 - **Do not commit** real OAuth client secrets, API keys, or `gcp-oauth.keys.json`. Use **`.env.example`** only as a template; keep **`.env`** local or in your host’s secret store (Vercel env, etc.).
