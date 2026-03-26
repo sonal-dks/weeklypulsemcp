@@ -6,7 +6,12 @@ from pathlib import Path
 import streamlit as st
 
 from phase5_delivery.src.config import Phase5Config
-from phase5_delivery.src.delivery import extract_date_from_pulse_path
+from phase5_delivery.src.path_resolver import (
+    list_available_weeks,
+    resolve_latest_phase4_paths,
+    resolve_phase4_for_week,
+    find_latest_fee_data_path_for_week,
+)
 from phase7_ui.send_service import (
     fee_blocks_for_selected,
     fee_preview_text,
@@ -22,27 +27,26 @@ def _inject_theme() -> None:
     st.markdown(
         """
         <style>
-        .main { background: linear-gradient(180deg, #0b1020 0%, #10172a 100%); }
-        .block-container { padding-top: 1.5rem; max-width: 1200px; }
-        h1 { color: #f8fafc !important; font-weight: 600; letter-spacing: -0.02em; }
+        .main { background: #f7f7f8 !important; }
+        .block-container { padding-top: 2rem; max-width: 960px; }
+        h1 { color: #0d0d0d !important; font-weight: 600; letter-spacing: -0.025em; }
 
-        /* Streamlit sometimes mutes markdown; keep preview columns crisp */
         [data-testid="column"] .stMarkdown { opacity: 1 !important; }
 
         .preview-wrap { margin-bottom: 0.5rem; }
         .preview-title {
-          color: #f8fafc !important;
-          font-size: 1.125rem;
-          font-weight: 650;
-          margin: 0 0 12px 0;
-          letter-spacing: -0.02em;
+          color: #0d0d0d !important;
+          font-size: 14px;
+          font-weight: 600;
+          margin: 0 0 10px 0;
+          letter-spacing: -0.01em;
         }
         .preview-card {
-          background: #162039 !important;
-          border: 1px solid rgba(255,255,255,0.22);
+          background: #ffffff !important;
+          border: 1px solid #e5e5e5;
           border-radius: 14px;
           padding: 16px 18px;
-          box-shadow: 0 4px 20px rgba(0,0,0,0.35);
+          box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
         }
         .preview-scroll {
           max-height: 440px;
@@ -50,20 +54,19 @@ def _inject_theme() -> None:
           overflow-x: auto;
           white-space: pre-wrap;
           word-wrap: break-word;
-          line-height: 1.58;
-          color: #f8fafc !important;
+          line-height: 1.65;
+          color: #0d0d0d !important;
           opacity: 1 !important;
-          font-size: 15px;
-          font-weight: 500;
+          font-size: 13.5px;
           -webkit-font-smoothing: antialiased;
           font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
         }
         .preview-scroll::-webkit-scrollbar {
-          width: 8px;
+          width: 6px;
         }
         .preview-scroll::-webkit-scrollbar-thumb {
-          background: rgba(255,255,255,0.28);
-          border-radius: 6px;
+          background: #d1d5db;
+          border-radius: 3px;
         }
         </style>
         """,
@@ -94,10 +97,28 @@ def main() -> None:
     st.title("Weekly Pulse Delivery")
 
     cfg = Phase5Config()
-    week = extract_date_from_pulse_path(cfg.pulse_path)
-    pulse_text = _load_pulse_text(cfg.pulse_path)
+    weeks = list_available_weeks()
+    if not weeks:
+        _pulse_path, _insights_path, latest = resolve_latest_phase4_paths(
+            configured_pulse_path=cfg.pulse_path,
+            configured_insights_path=cfg.insights_path,
+        )
+        weeks = [latest]
 
-    funds_lookup = load_funds_lookup()
+    selected_week = st.selectbox("Report week", weeks, index=0)
+    week = selected_week or weeks[0]
+
+    try:
+        pulse_path, _insights_path = resolve_phase4_for_week(week)
+    except FileNotFoundError:
+        pulse_path, _insights_path, _w = resolve_latest_phase4_paths(
+            configured_pulse_path=cfg.pulse_path,
+            configured_insights_path=cfg.insights_path,
+        )
+    pulse_text = _load_pulse_text(pulse_path)
+
+    fee_path = find_latest_fee_data_path_for_week(week)
+    funds_lookup = load_funds_lookup(fee_path)
     fund_names = sorted(funds_lookup.keys())
 
     if "mf_multiselect_pick" not in st.session_state:
@@ -108,9 +129,14 @@ def main() -> None:
         placeholder="one@example.com, two@example.com",
         height=90,
     )
+    delivery_token_input = st.text_input(
+        "Delivery token",
+        type="password",
+        placeholder="Enter admin token to enable send",
+    )
 
-    st.markdown("**Mutual funds (fee explainer)**")
-    st.caption("Pick any number of funds — 1, 2, 3, … — or use **Select all** / **Clear**.")
+    st.markdown("**Mutual funds (fee explainer — email only, not in Google Doc)**")
+    st.caption("Pick any number of funds. Fee data is included in the email body only.")
     ba, bb = st.columns(2)
     with ba:
         if st.button("Select all funds", use_container_width=True) and fund_names:
@@ -132,7 +158,7 @@ def main() -> None:
     fee_blocks = fee_blocks_for_selected(selected_funds, funds_lookup)
     recipients = parse_recipients(recipients_input)
     invalid = [r for r in recipients if not is_valid_email(r)]
-    send_disabled = (not recipients) or bool(invalid)
+    send_disabled = (not recipients) or bool(invalid) or (not delivery_token_input.strip())
 
     if invalid:
         st.error("Invalid email IDs found. Please fix and retry.")
@@ -141,10 +167,15 @@ def main() -> None:
     elif selected_funds and not fee_blocks:
         st.warning("None of the selected funds have successful fee data. Adjust your selection.")
 
-    if st.button("Append to doc and send email", type="primary", use_container_width=True, disabled=send_disabled):
+    if st.button("Send email", type="primary", use_container_width=True, disabled=send_disabled):
         try:
-            run_console_delivery(recipients=recipients, fee_funds=fee_blocks, week=week)
-            st.success("Appended and sent.")
+            run_console_delivery(
+                recipients=recipients,
+                fee_funds=fee_blocks,
+                week=week,
+                delivery_token=delivery_token_input,
+            )
+            st.success("Email sent.")
         except Exception as exc:  # noqa: BLE001
             log_load_error(str(exc))
             st.error(str(exc))
@@ -154,7 +185,7 @@ def main() -> None:
         st.markdown(_preview_block("Weekly Pulse Preview", pulse_text), unsafe_allow_html=True)
     with col2:
         fee_preview = fee_preview_text(fee_blocks)
-        st.markdown(_preview_block("Fee Explainer Preview", fee_preview), unsafe_allow_html=True)
+        st.markdown(_preview_block("Fee Explainer Preview (email only)", fee_preview), unsafe_allow_html=True)
 
 
 if __name__ == "__main__":

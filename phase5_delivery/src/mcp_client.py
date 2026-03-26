@@ -12,62 +12,6 @@ class DeliveryHardError(Exception):
     pass
 
 
-def deliver_via_mcp(
-    endpoint: str,
-    api_key: str,
-    mode: str,
-    recipient: str,
-    subject: str,
-    body: str,
-    mime_type: str = "text/plain",
-    timeout_seconds: int = 20,
-) -> dict[str, Any]:
-    if not endpoint.strip():
-        if mode == "draft_only":
-            return {
-                "status": "draft_only_local",
-                "message_id": f"local-{uuid.uuid4()}",
-                "provider": "local_fallback",
-                "details": "No GMAIL_MCP_ENDPOINT configured; created local draft artifact only.",
-            }
-        raise DeliveryHardError("Missing GMAIL_MCP_ENDPOINT for send mode")
-
-    payload = {
-        "mode": mode,
-        "to": recipient,
-        "subject": subject,
-        "body": body,
-        "mimeType": mime_type,
-    }
-    headers = {"Content-Type": "application/json"}
-    if api_key.strip():
-        headers["Authorization"] = f"Bearer {api_key.strip()}"
-
-    try:
-        response = requests.post(endpoint, json=payload, headers=headers, timeout=timeout_seconds)
-    except requests.RequestException as exc:
-        raise DeliveryTransientError(f"MCP request failed: {exc}") from exc
-
-    if response.status_code >= 500:
-        raise DeliveryTransientError(f"MCP server error: {response.status_code}")
-    if response.status_code >= 400:
-        raise DeliveryHardError(f"MCP client error: {response.status_code} {response.text}")
-
-    try:
-        body_json = response.json()
-    except ValueError:
-        body_json = {}
-
-    message_id = str(body_json.get("message_id") or body_json.get("id") or f"mcp-{uuid.uuid4()}")
-    status = str(body_json.get("status") or ("drafted" if mode == "draft_only" else "sent"))
-    return {
-        "status": status,
-        "message_id": message_id,
-        "provider": "gmail_mcp",
-        "http_status": response.status_code,
-    }
-
-
 def append_doc_via_mcp(
     endpoint: str,
     api_key: str,

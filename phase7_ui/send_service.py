@@ -1,4 +1,8 @@
-"""Shared delivery logic for Phase 7 (Streamlit locally, FastAPI on Vercel)."""
+"""Shared delivery logic for Phase 7 (Streamlit locally, FastAPI on Vercel).
+
+Google Doc append: pulse-only text (same for everyone, static per week).
+Email: pulse + selected fee explainer (varies per send).
+"""
 
 from __future__ import annotations
 
@@ -18,10 +22,14 @@ from phase5_delivery.src.combined_payload import (
 )
 from phase5_delivery.src.config import Phase5Config
 from phase5_delivery.src.delivery import (
-    append_doc_with_retries,
     build_subject,
     deliver_with_retries,
     ensure_pulse_sections,
+)
+from phase5_delivery.src.path_resolver import (
+    find_latest_fee_data_path_for_week,
+    resolve_latest_phase4_paths,
+    resolve_phase4_for_week,
 )
 
 UI_DELIVERY_LOG = Path("phase7_ui/outputs/ui_delivery_runs.jsonl")
@@ -51,8 +59,17 @@ def is_valid_email(email: str) -> bool:
     return re.match(r"^[^@\s]+@[^@\s]+\.[^@\s]+$", email) is not None
 
 
-def load_funds_lookup() -> dict[str, dict[str, Any]]:
-    fee_path = find_latest_fee_data_path()
+def assert_valid_delivery_token(provided_token: str, cfg: Phase5Config) -> None:
+    expected = cfg.delivery_trigger_token.strip()
+    if not expected:
+        raise ValueError("Delivery token is not configured. Please contact admin.")
+    if provided_token.strip() != expected:
+        raise ValueError("Token wrong. Please get token from admin.")
+
+
+def load_funds_lookup(fee_path: str | None = None) -> dict[str, dict[str, Any]]:
+    if not fee_path:
+        fee_path = find_latest_fee_data_path()
     if not fee_path:
         return {}
     try:
@@ -101,12 +118,28 @@ def fee_preview_text(blocks: list[dict[str, Any]]) -> str:
     return "\n".join(lines).strip()
 
 
-def run_console_delivery(*, recipients: list[str], fee_funds: list[dict[str, Any]], week: str) -> dict[str, Any]:
+def run_console_delivery(
+    *,
+    recipients: list[str],
+    fee_funds: list[dict[str, Any]],
+    week: str,
+    delivery_token: str,
+) -> dict[str, Any]:
+    """Send email only (no Doc append here — Doc is handled by the scheduler)."""
     cfg = Phase5Config()
     if not recipients:
         raise ValueError("At least one recipient is required")
+    assert_valid_delivery_token(delivery_token, cfg)
 
-    insights_payload = load_phase4_insights(cfg.insights_path)
+    try:
+        pulse_path, insights_path = resolve_phase4_for_week(week)
+    except FileNotFoundError:
+        _pulse_path, insights_path, _resolved_week = resolve_latest_phase4_paths(
+            configured_pulse_path=cfg.pulse_path,
+            configured_insights_path=cfg.insights_path,
+        )
+
+    insights_payload = load_phase4_insights(insights_path)
     flat_bullets: list[str] = []
     flat_links: list[str] = []
     for block in fee_funds:
@@ -130,21 +163,11 @@ def run_console_delivery(*, recipients: list[str], fee_funds: list[dict[str, Any
     combined["source_links"] = flat_links
     combined["last_checked"] = datetime.now(timezone.utc).date().isoformat()
 
-    doc_text = combined_payload_to_doc_text(combined)
-    body_errors = ensure_pulse_sections(doc_text)
-    if body_errors:
-        raise ValueError(f"Invalid composed body: {body_errors}")
-
-    doc_result, doc_attempts = append_doc_with_retries(
-        cfg,
-        week=week,
-        pulse_body=doc_text,
-        max_retries=cfg.max_retries,
-        retry_backoff_seconds=cfg.retry_backoff_seconds,
-    )
+    doc_url = ""
+    if cfg.google_doc_id:
+        doc_url = f"https://docs.google.com/document/d/{cfg.google_doc_id}/edit"
 
     subject = build_subject(week)
-    doc_url = str(doc_result.get("doc_url", "")).strip()
     email_body = combined_payload_to_html_email(combined, doc_url=doc_url)
 
     email_attempts: dict[str, Any] = {}
@@ -166,8 +189,7 @@ def run_console_delivery(*, recipients: list[str], fee_funds: list[dict[str, Any
         "week": week,
         "recipients": recipients,
         "fee_funds": fee_funds,
-        "doc_result": doc_result,
-        "doc_attempts": doc_attempts,
+        "doc_url": doc_url,
         "email_attempts": email_attempts,
     }
     UI_DELIVERY_LOG.parent.mkdir(parents=True, exist_ok=True)

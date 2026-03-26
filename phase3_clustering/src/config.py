@@ -1,10 +1,14 @@
+from pathlib import Path
+
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+_ENV_FILE = Path(__file__).resolve().parents[2] / ".env"
 
 
 class Phase3Config(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=str(_ENV_FILE),
         env_file_encoding="utf-8",
         case_sensitive=False,
         extra="ignore",
@@ -12,9 +16,9 @@ class Phase3Config(BaseSettings):
 
     groq_api_key: str = Field(default="", alias="GROQ_API_KEY")
     groq_model: str = Field(default="llama-3.3-70b-versatile", alias="GROQ_MODEL")
-    themes_path: str = Field(default="phase2_theming/outputs/themes_2026-03-24.json", alias="THEMES_PATH")
+    themes_path: str = Field(default="", alias="THEMES_PATH")
     review_theme_map_path: str = Field(
-        default="phase2_theming/outputs/review_theme_map_2026-03-24.json",
+        default="",
         alias="REVIEW_THEME_MAP_PATH",
     )
     output_dir: str = Field(default="phase3_clustering/outputs", alias="OUTPUT_DIR")

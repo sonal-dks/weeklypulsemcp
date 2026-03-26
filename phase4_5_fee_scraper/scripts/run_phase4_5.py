@@ -147,8 +147,10 @@ def main() -> None:
     log = logging.getLogger(__name__)
 
     cfg = Phase45Config()
+    from shared.week_utils import current_week_tag
+
     now_utc = datetime.now(timezone.utc).isoformat()
-    week = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    week = current_week_tag()
 
     output_path = Path(cfg.output_dir) / f"mf_fee_data_{week}.json"
 

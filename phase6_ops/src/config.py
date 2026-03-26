@@ -5,7 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Phase6Config(BaseSettings):
-    _ENV_FILE = Path(__file__).resolve().parent.parent / ".env"
+    _ENV_FILE = Path(__file__).resolve().parents[2] / ".env"
     model_config = SettingsConfigDict(
         env_file=str(_ENV_FILE),
         env_file_encoding="utf-8",
@@ -20,7 +20,6 @@ class Phase6Config(BaseSettings):
     phase2_themes_path: str = Field(default="phase2_theming/outputs/themes_{week}.json", alias="PHASE2_THEMES_PATH")
     phase4_insights_path: str = Field(default="phase4_insights/outputs/insights_{week}.json", alias="PHASE4_INSIGHTS_PATH")
     phase4_pulse_path: str = Field(default="phase4_insights/outputs/pulse_{week}.md", alias="PHASE4_PULSE_PATH")
-    phase5_email_report_path: str = Field(default="phase5_delivery/outputs/email_delivery_report.json", alias="PHASE5_EMAIL_REPORT_PATH")
     phase5_doc_report_path: str = Field(default="phase5_delivery/outputs/doc_append_report_{week}.json", alias="PHASE5_DOC_REPORT_PATH")
     phase5_combined_payload_path: str = Field(default="phase5_delivery/outputs/combined_payload_{week}.json", alias="PHASE5_COMBINED_PAYLOAD_PATH")
 

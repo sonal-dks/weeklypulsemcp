@@ -8,10 +8,11 @@ from phase2_theming.src.theme_generator import (
     load_processed_reviews,
     map_reviews_to_themes,
 )
+from shared.week_utils import current_week_tag
 
 
 def _week_tag() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    return current_week_tag()
 
 
 def _write_json(path: Path, payload: dict) -> None:

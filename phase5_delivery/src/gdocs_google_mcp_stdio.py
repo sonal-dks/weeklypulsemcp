@@ -8,7 +8,7 @@ Tools used:
   - readDocument (format=json) — plain text + API index mapping for week blocks
   - deleteRange — replace existing week section in place
   - insertText — insert replacement week block after delete
-  - insertPageBreak — only when appending a *new* ISO week block
+  - insertPageBreak — only when appending a *new* report-date block
   - appendText — new week when markers not present
 """
 
@@ -86,9 +86,9 @@ async def append_weekly_via_google_docs_mcp(
     session_timeout_seconds: float = 120.0,
 ) -> dict[str, Any]:
     """
-    Upsert one delimited week block per ISO week (``YYYY-Www``), derived from ``report_date`` (YYYY-MM-DD).
+    Upsert one delimited block per week (``Month-WN-Year``), derived from ``report_date``.
 
-    Same week + re-run → ``deleteRange`` + ``insertText`` at the same span (idempotent).
+    Same week + re-run → ``deleteRange`` + ``insertText`` at the same span (idempotent overwrite).
     New week → optional ``insertPageBreak`` then ``appendText``.
     """
     params = StdioServerParameters(

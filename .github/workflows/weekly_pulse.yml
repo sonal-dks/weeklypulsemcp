@@ -3,15 +3,14 @@ name: groww-weekly-pulse
 on:
   workflow_dispatch:
   schedule:
-    # Every Monday 09:00 UTC
-    - cron: "0 9 * * 1"
+    # Every Monday 11:00 AM IST = 05:30 UTC
+    - cron: "30 5 * * 1"
 
 jobs:
   run:
-    # For end-to-end delivery (Phase 5 MCP stdio), use a self-hosted runner with
-    # persisted OAuth token directories:
+    # Google Docs MCP stdio requires persisted OAuth tokens at:
     #   ~/.config/google-docs-mcp/
-    #   ~/.gmail-mcp/
+    # Gmail MCP is NOT used here — email is sent from the UI only.
     runs-on: self-hosted
 
     steps:
@@ -23,56 +22,15 @@ jobs:
         with:
           python-version: "3.11"
 
-      - name: Install dependencies (per-phase)
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r phase1_pipeline/requirements.txt
-          pip install -r phase2_theming/requirements.txt
-          pip install -r phase3_clustering/requirements.txt
-          pip install -r phase4_insights/requirements.txt
-          pip install -r phase4_5_fee_scraper/requirements.txt
-          pip install -r phase5_delivery/requirements.txt
-          pip install -r phase6_ops/requirements.txt
+      - name: Install dependencies (scheduler sub-phase)
+        run: bash scheduler/scripts/install_deps.sh
 
-      - name: Run Phase 1
-        env:
-          # Set secrets / config as needed (example):
-          # PLAYSTORE_COUNTRY: in
-          # PLAYSTORE_LANG: en
-          # etc...
-          PYTHONPATH: "."
-        run: python3 phase1_pipeline/scripts/run_phase1.py
-
-      - name: Run Phase 2 (Groq)
+      - name: Run weekly pipeline (scheduler sub-phase)
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          PYTHONPATH: "."
-        run: python3 phase2_theming/scripts/run_phase2.py
-
-      - name: Run Phase 3 (Groq)
-        env:
-          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
-          PYTHONPATH: "."
-        run: python3 phase3_clustering/scripts/run_phase3.py
-
-      - name: Run Phase 4 (Gemini)
-        env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GOOGLE_DOC_ID: ${{ secrets.GOOGLE_DOC_ID }}
+          GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
+          GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           PYTHONPATH: "."
-        run: python3 phase4_insights/scripts/run_phase4.py
-
-      - name: Run Phase 4.5 (Fee scraper)
-        env:
-          PYTHONPATH: "."
-        run: python -m phase4_5_fee_scraper.scripts.run_phase4_5
-
-      - name: Run Phase 5 (Docs+Gmail MCP)
-        env:
-          PYTHONPATH: "."
-        run: python3 phase5_delivery/scripts/run_phase5.py
-
-      - name: Run Phase 6 (QA summary)
-        env:
-          PYTHONPATH: "."
-        run: python3 phase6_ops/scripts/run_phase6.py
-
+        run: bash scheduler/scripts/run_weekly_pipeline.sh

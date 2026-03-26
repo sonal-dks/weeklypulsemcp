@@ -9,17 +9,28 @@ from phase5_delivery.src.gdocs_weekly_idempotent import (
     build_week_block,
     doc_json_to_plain_with_index_map,
     find_week_span_in_plain,
+    is_well_formed_week_id,
     replace_week_section,
     week_id_from_report_date,
 )
 
 
 class WeeklyIdempotentTests(unittest.TestCase):
-    def test_week_id_from_report_date_iso(self) -> None:
-        self.assertEqual(week_id_from_report_date("2026-03-24"), "2026-W13")
+    def test_week_id_from_month_tag(self) -> None:
+        self.assertEqual(week_id_from_report_date("March-W4-2026"), "March-W4-2026")
+
+    def test_week_id_from_date_string(self) -> None:
+        result = week_id_from_report_date("2026-03-24")
+        self.assertEqual(result, "March-W4-2026")
+
+    def test_is_well_formed_week_id(self) -> None:
+        self.assertTrue(is_well_formed_week_id("March-W4-2026"))
+        self.assertTrue(is_well_formed_week_id("January-W1-2026"))
+        self.assertFalse(is_well_formed_week_id("2026-W13"))
+        self.assertFalse(is_well_formed_week_id("2026-03-24"))
 
     def test_build_and_find_span(self) -> None:
-        wid = "2026-W13"
+        wid = "March-W4-2026"
         body = "hello pulse"
         block = build_week_block(wid, body, section_title="Title")
         plain = f"intro\n\n{block}\ntrailer"
@@ -29,11 +40,11 @@ class WeeklyIdempotentTests(unittest.TestCase):
         self.assertEqual(plain[start:end], block)
 
     def test_find_span_rejects_partial_marker(self) -> None:
-        plain = "===== WEEK: 2026-W13 =====\nno end"
-        self.assertIsNone(find_week_span_in_plain(plain, "2026-W13"))
+        plain = "===== WEEK: March-W4-2026 =====\nno end"
+        self.assertIsNone(find_week_span_in_plain(plain, "March-W4-2026"))
 
     def test_replace_week_section_idempotent(self) -> None:
-        wid = "2026-W13"
+        wid = "March-W4-2026"
         b1 = build_week_block(wid, "v1", section_title="T")
         b2 = build_week_block(wid, "v2", section_title="T")
         doc = f"keep\n{b1}\ntail"

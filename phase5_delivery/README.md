@@ -22,13 +22,13 @@ Phase 5 runs **`npx -y @gongrzhe/server-gmail-autoauth-mcp`** over stdio and cal
 
 1. Create Gmail API OAuth credentials in Google Cloud (Desktop or Web app per upstream README).
 2. Run once: `npx -y @gongrzhe/server-gmail-autoauth-mcp auth` — tokens are stored under `~/.gmail-mcp/` (or set `GMAIL_CREDENTIALS_PATH`).
-3. Set `GMAIL_MCP_TRANSPORT=stdio` in `.env`.
+3. Gmail transport is MCP stdio only in this project.
 
-The GitHub repo is **archived**; the npm workflow remains the common integration path. For CI without Node, use **`GMAIL_MCP_TRANSPORT=http`** and `mcp_bridge` `POST /gmail/deliver` (see `mcp_bridge/README.md`).
+The GitHub repo is **archived**; the npm workflow remains the common integration path.
 
 ## HTTP fallback (Docs only)
 
-For CI or hosts without Node: `GDOCS_MCP_TRANSPORT=http` and `GDOCS_MCP_ENDPOINT` pointing at `mcp_bridge` `POST /docs/append`.
+For CI or hosts without Node: `GDOCS_MCP_TRANSPORT=http` and `GDOCS_MCP_ENDPOINT` pointing at a custom Docs endpoint.
 
 ## Inputs
 
@@ -52,7 +52,7 @@ export PYTHONPATH=.
 python3 phase5_delivery/scripts/run_phase5.py
 ```
 
-## Google Docs HTTP client (mcp_bridge / custom)
+## Google Docs HTTP client (custom endpoint)
 
 Use `phase5_delivery/scripts/gdocs_mcp_client.py` when `GDOCS_MCP_TRANSPORT=http`.
 

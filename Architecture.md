@@ -10,7 +10,24 @@ Build an automated weekly system that converts recent Groww Google Play Store re
 - Output note length: max 250 words
 - Theme constraints: exactly 5 themes, never more than 5
 - Privacy: no PII in generated outputs
-- Delivery: **upsert** weekly content into one persistent Google Doc via [**@a-bonus/google-docs-mcp**](https://github.com/a-bonus/google-docs-mcp) (stdio from Phase 5): **one ISO-week block per `YYYY-Www`** (derived from the pulse report date); repeat runs for the same week **update in place** (`deleteRange` + `insertText`), new weeks **page-break + append**. Then email via [**GongRzhe Gmail MCP Server**](https://github.com/GongRzhe/Gmail-MCP-Server) (stdio, npm: `@gongrzhe/server-gmail-autoauth-mcp`) or HTTP `mcp_bridge` fallback for Gmail (Docs HTTP bridge remains append-only).
+- Artifact naming: all phase outputs use **month-week tags** (`Month-WN-Year`, e.g. `March-W4-2026`). The tag is derived from the **Monday** of the current week; week-of-month N = `((monday.day - 1) // 7) + 1`. Runs within the same week **overwrite** the same artifact files — no duplicates.
+- Google Doc ledger: **one block per week** (`===== WEEK: March-W4-2026 =====`). Same-week reruns replace in place; new week appends after page break. **Pulse-only** content in Doc (no fee data).
+- Email delivery: **UI-triggered only** (Phase 7). User enters email + admin token + selects week from dropdown + picks fee funds. Email body = weekly pulse + selected fee explainer. **No automatic email in scheduler.**
+- Delivery MCPs:
+  - Google Docs: [**@a-bonus/google-docs-mcp**](https://github.com/a-bonus/google-docs-mcp) stdio.
+  - Gmail: [**GongRzhe Gmail MCP Server**](https://github.com/GongRzhe/Gmail-MCP-Server) stdio only — used **exclusively from Phase 7 UI**, not from the scheduler.
+
+## Week Tag Convention & Overwrite Contract
+
+| Aspect | Detail |
+|---|---|
+| **Tag format** | `Month-WN-Year` (e.g. `March-W4-2026`) |
+| **Derivation** | Monday of the current ISO week → `week_of_month = ((monday.day - 1) // 7) + 1` |
+| **Shared utility** | `shared/week_utils.py` → `current_week_tag()`, `week_tag_from_date(d)` |
+| **Scheduler cron** | Monday 11:00 AM IST = `30 5 * * 1` UTC |
+| **Same-week re-run** | All phase output files are **overwritten** (same filename). Google Doc block for that week is **replaced in place**. No duplicates ever. |
+| **New-week run** | New output files created with new tag. Google Doc gets a **page break + new block appended**. |
+| **Phases using tag** | Phase 2 (`themes_`, `review_theme_map_`, `theme_runs_`), Phase 4 (`insights_`, `pulse_`), Phase 4.5 (`mf_fee_data_`), Phase 5 (`combined_payload_`, `doc_append_report_`), Phase 6 (`run_summary_`) |
 
 ## System Architecture (Phase-wise)
 
@@ -21,7 +38,7 @@ flowchart TB
     playStore[GooglePlayPublicReviews]
   end
 
-  subgraph backendLayer [BackendPipeline]
+  subgraph backendLayer [BackendPipeline — Scheduler]
     sched[Scheduler]
     ingest[IngestAPI]
     clean[CleanAndPII]
@@ -30,6 +47,7 @@ flowchart TB
     insight[InsightEngine]
     compose[PulseComposer]
     validate[PolicyGate]
+    gdoc[google-docs-mcp Docs upsert — pulse only]
   end
 
   subgraph dataLayer [DataStores]
@@ -38,11 +56,10 @@ flowchart TB
     runArtifacts[RunArtifactsJSON]
   end
 
-  subgraph uiLayer [UIAndDelivery]
+  subgraph uiLayer [UI — Email Trigger]
     api[BackendAPI]
-    ui[OpsDashboardUI]
-    gdoc[google-docs-mcp Docs upsert]
-    mail[GongRzheGmailMCP]
+    ui[SendConsole — week dropdown]
+    mail[GongRzheGmailMCP — email only]
     users[InternalTeams]
   end
 
@@ -58,15 +75,15 @@ flowchart TB
   compose --> validate
   validate --> runArtifacts
   validate --> gdoc
-  gdoc --> mail
   runArtifacts --> api
   api --> ui
+  ui --> mail
   mail --> users
 ```
 
 ## Backend vs Frontend Scope
-- Backend phases: Phase 1 to Phase 6
-- Frontend/UI phase: Phase 7
+- Backend phases: Phase 1 to Phase 6 (automated scheduler — no email)
+- Frontend/UI phase: Phase 7 (email triggered by user)
 
 ### Phase 1 (Backend): Foundation + Ingestion + Cleaning (Combined)
 - Define run cadence: weekly scheduled execution.
@@ -200,6 +217,7 @@ flowchart TB
   - assign each processed review to one primary theme from the generated 5 themes (all processed reviews must be tagged)
   - output must include `review_id`, `text`, and `primary_theme` for auditability
 - Enforce strict schema output (JSON) and retry on malformed/oversized theme list.
+- **Weekly overwrite**: output files use month-week tag (`Month-WN-Year`). Re-runs within the same week overwrite the same files — no duplicates.
 - Tech:
   - LLM API: Groq API
   - Prompting: constrained JSON output with validation/retry
@@ -231,6 +249,7 @@ flowchart TB
   - LLM API: Groq API
   - Classification: constrained JSON output (`primary_theme` from fixed 5-theme set)
   - Storage: JSON (`phase3_clustering/outputs/review_theme_map.json`)
+  - Input resolution: if `THEMES_PATH` / `REVIEW_THEME_MAP_PATH` are empty or stale, Phase 3 resolves latest Phase 2 outputs automatically.
 - Data validation:
   - Validate one and only one `primary_theme` per review after rebalancing.
   - Validate all assigned themes belong to the fixed 5-theme set.
@@ -298,6 +317,7 @@ ERROR: MISSING_REQUIRED_INPUT
   - hard validator for <=250 words
   - compression pass if needed
 - Final privacy scan before publication.
+- **Weekly overwrite**: output files use month-week tag (`Month-WN-Year`).
 - Tech:
   - Sentiment: `vaderSentiment` or transformer-based classifier
   - Ranking: weighted scoring in Python
@@ -306,6 +326,7 @@ ERROR: MISSING_REQUIRED_INPUT
   - Validation: word counter + PII validator
   - Storage (structured): JSON (`phase4_insights/outputs/insights_<week>.json`)
   - Storage: Markdown artifact (`phase4_insights/outputs/pulse_<week>.md`)
+  - Input resolution: if `THEMES_PATH` is empty or stale, Phase 4 resolves latest Phase 2 themes output automatically.
 - Data validation:
   - Validate top themes are selected from the approved 5-theme set only.
   - Validate exactly 3 quotes and 3 action items are produced before composition.
@@ -322,19 +343,19 @@ ERROR: MISSING_REQUIRED_INPUT
   - If sentiment/trend components fail, fallback to frequency-only ranking and flag in run metadata.
   - Skip invalid quotes/actions and regenerate until constraints are met or fail explicitly.
   - On validation failure, run one automatic LLM rewrite/compression pass before failing.
-  - If still invalid, block downstream email phase and record failure reason.
+  - If still invalid, block downstream phases and record failure reason.
 - Manual output to verify:
   - `phase4_insights/outputs/insights_<week>.json` with 5 generated themes, top 3 ranked themes, 3 quotes, 3 actions
   - `phase4_insights/outputs/pulse_<week>.md` that follows exact structure and <=250 words
 
 ### Phase 4.5 (Backend): Mutual Fund Fee Scraper (Exit Load / Fee Context)
 - Purpose:
-  - Pull a small public-data “fee context” snapshot from Groww mutual fund pages (no auth) to support internal interpretation of review themes around “fees/charges” (optional context layer).
-  - This is a standalone artifact; Phase 4 note generation can optionally reference it later if needed.
+  - Pull a small public-data "fee context" snapshot from Groww mutual fund pages (no auth) to support internal interpretation of review themes around "fees/charges" (optional context layer).
+  - This is a standalone artifact; **fee data is included only in the email body** (Phase 7 UI), not in the Google Doc.
 - Input:
   - Static list of fund source URLs (public Groww pages) embedded in code.
 - Output:
-  - `phase4_5_fee_scraper/outputs/mf_fee_data_<week>.json`
+  - `phase4_5_fee_scraper/outputs/mf_fee_data_<week>.json` (month-week tag naming; same week overwrites).
 - Tech:
   - Runtime: Python 3.11+
   - HTTP: `requests`
@@ -354,86 +375,73 @@ ERROR: MISSING_REQUIRED_INPUT
 - Manual output to verify:
   - `phase4_5_fee_scraper/outputs/mf_fee_data_<week>.json`
 
-### Phase 5 (Backend): Email Draft and MCP Delivery
+### Phase 5 (Backend): Google Doc Append (Scheduler — No Email)
+- **Scope change**: Phase 5 in the scheduler only appends the weekly pulse to the Google Doc. It does **not** send email. Email delivery is handled exclusively by Phase 7 UI.
 - Delivery model:
   - Maintain one persistent Google Doc as the weekly pulse ledger.
-  - **Idempotent ISO week blocks (stdio MCP):** each run derives `week_id` as `YYYY-Www` from the pulse **report date** (`YYYY-MM-DD`). The doc body includes delimited sections:
-    - `===== WEEK: YYYY-Www =====` … content … `===== END WEEK: YYYY-Www =====`
+  - **Idempotent weekly blocks (stdio MCP):** each run derives `week_id` as `Month-WN-Year` from the Monday of the pipeline run. The doc body includes delimited sections:
+    - `===== WEEK: Month-WN-Year =====` … pulse content … `===== END WEEK: Month-WN-Year =====`
   - If that `week_id` already exists → **deleteRange + insertText** at the same span (update in place, **no** duplicate page).
   - If it does not exist → **insertPageBreak** (when the doc already has body content) then **appendText** (new week only).
-  - Email runs **only after** a successful Doc write, body includes the same formatted section + Doc link.
-  - Internal combined JSON artifact is still generated for audit (`combined_payload_<week>.json`), but **human-facing output is markdown/plain text**, not raw JSON.
+  - **Google Doc content is pulse-only** (Top Themes, User Voice, Action Ideas). Fee explainer is NOT written to the Doc.
+  - Internal combined JSON artifact is still generated for audit (`combined_payload_<week>.json`).
   - Optional env **`GDOCS_LAST_WEEK_CACHE`**: path to a small JSON file recording last `{ doc_id, week_id }` (debug/ops only).
-- **Google Docs (primary):** [**a-bonus/google-docs-mcp**](https://github.com/a-bonus/google-docs-mcp) — the same MCP server used with Cursor/Claude (`npx -y @a-bonus/google-docs-mcp`), driven from Python via the **MCP stdio client** (see `phase5_delivery/src/gdocs_google_mcp_stdio.py`). **Pure idempotency helpers** (markers, plain-text span math, ISO `week_id`): `phase5_delivery/src/gdocs_weekly_idempotent.py` (unit tests: `phase5_delivery/tests/test_gdocs_weekly_idempotent.py`).
-  - Auth (per upstream): OAuth desktop client (`GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`, run `npx -y @a-bonus/google-docs-mcp auth` once) **or** Workspace **service account** + `SERVICE_ACCOUNT_PATH` / delegation (`GOOGLE_IMPERSONATE_USER`) as documented in that repo.
-  - MCP tools used (stdio): `readDocument` (`format=json`), `deleteRange`, `insertText`, `insertPageBreak`, `appendText`. Set **`GOOGLE_DOC_ID`** to an existing doc (recommended); if it is empty the client raises a clear config error instead of calling `createDocument` (which often returns *Permission denied*). Optional: `GDOCS_AUTO_CREATE=1` restores automatic `createDocument`.
-  - **HTTP fallback:** `mcp_bridge` `POST /docs/append` still performs a simple append (no week-id upsert). Prefer **stdio** for idempotent weekly updates.
-- **Gmail:** [**GongRzhe/Gmail-MCP-Server**](https://github.com/GongRzhe/Gmail-MCP-Server) — MCP tools `draft_email` / `send_email` (OAuth; install auth via `npx -y @gongrzhe/server-gmail-autoauth-mcp auth`, credentials under `~/.gmail-mcp/` per upstream). The upstream GitHub repo is **archived** as of 2026; the published npm package is still used the same way as in Cursor. Phase 5 drives it over **stdio** (see `phase5_delivery/src/gmail_gongrzhe_mcp_stdio.py`) when `GMAIL_MCP_TRANSPORT=stdio`.
-  - **HTTP fallback:** `GMAIL_MCP_TRANSPORT=http` + `GMAIL_MCP_ENDPOINT` pointing at **`mcp_bridge`** `POST /gmail/deliver` (service account / Workspace) for CI or when you do not run the Node Gmail MCP subprocess.
-- Subject format:
-  - `Groww Weekly Product Pulse - <Week/Date>`
-- Delivery modes:
-  - `draft_only` for safe testing
-  - `send` for production runs
+  - **Latest-artifact resolution:** Phase 5 resolves the newest matching `insights_<week>.json` + `pulse_<week>.md` pair from `phase4_insights/outputs/`. If configured env paths are stale or missing, it automatically uses the latest pair.
+- **Google Docs:** [**a-bonus/google-docs-mcp**](https://github.com/a-bonus/google-docs-mcp) — MCP stdio client (`npx -y @a-bonus/google-docs-mcp`). **Pure idempotency helpers** (markers, plain-text span math, `Month-WN-Year` week id): `phase5_delivery/src/gdocs_weekly_idempotent.py` (unit tests: `phase5_delivery/tests/test_gdocs_weekly_idempotent.py`).
+  - Auth: OAuth desktop client (`GOOGLE_CLIENT_ID` / `GOOGLE_CLIENT_SECRET`, run `npx -y @a-bonus/google-docs-mcp auth` once) **or** Workspace service account.
+  - MCP tools used: `readDocument`, `deleteRange`, `insertText`, `insertPageBreak`, `appendText`.
+- **Gmail is NOT used in Phase 5.** Email delivery is Phase 7 only.
 - Tech:
-  - Docs: Python [`mcp`](https://github.com/modelcontextprotocol/python-sdk) SDK + stdio (`npx -y @a-bonus/google-docs-mcp`) when `GDOCS_MCP_TRANSPORT=stdio`; **`GDOCS_MCP_TRANSPORT=http`** uses `mcp_bridge` or local fallback (default in code favors `http` for environments without Node).
-  - Gmail: Python `mcp` SDK + stdio (`npx -y @gongrzhe/server-gmail-autoauth-mcp`) when `GMAIL_MCP_TRANSPORT=stdio`; **`GMAIL_MCP_TRANSPORT=http`** uses `mcp_bridge` + Gmail API
-  - Audit: doc id, section title, delivery status in `phase5_delivery/outputs/email_runs_<week>.json`
-  - Stdio doc tool result may include `gdocs_action` (`update` vs `append`), `week_id` (`YYYY-Www`), `plain_len_before` / `plain_len_after`, and `status` `doc_updated` or `doc_appended`.
+  - Docs: Python [`mcp`](https://github.com/modelcontextprotocol/python-sdk) SDK + stdio with weekly upsert (`Month-WN-Year`).
+  - Audit: doc id, section title, delivery status in `phase5_delivery/outputs/doc_append_report_<week>.json`
 - Data validation:
-  - Validate subject format `Groww Weekly Product Pulse - <Week/Date>`.
-  - Validate body is sourced from latest validated artifacts only:
-    - Phase 4 insights (`phase4_insights/outputs/insights_<week>.json`)
-    - Phase 4.5 fee snapshot (`phase4_5_fee_scraper/outputs/mf_fee_data_<week>.json`) when available
-  - Validate recipient allowlist when configured.
-  - With `GDOCS_MCP_TRANSPORT=stdio`, validate Google auth material (OAuth **or** service account path) before running.
-  - With `GMAIL_MCP_TRANSPORT=stdio`, validate Gmail OAuth token file exists (`~/.gmail-mcp/credentials.json` or `GMAIL_CREDENTIALS_PATH`).
-  - Validate combined JSON payload (audit artifact) is valid JSON and contains required keys before doc write; human-facing doc/email body is **formatted plain text** inside week markers, not raw JSON.
-  - Validate human-facing body includes required pulse sections (`Top Themes`, `User Voice`, `Action Ideas`) and optional `Fee Explainer` when selected.
+  - Validate body is sourced from latest validated artifacts.
+  - Validate combined JSON payload contains required keys before doc write.
+  - Validate pulse sections (`Top Themes`, `User Voice`, `Action Ideas`) are present.
 - Logging:
-  - Log transport (`stdio` vs `http`), draft/send mode, doc id, Gmail message id, MCP/tool errors (text only).
+  - Log docs transport (`stdio`), doc id, MCP tool errors.
 - Error handling:
-  - Retry transient failures with bounded backoff (HTTP and stdio subprocess retries).
-  - Doc write failure (append or in-place update) → `doc_append_failed`, **no** email send.
+  - Retry transient failures with bounded backoff.
+  - Doc write failure → `doc_append_failed`.
 - Manual output to verify:
-  - `phase5_delivery/outputs/email_delivery_report.json`
-  - `phase5_delivery/outputs/doc_append_report_<week>.json` (despite the name, covers both upsert paths; check tool attempts / result metadata)
-  - `phase5_delivery/outputs/combined_payload_<week>.json` (**audit / structured snapshot**; may include `fee_funds` per selected MFs in UI flows — the Doc still stores the formatted weekly text + fee explainer, not this JSON blob)
+  - `phase5_delivery/outputs/doc_append_report_<week>.json`
+  - `phase5_delivery/outputs/combined_payload_<week>.json`
 
 ### Phase 6 (Backend): Orchestration, Observability, and QA
-- Weekly scheduler triggers full pipeline.
+- Weekly scheduler triggers full pipeline (Phases 1–5 Doc append + 6 QA).
 - Per-run logs:
   - fetched count, cleaned count, dedup removed, spam removed
   - theme distribution
   - sentiment summary
   - word count and pii redaction count
-  - email delivery result
-- Quality gates before send:
+  - doc append result
+- Quality gates before marking pass:
   - themes count is exactly 5
   - exactly 3 quotes and 3 actions
   - note length <=250 words
   - PII check passes
+  - Doc append succeeded
 - Fail-safe:
-  - block send on policy failure
   - store artifacts and error reason for review
 - Tech:
   - Orchestration: **GitHub Actions scheduled workflow only** (no cron / no APScheduler)
-  - Workflow file: `.github/workflows/weekly_pulse.yml`
+  - Scheduler sub-phase files: `scheduler/` (install + run scripts)
+    - `scheduler/scripts/install_deps.sh`
+    - `scheduler/scripts/run_weekly_pipeline.sh`
+  - Workflow file: `.github/workflows/weekly_pulse.yml` (invokes scheduler scripts)
   - GitHub Actions secrets/env required (minimum):
     - `GROQ_API_KEY`: required for Phase 2 and Phase 3 (Groq LLM calls)
     - `GEMINI_API_KEY`: required for Phase 4 (Gemini Flash 2.5)
+    - `GOOGLE_DOC_ID`, `GOOGLE_CLIENT_ID`, `GOOGLE_CLIENT_SECRET`: required for Phase 5 Doc append
   - GitHub Actions runner prerequisites (minimum):
     - Python 3.11+ available
     - Node.js available (so `npx` can run MCP servers in Phase 5)
     - Phase 5 MCP OAuth tokens are pre-created and persist on the runner machine:
       - Google Docs MCP tokens: `~/.config/google-docs-mcp/`
-      - Gmail MCP tokens: `~/.gmail-mcp/`
-  - Runner requirement for MCP delivery:
-    - Phase 5 uses **stdio MCP** (`npx ...`) and relies on persisted OAuth tokens in the runner home directory:
-      - Google Docs MCP tokens: `~/.config/google-docs-mcp/`
-      - Gmail MCP tokens: `~/.gmail-mcp/`
-    - Recommended: use a **self-hosted GitHub Actions runner** (so tokens can persist) for end-to-end Phase 5.
-    - If using GitHub-hosted runners, Phase 5 will not be able to perform interactive OAuth; delivery will fail unless you change delivery auth strategy.
+    - **Gmail MCP tokens are NOT needed on the runner** — email is sent from UI only.
+  - Runner requirement for MCP Doc append:
+    - Phase 5 uses **stdio MCP** (`npx ...`) and relies on persisted OAuth tokens in the runner home directory.
+    - Recommended: use a **self-hosted GitHub Actions runner** (so tokens can persist).
   - Observability: structured logs + lightweight metrics dashboard
   - QA: pre-send assertions as automated checks
 - Data validation:
@@ -448,28 +456,61 @@ ERROR: MISSING_REQUIRED_INPUT
 - Manual output to verify:
   - `phase6_ops/outputs/run_summary_<week>.json` with pass/fail for all quality gates
 
-### Phase 7 (Frontend/UI): Send console (minimal)
-- Purpose: operator-only screen to deliver the weekly note + fee explainer.
-- UI shows **only**:
+#### Phase 6.1 (Backend Sub-phase): Scheduler Packaging
+- Purpose:
+  - Keep orchestration assets isolated from phase logic for easier ops ownership and workflow maintenance.
+- Folder:
+  - `scheduler/` contains dependency bootstrap and ordered phase execution scripts.
+- Triggering:
+  - GitHub Actions schedule: **Monday 11:00 AM IST (cron `30 5 * * 1` UTC)** and `workflow_dispatch`.
+- Week propagation:
+  - Scheduler computes one month-week tag (`Month-WN-Year`, e.g. `March-W4-2026`) per workflow run via `shared.week_utils.current_week_tag()`.
+  - It exports week-specific paths before downstream phases (`THEMES_PATH`, `REVIEW_THEME_MAP_PATH`, `PULSE_PATH`, `INSIGHTS_PATH`, `WEEK_TAG`) so all phases use consistent naming.
+- Runner model:
+  - `runs-on: self-hosted` to preserve MCP stdio OAuth token state for Google Docs.
+
+### Phase 7 (Frontend/UI): Send console (email trigger)
+- Purpose: operator screen to deliver the weekly note + fee explainer **via email only**.
+- **Key change**: email is sent only when the user manually enters email IDs, token, and clicks send. The scheduler does NOT send email.
+- UI shows:
+  - **Week selector dropdown** — lists all available weeks (newest first) from `phase4_insights/outputs/`. Selecting a week loads that week's pulse preview and fee data.
   - Multi-recipient email input (comma/newline separated).
-  - Mutual fund **multi-select** (choose 1, 2, 3, … or all) from latest Phase 4.5 snapshot, plus **Select all funds** and **Clear selection**.
-  - One primary action: append to Google Doc, then send to all listed recipients (body uses **Fee Explainer** layout from Output Template).
+  - Mutual fund **multi-select** (choose 1, 2, 3, … or all) from the fee artifact for the selected week, plus **Select all funds** and **Clear selection**.
+  - Token input: operator must enter a valid admin token before send is accepted.
+  - One primary action: **send email** to all listed recipients.
+    - Email body = weekly pulse + selected fee explainer (HTML formatted).
+    - Google Doc is **not updated from UI** — Doc is managed by the scheduler.
   - Below the action button, show two preview cards in one row:
-    - left card: weekly pulse preview
-    - right card: fee explainer preview (scrollable when multiple funds are selected)
+    - left card: weekly pulse preview (for selected week)
+    - right card: fee explainer preview (email-only; scrollable when multiple funds are selected)
+- UI responsiveness: `public/index.html` uses a mobile-first CSS layout (single-column previews on small screens, two-column layout on desktop/tablet).
+- **Why this solves the runner issue**: Gmail MCP requires stdio + OAuth tokens. Since email is now UI-only (not in the scheduler), the GitHub Actions runner does NOT need Gmail MCP tokens. Only Google Docs MCP tokens are needed on the runner.
+- UI design:
+  - **Light mode**, inspired by ChatGPT's clean aesthetic.
+  - Color scheme: white surface (`#ffffff`), light gray page background (`#f7f7f8`), subtle gray borders (`#e5e5e5`), dark text (`#0d0d0d`), muted secondary text (`#6e6e80`), green accent (`#10a37f`) for primary actions.
+  - Typography: system sans-serif stack, 15px base, clean spacing.
+  - Streamlit config: `.streamlit/config.toml` enforces `base = "light"` with matching palette.
 - Tech:
-  - Frontend: Streamlit (`phase7_ui/app.py`).
-  - Delivery: reuses Phase 5 helpers (same **doc upsert** + Gmail MCP path as automated `run_phase5`). Multi-recipient UI sends call Gmail with **`mode=send`** explicitly (independent of `DELIVERY_MODE` in `.env` for that button path).
-  - Optional: FastAPI artifact endpoints (`phase7_ui/api.py`) for tooling; not required for the send console.
+  - Production frontend: static web app (`public/index.html`) deployed on Vercel.
+  - Backend API: FastAPI (`phase7_ui/api.py`) served by Vercel Python function entry (`api/index.py`).
+  - Local fallback UI (optional): Streamlit (`phase7_ui/app.py`) for operator testing.
+  - Delivery: reuses Phase 5 Gmail MCP stdio helpers for email only. Multi-recipient sends call Gmail with **`mode=send`** explicitly.
+  - API endpoints:
+    - `GET /weeks` — list available week tags
+    - `GET /pulse/{week}` — pulse markdown for a specific week
+    - `GET /funds?week=` — fund names from fee artifact for a week
+    - `GET /preview/fee?fund_names=&week=` — plain-text fee preview
+    - `POST /deliver` — send email (recipients, fund_names, delivery_token, week)
 - Data validation:
-  - Block send on invalid email tokens.
-  - Phase 4 insights must be `pass` when building the combined body (`load_phase4_insights`).
+  - Block send on invalid email addresses.
+  - Block send when token is missing or incorrect; return clear message to get token from admin.
+  - Phase 4 insights must be `pass` when building the combined body.
 - Logging:
   - UI-triggered sends append to `phase7_ui/outputs/ui_delivery_runs.jsonl`.
   - Load/delivery errors append to `phase7_ui/outputs/ui_load_errors.log`.
 - Manual output to verify:
-  - UI preview cards show exact content the user should expect in email/doc.
-  - Doc receives weekly pulse + **Fee Explainer** blocks; each selected fund repeats: fund name, three bullets, `Links:` URL.
+  - UI preview cards show exact content the user should expect in email.
+  - Email contains pulse + fee explainer for selected funds; Google Doc contains pulse only.
 
 ## High-Level Data Flow
 ```mermaid
@@ -483,12 +524,15 @@ flowchart TD
   cluster --> insights[InsightsEngine]
   insights --> note[OnePageComposer]
   note --> policy[PIIAndWordCountValidator]
-  policy --> docappend[google-docs-mcp ISO-week upsert]
-  docappend --> email[GongRzhe Gmail MCP or bridge]
+  policy --> docappend[google-docs-mcp weekly upsert — pulse only]
   policy --> archive[PulseArchive]
+  ui[Phase7 UI — week dropdown] -->|user clicks send| email[GongRzhe Gmail MCP stdio]
+  email --> users[InternalTeams]
 ```
 
 ## Output Template (Target Format)
+
+### Google Doc content (pulse only — appended by scheduler)
 **Weekly Groww Product Pulse**
 
 **Top Themes**
@@ -506,7 +550,10 @@ flowchart TD
 - Action 2
 - Action 3
 
-**Fee Explainer** (optional; one block per selected mutual fund)
+### Email content (pulse + fee explainer — sent from UI)
+The email includes the full pulse above **plus** the fee explainer section below (based on funds selected by the user in the UI):
+
+**Fee Explainer** (one block per selected mutual fund)
 
 Fund Name A
 
@@ -525,53 +572,50 @@ Fund Name B
 Links: https://...
 
 ### Google Doc ledger envelope (Phase 5 idempotency)
-What is **actually stored** in the shared Google Doc is the formatted note above, wrapped for **ISO-week upsert** (stdio MCP):
+What is **actually stored** in the shared Google Doc is the pulse text above (no fee data), wrapped for **weekly upsert** (stdio MCP):
 
 ```text
-===== WEEK: YYYY-Www =====
-Groww Weekly Product Pulse - YYYY-MM-DD
-... pulse + fee explainer body ...
-===== END WEEK: YYYY-Www =====
+===== WEEK: March-W4-2026 =====
+Weekly Groww Product Pulse - March-W4-2026
+... pulse body (Top Themes, User Voice, Action Ideas) ...
+===== END WEEK: March-W4-2026 =====
 ```
 
-- `YYYY-Www` comes from the pulse **report date** (`pulse_<date>.md` / `YYYY-MM-DD`) via the ISO calendar.
-- Reruns in the same week **replace** the span between these markers; a **new** week **appends** (after an optional page break if the doc is non-empty).
+- The tag comes from `shared.week_utils.current_week_tag()` — derived from the Monday of the pipeline run week.
+- Reruns within the same week **replace** the span between these markers (idempotent overwrite, no duplicates); a **new** week **appends** (after an optional page break if the doc is non-empty).
 
 ## Suggested Delivery Milestones
 - Week 1: ingestion + cleaning + storage + scheduler
 - Week 2: LLM theming + clustering + ranking logic
 - Week 3: integrated insights + one-page composition + policy validators
-- Week 4: Google Docs **idempotent ISO-week ledger** + Gmail MCP + observability + end-to-end hardening
+- Week 4: Google Docs **idempotent weekly ledger** (`Month-WN-Year`) + Gmail MCP (UI-only) + observability + end-to-end hardening
 
 ## Deployment (Vercel)
-- Target deployment model:
-  - Frontend (Phase 7 UI): deploy on Vercel.
-  - Backend APIs/orchestration endpoints: deploy on Vercel serverless functions.
-- Frontend on Vercel:
-  - Production “ops” UI may be a Next.js (or similar) app that talks to the same artifact API patterns as `phase7_ui/api.py`.
-  - The **current** Phase 7 reference implementation is a **minimal Streamlit send console** (recipients, MF multi-select, dual preview cards, upsert+send) — not a full metrics dashboard unless you extend it.
-- Backend on Vercel:
-  - Expose API routes for triggering/reading pipeline runs and artifacts.
-  - Run pipeline phase scripts through backend job endpoints and persist artifacts in storage accessible to Vercel functions.
-- Scheduler (GitHub Actions only):
-  - Weekly scheduling is handled **only** by GitHub Actions (Phase 6), not Vercel Cron.
-  - This avoids double-runs and does not impact Vercel deployment of frontend/backend.
-  - Vercel backend endpoints can still be called by the GitHub Actions workflow if you choose an “API-driven” execution model later.
+- Right now (single source of truth):
+  - Frontend on Vercel: static send console (`public/index.html`) with week dropdown.
+  - Backend on Vercel: FastAPI endpoints from `phase7_ui/api.py` via `api/index.py`.
+  - Scheduler: GitHub Actions workflow `.github/workflows/weekly_pulse.yml` (self-hosted runner).
+- Delivery tech in deployed stack:
+  - Google Docs: MCP stdio (`@a-bonus/google-docs-mcp`) with `Month-WN-Year` upsert — **scheduler only**.
+  - Gmail: MCP stdio (`@gongrzhe/server-gmail-autoauth-mcp`) — **Phase 7 UI only**.
+- Fallback options (explicit):
+  - If Vercel runtime cannot host stdio/OAuth token state for Gmail MCP, run email delivery from the self-hosted runner or local Streamlit console where stdio MCP is available.
+  - No bridge layer is used.
 - Secrets/config on Vercel:
-  - Configure env vars in Vercel project settings (`GROQ_API_KEY`, `GEMINI_API_KEY`, delivery config, paths/endpoints).
+  - Configure only runtime env vars required by Phase 7 API and delivery paths; keep secrets in Vercel settings.
   - Do not commit runtime secrets or OAuth token files.
-- MCP delivery on Vercel (Phase 5):
-  - If stdio MCP token persistence is not feasible on serverless runtime, use HTTP MCP-compatible delivery endpoints for Docs/Gmail from backend route calls.
-  - Keep policy gate behavior unchanged: Doc append must pass before email send.
 - Manual verification after deploy:
   - Confirm weekly GitHub Actions scheduled run logs.
-  - Confirm latest `run_summary_<week>.json` and Phase 5 delivery reports are generated and accessible.
-  - Confirm Google Doc append and Gmail delivery status for a scheduled run.
+  - Confirm latest `run_summary_<week>.json` and Phase 5 doc append reports are generated.
+  - Confirm Google Doc append for a scheduled run (pulse only).
+  - Confirm email delivery from UI (pulse + fee explainer).
 
 ## Definition of Done (v1)
-- Weekly automated run succeeds end-to-end.
+- Weekly automated run succeeds end-to-end (Phases 1–6).
 - Uses only public data from configured rolling 12-week window.
 - Produces one note that is <=250 words, no PII, and exactly 5 themes.
-- Writes the weekly pulse (+ optional fee explainer) to **one** persistent Google Doc via [google-docs-mcp](https://github.com/a-bonus/google-docs-mcp) **stdio** using **ISO `YYYY-Www` markers**: at most **one block per week**; same-week reruns **replace** that block (no duplicate pages). **New** calendar weeks get a **page break** then append. Prefer stdio; **HTTP Docs fallback** (`mcp_bridge`) remains **append-only** (no week-id upsert).
-- Drafts/sends email via [GongRzhe Gmail MCP](https://github.com/GongRzhe/Gmail-MCP-Server) (stdio) or Gmail HTTP bridge with required subject/body and Doc link when available.
-- Stores run artifacts and metrics for audit and trend comparison (`combined_payload_<week>.json`, delivery reports, optional `GDOCS_LAST_WEEK_CACHE`).
+- All artifacts use month-week tag naming (`Month-WN-Year`, e.g. `March-W4-2026`); re-runs within the same week overwrite — no duplicate files or Doc entries.
+- Scheduler writes the weekly pulse (no fee data) to **one** persistent Google Doc via [google-docs-mcp](https://github.com/a-bonus/google-docs-mcp) **stdio** using **`Month-WN-Year` markers**: at most **one block per week**; same-week reruns **replace** that block (no duplicate pages). **New** weeks get a **page break** then append.
+- Email is sent **only from Phase 7 UI**: user selects week from dropdown, enters email + token, picks fee funds. Email body includes pulse + fee explainer.
+- Gmail MCP is NOT required on the GitHub Actions runner.
+- Stores run artifacts and metrics for audit and trend comparison.

@@ -1,10 +1,13 @@
 """
-Idempotent weekly blocks for Google Docs: one logical entry per ISO week.
+Idempotent weekly blocks for Google Docs: one logical entry per week.
 
 Markers:
-  ===== WEEK: YYYY-Www =====
+  ===== WEEK: Month-WN-Year =====
   ... content ...
-  ===== END WEEK: YYYY-Www =====
+  ===== END WEEK: Month-WN-Year =====
+
+Same week re-run → replaces block in place (overwrite).
+New week → append with page break.
 
 Pure helpers are unit-testable; MCP I/O stays in gdocs_google_mcp_stdio.py.
 """
@@ -16,21 +19,33 @@ import re
 from datetime import date, datetime, timezone
 from typing import Any
 
+from shared.week_utils import current_week_tag, week_tag_from_date
+
 
 def get_current_week_id() -> str:
-    """Week id for 'now' in UTC (ISO calendar year + week, zero-padded)."""
-    return week_id_from_datetime(datetime.now(timezone.utc))
+    """Ledger id for 'now' in UTC (``Month-WN-Year``)."""
+    return current_week_tag()
 
 
 def week_id_from_report_date(report_date: str) -> str:
-    """Derive week id from pulse/artifact date ``YYYY-MM-DD`` (ISO weeks)."""
-    d = date.fromisoformat(report_date.strip()[:10])
-    return week_id_from_datetime(datetime(d.year, d.month, d.day, tzinfo=timezone.utc))
+    """Derive ledger id from artifact tag.
+
+    Accepts ``Month-WN-Year`` directly, ``YYYY-Www``, or ``YYYY-MM-DD``.
+    """
+    s = report_date.strip()
+    if re.match(r"^[A-Z][a-z]+-W\d+-\d{4}$", s):
+        return s
+    if re.match(r"^\d{4}-W\d{2}$", s):
+        return s
+    try:
+        d = date.fromisoformat(s[:10])
+        return week_tag_from_date(d)
+    except ValueError:
+        return s
 
 
 def week_id_from_datetime(dt: datetime) -> str:
-    y, w, _ = dt.date().isocalendar()
-    return f"{y}-W{w:02d}"
+    return week_tag_from_date(dt.date())
 
 
 def week_markers(week_id: str) -> tuple[str, str]:
@@ -86,7 +101,6 @@ def find_week_span_in_plain(plain: str, week_id: str) -> tuple[int, int] | None:
     if j < 0:
         return None
     j_end = j + len(end_marker)
-    # Include end-of-line after the END marker only (LF or CRLF once).
     if j_end < len(plain) and plain[j_end] == "\r":
         j_end += 1
     if j_end < len(plain) and plain[j_end] == "\n":
@@ -168,8 +182,7 @@ def main() -> None:
     print(get_current_week_id())
 
 
-# Loose validation for week id in markers (e.g. 2026-W13)
-_WEEK_ID_RE = re.compile(r"^\d{4}-W\d{2}$")
+_WEEK_ID_RE = re.compile(r"^[A-Z][a-z]+-W\d+-\d{4}$")
 
 
 def is_well_formed_week_id(week_id: str) -> bool:

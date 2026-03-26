@@ -13,10 +13,11 @@ from phase4_insights.src.insights import (
     select_quotes,
     validate_pulse,
 )
+from shared.week_utils import current_week_tag
 
 
 def _week_tag() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    return current_week_tag()
 
 
 def _write_json(path: Path, payload: dict) -> None:
@@ -24,9 +25,24 @@ def _write_json(path: Path, payload: dict) -> None:
     path.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding="utf-8")
 
 
+def _resolve_themes_path(cfg: Phase4Config) -> str:
+    p = cfg.themes_path.strip()
+    if p and Path(p).exists():
+        return p
+    tag = current_week_tag()
+    cand = Path(f"phase2_theming/outputs/themes_{tag}.json")
+    if cand.exists():
+        return str(cand)
+    files = sorted(Path("phase2_theming/outputs").glob("themes_*.json"), key=lambda x: x.stat().st_mtime, reverse=True)
+    if not files:
+        raise FileNotFoundError("Missing phase2 themes outputs")
+    return str(files[0])
+
+
 def main() -> None:
     cfg = Phase4Config()
     errors = cfg.validate_rules()
+    themes_path = _resolve_themes_path(cfg)
 
     out_dir = Path(cfg.output_dir)
     tag = _week_tag()
@@ -49,7 +65,7 @@ def main() -> None:
 
     try:
         themes, mapping, distribution, processed_lookup = load_inputs(
-            cfg.themes_path,
+            themes_path,
             cfg.review_theme_map_path,
             cfg.processed_reviews_path,
             cfg.cluster_distribution_path,
@@ -92,7 +108,7 @@ def main() -> None:
             "generated_at_utc": datetime.now(timezone.utc).isoformat(),
             "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
             "status": "pass",
-            "input_themes_path": cfg.themes_path,
+            "input_themes_path": themes_path,
             "input_review_theme_map_path": cfg.review_theme_map_path,
             "input_cluster_distribution_path": cfg.cluster_distribution_path,
             "top_themes": top_themes,
@@ -113,7 +129,7 @@ def main() -> None:
                 "generated_at_utc": datetime.now(timezone.utc).isoformat(),
                 "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
                 "status": "fail",
-                "input_themes_path": cfg.themes_path,
+                "input_themes_path": themes_path,
                 "input_review_theme_map_path": cfg.review_theme_map_path,
                 "input_cluster_distribution_path": cfg.cluster_distribution_path,
                 "error": str(exc),

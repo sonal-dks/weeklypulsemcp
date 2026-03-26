@@ -12,12 +12,12 @@ from phase5_delivery.src.mcp_client import (
     DeliveryHardError,
     DeliveryTransientError,
     append_doc_via_mcp,
-    deliver_via_mcp,
 )
 
 
 def week_tag_now() -> str:
-    return datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    from shared.week_utils import current_week_tag
+    return current_week_tag()
 
 
 def load_validated_pulse(pulse_path: str, insights_path: str) -> str:
@@ -43,8 +43,8 @@ def validate_subject(subject: str) -> bool:
 
 
 def extract_date_from_pulse_path(pulse_path: str) -> str:
-    match = re.search(r"pulse_(\d{4}-\d{2}-\d{2})\.md$", pulse_path)
-    return match.group(1) if match else week_tag_now()
+    m = re.search(r"pulse_(.+)\.md$", pulse_path)
+    return m.group(1) if m else week_tag_now()
 
 
 def deliver_with_retries(
@@ -58,31 +58,19 @@ def deliver_with_retries(
     body_mime_type: str = "text/plain",
 ) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     attempts: list[dict[str, Any]] = []
-    transport = (cfg.gmail_mcp_transport or "http").strip().lower()
 
     for attempt in range(1, max_retries + 1):
         try:
-            if transport == "stdio":
-                result = deliver_via_gmail_mcp_stdio_sync(
-                    command=cfg.google_gmail_mcp_command.strip() or "npx",
-                    args=cfg.google_gmail_mcp_args_list(),
-                    extra_env=cfg.google_gmail_mcp_extra_env(),
-                    mode=mode,
-                    recipient=recipient,
-                    subject=subject,
-                    body=body,
-                    mime_type=body_mime_type,
-                )
-            else:
-                result = deliver_via_mcp(
-                    endpoint=cfg.gmail_mcp_endpoint,
-                    api_key=cfg.gmail_mcp_api_key,
-                    mode=mode,
-                    recipient=recipient,
-                    subject=subject,
-                    body=body,
-                    mime_type=body_mime_type,
-                )
+            result = deliver_via_gmail_mcp_stdio_sync(
+                command=cfg.google_gmail_mcp_command.strip() or "npx",
+                args=cfg.google_gmail_mcp_args_list(),
+                extra_env=cfg.google_gmail_mcp_extra_env(),
+                mode=mode,
+                recipient=recipient,
+                subject=subject,
+                body=body,
+                mime_type=body_mime_type,
+            )
             attempts.append({"attempt": attempt, "status": "success", "result": result})
             return result, attempts
         except DeliveryTransientError as exc:
@@ -95,8 +83,6 @@ def deliver_with_retries(
             attempts.append({"attempt": attempt, "status": "hard_error", "error": str(exc)})
             raise
         except Exception as exc:  # noqa: BLE001
-            if transport != "stdio":
-                raise
             attempts.append({"attempt": attempt, "status": "error", "error": str(exc)})
             if attempt < max_retries:
                 time.sleep(retry_backoff_seconds * attempt)
@@ -127,7 +113,10 @@ def append_doc_with_retries(
     retry_backoff_seconds: float,
 ) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     attempts: list[dict[str, Any]] = []
-    section_title = f"Groww Weekly Product Pulse - {week}"
+    # `pulse_body` already starts with "Weekly Groww Product Pulse - {date}".
+    # If we also add a section title here, Google Docs ends up with a duplicated
+    # header line. Keep the week block header markers only.
+    section_title = ""
     transport = (cfg.gdocs_mcp_transport or "http").strip().lower()
 
     for attempt in range(1, max_retries + 1):

@@ -6,7 +6,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Phase5Config(BaseSettings):
-    _ENV_FILE = Path(__file__).resolve().parent.parent / ".env"
+    _ENV_FILE = Path(__file__).resolve().parents[2] / ".env"
     model_config = SettingsConfigDict(
         env_file=str(_ENV_FILE),
         env_file_encoding="utf-8",
@@ -16,9 +16,9 @@ class Phase5Config(BaseSettings):
 
     delivery_mode: str = Field(default="draft_only", alias="DELIVERY_MODE")
     email_recipient: str = Field(default="", alias="EMAIL_RECIPIENT")
-    approved_recipients: str = Field(default="", alias="APPROVED_RECIPIENTS")
-    pulse_path: str = Field(default="phase4_insights/outputs/pulse_2026-03-24.md", alias="PULSE_PATH")
-    insights_path: str = Field(default="phase4_insights/outputs/insights_2026-03-24.json", alias="INSIGHTS_PATH")
+    delivery_trigger_token: str = Field(default="", alias="DELIVERY_TRIGGER_TOKEN")
+    pulse_path: str = Field(default="", alias="PULSE_PATH")
+    insights_path: str = Field(default="", alias="INSIGHTS_PATH")
     fee_data_path: str = Field(default="", alias="FEE_DATA_PATH")
     fee_scenario: str = Field(default="Mutual Fund Exit Load", alias="FEE_SCENARIO")
     output_dir: str = Field(default="phase5_delivery/outputs", alias="OUTPUT_DIR")
@@ -27,8 +27,8 @@ class Phase5Config(BaseSettings):
     google_doc_id: str = Field(default="", alias="GOOGLE_DOC_ID")
     google_doc_title: str = Field(default="Groww Weekly Product Pulse", alias="GOOGLE_DOC_TITLE")
 
-    # Google Docs: stdio MCP (@a-bonus/google-docs-mcp) or HTTP fallback (mcp_bridge)
-    # Default http: works with mcp_bridge or local fallback without Node. Set stdio for @a-bonus/google-docs-mcp.
+    # Google Docs: stdio MCP (@a-bonus/google-docs-mcp) or HTTP endpoint fallback.
+    # Default http allows custom MCP-compatible Docs endpoints in environments without Node.
     gdocs_mcp_transport: str = Field(default="http", alias="GDOCS_MCP_TRANSPORT")
     google_docs_mcp_command: str = Field(default="npx", alias="GOOGLE_DOCS_MCP_COMMAND")
     google_docs_mcp_package: str = Field(default="@a-bonus/google-docs-mcp", alias="GOOGLE_DOCS_MCP_PACKAGE")
@@ -41,19 +41,13 @@ class Phase5Config(BaseSettings):
     gdocs_mcp_endpoint: str = Field(default="", alias="GDOCS_MCP_ENDPOINT")
     gdocs_mcp_api_key: str = Field(default="", alias="GDOCS_MCP_API_KEY")
 
-    # Gmail: stdio GongRzhe MCP (https://github.com/GongRzhe/Gmail-MCP-Server) or HTTP mcp_bridge
-    gmail_mcp_transport: str = Field(default="http", alias="GMAIL_MCP_TRANSPORT")
+    # Gmail: MCP stdio only (GongRzhe server package)
     google_gmail_mcp_command: str = Field(default="npx", alias="GOOGLE_GMAIL_MCP_COMMAND")
     google_gmail_mcp_package: str = Field(
         default="@gongrzhe/server-gmail-autoauth-mcp",
         alias="GOOGLE_GMAIL_MCP_PACKAGE",
     )
     gmail_credentials_path: str = Field(default="", alias="GMAIL_CREDENTIALS_PATH")
-    gmail_mcp_endpoint: str = Field(default="", alias="GMAIL_MCP_ENDPOINT")
-    gmail_mcp_api_key: str = Field(default="", alias="GMAIL_MCP_API_KEY")
-
-    def approved_recipient_list(self) -> list[str]:
-        return [x.strip().lower() for x in self.approved_recipients.split(",") if x.strip()]
 
     def google_docs_mcp_args_list(self) -> list[str]:
         return ["-y", self.google_docs_mcp_package.strip()]
@@ -93,9 +87,6 @@ class Phase5Config(BaseSettings):
             errors.append("MAX_RETRIES must be >= 1")
         if self.retry_backoff_seconds <= 0:
             errors.append("RETRY_BACKOFF_SECONDS must be > 0")
-        allowlist = self.approved_recipient_list()
-        if allowlist and self.email_recipient.strip().lower() not in allowlist:
-            errors.append("EMAIL_RECIPIENT must be in APPROVED_RECIPIENTS")
 
         transport = (self.gdocs_mcp_transport or "http").strip().lower()
         if transport not in {"stdio", "http"}:
@@ -107,18 +98,7 @@ class Phase5Config(BaseSettings):
         else:
             errors.extend(self._validate_stdio_docs_auth())
 
-        gmail_t = (self.gmail_mcp_transport or "http").strip().lower()
-        if gmail_t not in {"stdio", "http"}:
-            errors.append("GMAIL_MCP_TRANSPORT must be stdio or http")
-
-        if self.delivery_mode == "send":
-            if gmail_t == "http" and not self.gmail_mcp_endpoint.strip():
-                errors.append(
-                    "GMAIL_MCP_ENDPOINT is required when GMAIL_MCP_TRANSPORT=http and DELIVERY_MODE=send"
-                )
-
-        if gmail_t == "stdio":
-            errors.extend(self._validate_stdio_gmail_auth())
+        errors.extend(self._validate_stdio_gmail_auth())
 
         return errors
 

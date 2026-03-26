@@ -20,7 +20,6 @@ def main() -> None:
         "phase4_insights": cfg.phase4_insights_path.format(week=week),
         "phase4_pulse": cfg.phase4_pulse_path.format(week=week),
         "phase5_doc_report": cfg.phase5_doc_report_path.format(week=week),
-        "phase5_email_report": cfg.phase5_email_report_path,
         "phase5_combined_payload": cfg.phase5_combined_payload_path.format(week=week),
     }
 
@@ -33,4 +32,3 @@ def main() -> None:
 
 if __name__ == "__main__":
     main()
-

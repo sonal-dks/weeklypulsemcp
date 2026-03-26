@@ -7,7 +7,7 @@ The deployed product is:
 - **Static UI:** `public/index.html` (repo root) → served at `/`
 - **API:** FastAPI app in `api.py`, mounted under `/api` via `api/index.py` (Mangum) and `vercel.json` rewrites
 
-Configure Vercel env vars from `phase5_delivery/.env.example`. On Vercel, **stdio MCP (`npx` + OAuth dirs) is not practical**; use **`GMAIL_MCP_TRANSPORT=http`** / **`GDOCS_MCP_TRANSPORT=http`** with a reachable `mcp_bridge` (or equivalent).
+Configure env vars from `phase5_delivery/.env.example`. Gmail delivery in this project is MCP stdio only. For Docs only, `GDOCS_MCP_TRANSPORT=http` can target a reachable custom endpoint.
 
 ## Local — Streamlit (optional)
 

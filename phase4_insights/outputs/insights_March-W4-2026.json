@@ -1,0 +1,38 @@
+{
+  "generated_at_utc": "2026-03-26T21:09:23.695687+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_March-W4-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "{'theme': 'Performance Issues', 'keywords': ['slow', 'lag', 'performance']}",
+      "frequency": 0,
+      "avg_sentiment": 0.0,
+      "negative_share": 0.0,
+      "score": 0.0
+    },
+    {
+      "theme": "{'theme': 'Customer Service', 'keywords': ['support', 'response', 'service']}",
+      "frequency": 0,
+      "avg_sentiment": 0.0,
+      "negative_share": 0.0,
+      "score": 0.0
+    },
+    {
+      "theme": "{'theme': 'App Features', 'keywords': ['feature', 'update', 'missing']}",
+      "frequency": 0,
+      "avg_sentiment": 0.0,
+      "negative_share": 0.0,
+      "score": 0.0
+    }
+  ],
+  "quotes": [],
+  "action_ideas": [
+    "Implement a dedicated task force to diagnose and fix core performance bottlenecks.",
+    "Streamline customer support workflows and enhance agent training for faster, better service.",
+    "Conduct user surveys and analyze feedback to prioritize development of most requested app features."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_March-W4-2026.md"
+}

@@ -1,6 +1,6 @@
 # Weekly Pulse MCP (`weeklypulsemcp`)
 
-**What this is:** an end-to-end **Python** pipeline that turns **public Google Play Store reviews** (Groww app: `com.nextbillion.groww`) into a **short weekly “product pulse”** for internal teams—top themes, user quotes, action ideas, optional **mutual-fund fee explainer**—then **writes it into one shared Google Doc** (ISO-week **upsert**: same calendar week is replaced in place; new weeks append) and **emails stakeholders** a **styled HTML** digest. Delivery can use **Google Docs / Gmail over MCP** (local `stdio` via `npx`, or **HTTP** via an optional `mcp_bridge` service).
+**What this is:** an end-to-end **Python** pipeline that turns **public Google Play Store reviews** (Groww app: `com.nextbillion.groww`) into a **short weekly “product pulse”** for internal teams—top themes, user quotes, action ideas, optional **mutual-fund fee explainer**—then **writes it into one shared Google Doc** (ISO-week **upsert**: same calendar week is replaced in place; new weeks append) and **emails stakeholders** a **styled HTML** digest. Delivery uses MCP: Docs via stdio (primary) with optional HTTP bridge fallback, Gmail via stdio MCP only.
 
 **Why it exists:** automate a consistent, gated weekly narrative from noisy review data while keeping outputs short (e.g. word limits, quote/action counts) and avoiding PII in generated text.
 
@@ -15,7 +15,7 @@
 | **3** | Clustering / theme consolidation |
 | **4** | Insights + one-page pulse (e.g. Gemini); strict structure (themes, quotes, actions) |
 | **4.5** | Optional MF fee scrape → bullets + source links |
-| **5** | **Delivery:** merge pulse + fees → Doc upsert (MCP) + **HTML email** (MCP or bridge) |
+| **5** | **Delivery:** merge pulse + fees → Doc upsert (MCP) + **HTML email** (MCP stdio) |
 | **6** | QA / run summary over artifact paths |
 | **7** | **Ops UI:** static web app + **FastAPI** (`/api/*`); production target **Vercel** |
 
@@ -26,7 +26,6 @@ Deeper contracts, diagrams, and tool links live in **[Architecture.md](./Archite
 ## Repository layout (high level)
 
 - `phase1_pipeline/` … `phase6_ops/` — backend jobs and outputs under each phase’s `outputs/` (where committed samples exist).
-- `mcp_bridge/` — optional **FastAPI** bridge to Google **Docs** + **Gmail** APIs (for **`http`** transport when stdio MCP is not available).
 - `phase7_ui/` — FastAPI routes, optional local **Streamlit** dev UI, shared **`send_service`**.
 - `api/` — **Vercel** serverless entry (`Mangum`) mounting the same API under `/api`.
 - `public/` — production **send console** (HTML/JS) served at `/` on Vercel.
@@ -63,7 +62,7 @@ Phase scripts and READMEs under each `phase*/README.md` have details.
 ## Phase 7 on Vercel (production UI)
 
 1. Import this repo in [Vercel](https://vercel.com) with **root directory = repository root**.
-2. Add **environment variables** matching `phase5_delivery/.env.example` (and any paths your deployment needs). Serverless **cannot rely on local `npx` + OAuth token dirs** the way a laptop can—prefer **`GMAIL_MCP_TRANSPORT=http`** / **`GDOCS_MCP_TRANSPORT=http`** pointing at a deployed **[mcp_bridge](./mcp_bridge)** (or equivalent).
+2. Add **environment variables** matching `phase5_delivery/.env.example` (and any paths your deployment needs). Serverless **cannot rely on local `npx` + OAuth token dirs** the way a laptop can—use a runtime that supports Gmail MCP stdio for actual sends; for Docs only, optional `GDOCS_MCP_TRANSPORT=http` can point to a custom endpoint.
 3. Deploy. Open the site: **`/`** = send console, **`/api/health`** = API check.
 
 **Live example:** [weeklypulsemcp.vercel.app](https://weeklypulsemcp.vercel.app) (set your own env vars in the Vercel project for doc/email delivery).

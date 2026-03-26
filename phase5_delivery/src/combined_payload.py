@@ -112,16 +112,12 @@ def build_combined_payload(
 
 
 def combined_payload_to_doc_text(combined: dict[str, Any]) -> str:
+    """Pulse-only text for Google Docs (no fee explainer — that goes only in email)."""
     date = str(combined.get("date", "")).strip()
     weekly = combined.get("weekly_pulse", {}) or {}
     themes = weekly.get("themes", []) or []
     quotes = weekly.get("quotes", []) or []
     actions = weekly.get("action_ideas", []) or []
-    fee_scenario = str(combined.get("fee_scenario", "")).strip()
-    fee_bullets = combined.get("explanation_bullets", []) or []
-    links = combined.get("source_links", []) or []
-    last_checked = str(combined.get("last_checked", "")).strip()
-    fee_funds_raw = combined.get("fee_funds") or []
 
     lines: list[str] = []
     lines.append(f"Weekly Groww Product Pulse - {date}")
@@ -137,37 +133,6 @@ def combined_payload_to_doc_text(combined: dict[str, Any]) -> str:
     lines.append("Action Ideas")
     for a in actions[:3]:
         lines.append(f"- {a}")
-
-    fee_funds: list[dict[str, Any]] = []
-    if isinstance(fee_funds_raw, list):
-        for row in fee_funds_raw:
-            if isinstance(row, dict) and str(row.get("fund_name", "")).strip():
-                fee_funds.append(row)
-
-    if fee_funds:
-        lines.append("")
-        lines.append("Fee Explainer")
-        lines.append("")
-        for block in fee_funds:
-            name = str(block.get("fund_name", "")).strip()
-            bullets = [str(b).strip() for b in (block.get("bullets") or []) if str(b).strip()][:3]
-            url = str(block.get("source_url", "")).strip()
-            lines.append(name)
-            for b in bullets:
-                lines.append(f"- {b}")
-            if url:
-                lines.append(f"Links: {url}")
-            lines.append("")
-    elif fee_scenario and fee_bullets:
-        lines.append("")
-        lines.append("Fee Explainer")
-        lines.append("")
-        for b in fee_bullets[:3]:
-            lines.append(f"- {b}")
-        if links:
-            lines.append("Links: " + " | ".join(links))
-        if last_checked:
-            lines.append(f"Last checked: {last_checked}")
     return "\n".join(lines).strip()
 
 

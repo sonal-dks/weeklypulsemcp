@@ -1,10 +1,14 @@
+from pathlib import Path
+
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
+
+_ENV_FILE = Path(__file__).resolve().parents[2] / ".env"
 
 
 class Phase4Config(BaseSettings):
     model_config = SettingsConfigDict(
-        env_file=".env",
+        env_file=str(_ENV_FILE),
         env_file_encoding="utf-8",
         case_sensitive=False,
         extra="ignore",
@@ -12,7 +16,7 @@ class Phase4Config(BaseSettings):
 
     gemini_api_key: str = Field(default="", alias="GEMINI_API_KEY")
     gemini_model: str = Field(default="gemini-2.5-flash", alias="GEMINI_MODEL")
-    themes_path: str = Field(default="phase2_theming/outputs/themes_2026-03-24.json", alias="THEMES_PATH")
+    themes_path: str = Field(default="", alias="THEMES_PATH")
     review_theme_map_path: str = Field(
         default="phase3_clustering/outputs/review_theme_map.json",
         alias="REVIEW_THEME_MAP_PATH",

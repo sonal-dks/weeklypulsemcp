@@ -3,7 +3,7 @@ from pathlib import Path
 from pydantic import Field
 from pydantic_settings import BaseSettings, SettingsConfigDict
 
-_ENV_FILE = Path(__file__).resolve().parent.parent / ".env"
+_ENV_FILE = Path(__file__).resolve().parents[2] / ".env"
 
 # Fixed list of 10 Quant funds to scrape — matches Architecture.md
 FUND_SOURCES: list[dict[str, str]] = [
