@@ -43,6 +43,27 @@ Week tag format is `Month-WN-Year` (example: `March-W4-2026`).
 
 ---
 
+## High-level architecture
+
+```mermaid
+flowchart LR
+  A[Google Play Reviews] --> B[Phase 1: Ingest + Clean]
+  B --> C[Phase 2: Theme Generation]
+  C --> D[Phase 3: Clustering]
+  D --> E[Phase 4: Insights + Pulse]
+  E --> F[Phase 4.5: Fee Scraper]
+  E --> G[Phase 5: Google Doc Upsert]
+  F --> H[Phase 7: UI Email Delivery]
+  E --> H
+  G --> I[Shared Weekly Google Doc]
+  H --> J[Recipients]
+  E --> K[Phase 6: QA + Run Summary]
+```
+
+For full detailed architecture, phase contracts, and deployment decisions, see [`Architecture.md`](./Architecture.md).
+
+---
+
 ## Architecture at runtime
 
 ### GitHub Actions (scheduler)
@@ -133,26 +154,6 @@ Optional:
 - `GOOGLE_DOC_ID` (to include Doc link in response)
 
 Then redeploy latest `main`.
-
----
-
-## Troubleshooting (common)
-
-### `MCP error -32000: Connection closed`
-
-Usually MCP subprocess startup issue. Check:
-
-- `GMAIL_CREDENTIALS_JSON_B64` is valid base64 from `~/.gmail-mcp/credentials.json`
-- OAuth keys are provided (`GCP_OAUTH_KEYS_JSON_B64` or Google client id/secret)
-- deployment is latest `main`
-
-### `Request failed` on frontend
-
-Check Vercel function logs for `/api/deliver`; frontend message is generic by design.
-
-### Scheduler fails at Phase 3 due missing Phase 2 outputs
-
-Root cause is Phase 2 failure (usually LLM key/quota/rate-limit). Fix Phase 2 first.
 
 ---
 
