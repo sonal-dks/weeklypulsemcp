@@ -59,14 +59,80 @@ async function ensureGmailCredentialsPath() {
   return target;
 }
 
-async function fetchJson(baseUrl, relativePath) {
-  const response = await fetch(`${baseUrl}${relativePath}`);
-  const data = await response.json().catch(() => ({}));
-  if (!response.ok) {
-    const detail = data && data.detail ? data.detail : response.statusText;
-    throw new Error(`Upstream ${relativePath} failed: ${detail}`);
+async function readJson(filePath) {
+  return JSON.parse(await fs.readFile(filePath, "utf8"));
+}
+
+async function readText(filePath) {
+  return await fs.readFile(filePath, "utf8");
+}
+
+async function fileExists(filePath) {
+  try {
+    await fs.access(filePath);
+    return true;
+  } catch {
+    return false;
   }
-  return data;
+}
+
+async function listWeeksFromArtifacts() {
+  const dir = path.join(process.cwd(), "phase4_insights", "outputs");
+  let files = [];
+  try {
+    files = await fs.readdir(dir);
+  } catch {
+    return [];
+  }
+  const insights = new Set();
+  const pulses = new Set();
+  for (const f of files) {
+    let m = f.match(/^insights_(.+)\.json$/);
+    if (m) insights.add(m[1]);
+    m = f.match(/^pulse_(.+)\.md$/);
+    if (m) pulses.add(m[1]);
+  }
+  const both = [...insights].filter((w) => pulses.has(w));
+  both.sort((a, b) => (a < b ? 1 : -1));
+  return both;
+}
+
+async function resolveWeekArtifacts(week) {
+  const outputs = path.join(process.cwd(), "phase4_insights", "outputs");
+  const pulsePath = path.join(outputs, `pulse_${week}.md`);
+  const insightsPath = path.join(outputs, `insights_${week}.json`);
+  if (await fileExists(pulsePath) && await fileExists(insightsPath)) {
+    return { pulsePath, insightsPath };
+  }
+  throw new Error(`No pulse/insights artifacts found for week ${week}`);
+}
+
+async function loadFeePreviewText(week, fundNames) {
+  const feePath = path.join(process.cwd(), "phase4_5_fee_scraper", "outputs", `mf_fee_data_${week}.json`);
+  if (!(await fileExists(feePath))) {
+    return fundNames.length ? "Fee Explainer\n\nNo fee data available for selected week." : "None selected.";
+  }
+  const fee = await readJson(feePath);
+  const rows = Array.isArray(fee.funds) ? fee.funds : [];
+  const selected = new Set((fundNames || []).map((x) => String(x)));
+  const lines = ["Fee Explainer", ""];
+  let picked = 0;
+  for (const row of rows) {
+    const name = String((row && row.fund_name) || "").trim();
+    if (!name) continue;
+    if (selected.size && !selected.has(name)) continue;
+    if (String(row.status || "") !== "success") continue;
+    lines.push(name);
+    const bullets = Array.isArray(row.exit_load_bullets) ? row.exit_load_bullets : [];
+    for (const b of bullets.slice(0, 3)) {
+      lines.push(`- ${String(b).trim()}`);
+    }
+    if (row.source_url) lines.push(`Links: ${String(row.source_url)}`);
+    lines.push("");
+    picked += 1;
+  }
+  if (!picked) return selected.size ? "Fee Explainer\n\nNone of the selected funds have successful fee data." : "None selected.";
+  return lines.join("\n").trim();
 }
 
 async function sendViaGmailMcp({ to, subject, htmlBody }) {
@@ -131,29 +197,22 @@ module.exports = async (req, res) => {
       return json(res, 400, { detail: `Invalid email(s): ${bad.join(", ")}` });
     }
 
-    const proto = req.headers["x-forwarded-proto"] || "https";
-    const host = req.headers["x-forwarded-host"] || req.headers.host;
-    const baseUrl = `${proto}://${host}`;
-
     let week = String(requestedWeek || "").trim();
     if (!week) {
-      const weeks = await fetchJson(baseUrl, "/api/weeks");
-      week = (weeks.weeks && weeks.weeks[0]) || "";
+      const weeks = await listWeeksFromArtifacts();
+      week = weeks[0] || "";
       if (!week) {
         throw new Error("No weeks available to deliver.");
       }
     }
 
-    const pulse = await fetchJson(baseUrl, `/api/pulse/${encodeURIComponent(week)}`);
-    const fundNamesCsv = Array.isArray(fund_names) ? fund_names.join(",") : "";
-    const fee = await fetchJson(
-      baseUrl,
-      `/api/preview/fee?fund_names=${encodeURIComponent(fundNamesCsv)}&week=${encodeURIComponent(week)}`
-    );
+    const { pulsePath } = await resolveWeekArtifacts(week);
+    const pulseText = await readText(pulsePath);
+    const feeText = await loadFeePreviewText(week, Array.isArray(fund_names) ? fund_names : []);
 
     const subject = `Groww Weekly Product Pulse - ${week}`;
-    const pulseEsc = String(pulse.markdown || "").replace(/[<>&]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]));
-    const feeEsc = String(fee.text || "None selected.").replace(/[<>&]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]));
+    const pulseEsc = String(pulseText || "").replace(/[<>&]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]));
+    const feeEsc = String(feeText || "None selected.").replace(/[<>&]/g, (c) => ({ "<": "&lt;", ">": "&gt;", "&": "&amp;" }[c]));
     const docId = (process.env.GOOGLE_DOC_ID || "").trim();
     const docUrl = docId ? `https://docs.google.com/document/d/${docId}/edit` : "";
     const htmlBody = `
