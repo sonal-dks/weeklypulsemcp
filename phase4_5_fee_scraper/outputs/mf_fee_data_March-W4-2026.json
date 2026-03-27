@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-26T21:02:19.904812+00:00",
+  "generated_at_utc": "2026-03-27T13:16:43.605620+00:00",
   "phase": "Phase 4.5 (Backend): Mutual Fund Fee Scraper",
   "week": "March-W4-2026",
   "status": "pass",
@@ -18,7 +18,7 @@
       "parse_method": "next_data",
       "fetch_method": "playwright",
       "source_url": "https://groww.in/mutual-funds/quant-small-cap-fund-direct-plan-growth",
-      "last_scraped": "2026-03-26T21:02:19.904812+00:00",
+      "last_scraped": "2026-03-27T13:16:43.605620+00:00",
       "error": null
     },
     {
@@ -32,7 +32,7 @@
       "parse_method": "next_data",
       "fetch_method": "playwright",
       "source_url": "https://groww.in/mutual-funds/quant-infrastructure-fund-direct-growth",
-      "last_scraped": "2026-03-26T21:02:19.904812+00:00",
+      "last_scraped": "2026-03-27T13:16:43.605620+00:00",
       "error": null
     },
     {
@@ -46,7 +46,7 @@
       "parse_method": "next_data",
       "fetch_method": "playwright",
       "source_url": "https://groww.in/mutual-funds/quant-flexi-cap-fund-direct-growth",
-      "last_scraped": "2026-03-26T21:02:19.904812+00:00",
+      "last_scraped": "2026-03-27T13:16:43.605620+00:00",
       "error": null
     },
     {
@@ -60,7 +60,7 @@
       "parse_method": "html_table",
       "fetch_method": "playwright",
       "source_url": "https://groww.in/mutual-funds/quant-elss-tax-saver-fund-direct-growth",
-      "last_scraped": "2026-03-26T21:02:19.904812+00:00",
+      "last_scraped": "2026-03-27T13:16:43.605620+00:00",
       "error": null
     },
     {
@@ -74,7 +74,7 @@
       "parse_method": "next_data",
       "fetch_method": "playwright",
       "source_url": "https://groww.in/mutual-funds/quant-large-cap-fund-direct-growth",
-      "last_scraped": "2026-03-26T21:02:19.904812+00:00",
+      "last_scraped": "2026-03-27T13:16:43.605620+00:00",
       "error": null
     },
     {
@@ -88,7 +88,7 @@
       "parse_method": "next_data",
       "fetch_method": "playwright",
       "source_url": "https://groww.in/mutual-funds/quant-esg-integration-strategy-fund-direct-growth",
-      "last_scraped": "2026-03-26T21:02:19.904812+00:00",
+      "last_scraped": "2026-03-27T13:16:43.605620+00:00",
       "error": null
     },
     {
@@ -102,7 +102,7 @@
       "parse_method": "next_data",
       "fetch_method": "playwright",
       "source_url": "https://groww.in/mutual-funds/quant-mid-cap-fund-direct-growth",
-      "last_scraped": "2026-03-26T21:02:19.904812+00:00",
+      "last_scraped": "2026-03-27T13:16:43.605620+00:00",
       "error": null
     },
     {
@@ -116,7 +116,7 @@
       "parse_method": "next_data",
       "fetch_method": "playwright",
       "source_url": "https://groww.in/mutual-funds/quant-multi-cap-fund-direct-growth",
-      "last_scraped": "2026-03-26T21:02:19.904812+00:00",
+      "last_scraped": "2026-03-27T13:16:43.605620+00:00",
       "error": null
     },
     {
@@ -130,7 +130,7 @@
       "parse_method": "next_data",
       "fetch_method": "playwright",
       "source_url": "https://groww.in/mutual-funds/quant-aggressive-hybrid-fund-direct-growth",
-      "last_scraped": "2026-03-26T21:02:19.904812+00:00",
+      "last_scraped": "2026-03-27T13:16:43.605620+00:00",
       "error": null
     },
     {
@@ -144,7 +144,7 @@
       "parse_method": "next_data",
       "fetch_method": "playwright",
       "source_url": "https://groww.in/mutual-funds/quant-focused-fund-direct-growth",
-      "last_scraped": "2026-03-26T21:02:19.904812+00:00",
+      "last_scraped": "2026-03-27T13:16:43.605620+00:00",
       "error": null
     }
   ]

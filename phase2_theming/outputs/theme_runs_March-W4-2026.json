@@ -1,0 +1,145 @@
+{
+  "generated_at_utc": "2026-03-27T13:14:28.654847+00:00",
+  "phase": "Phase 2 (Backend): Theme Generation (LLM)",
+  "status": "pass",
+  "input_processed_reviews_path": "phase1_pipeline/outputs/processed_reviews.json",
+  "theme_count": 5,
+  "model": "llama-3.3-70b-versatile",
+  "review_count_input": 928,
+  "review_count_used": 928,
+  "batch_count": 6,
+  "candidate_theme_count": 30,
+  "batch_results": [
+    {
+      "batch_index": 1,
+      "batch_size": 160,
+      "review_count_used": 160,
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "pass"
+        }
+      ],
+      "themes": [
+        "User Experience",
+        "Fees and Charges",
+        "Trading Issues",
+        "Customer Support",
+        "Investment Options"
+      ]
+    },
+    {
+      "batch_index": 2,
+      "batch_size": 160,
+      "review_count_used": 160,
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "pass"
+        }
+      ],
+      "themes": [
+        "User Experience",
+        "Fees and Charges",
+        "Trading Issues",
+        "Customer Support",
+        "Investment Options"
+      ]
+    },
+    {
+      "batch_index": 3,
+      "batch_size": 160,
+      "review_count_used": 160,
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "pass"
+        }
+      ],
+      "themes": [
+        "User Experience",
+        "Fees and Charges",
+        "Investment Options",
+        "Technical Issues",
+        "Customer Support"
+      ]
+    },
+    {
+      "batch_index": 4,
+      "batch_size": 160,
+      "review_count_used": 160,
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "fail",
+          "error": "Groq API error 429: {\"error\":{\"message\":\"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kmfgsy1vea9t3hbtyhjjf9xf` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 10547, Requested 3857. Please try again in 12.02s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n"
+        },
+        {
+          "attempt": 2,
+          "status": "pass"
+        }
+      ],
+      "themes": [
+        "Fees",
+        "Trading",
+        "User Experience",
+        "Customer Support",
+        "Investment Options"
+      ]
+    },
+    {
+      "batch_index": 5,
+      "batch_size": 160,
+      "review_count_used": 160,
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "fail",
+          "error": "Groq API error 429: {\"error\":{\"message\":\"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kmfgsy1vea9t3hbtyhjjf9xf` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11734, Requested 3681. Please try again in 17.075s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n"
+        },
+        {
+          "attempt": 2,
+          "status": "pass"
+        }
+      ],
+      "themes": [
+        "User Experience",
+        "Investment Options",
+        "Customer Support",
+        "Technical Issues",
+        "Fees and Charges"
+      ]
+    },
+    {
+      "batch_index": 6,
+      "batch_size": 128,
+      "review_count_used": 128,
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "fail",
+          "error": "Groq API error 429: {\"error\":{\"message\":\"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kmfgsy1vea9t3hbtyhjjf9xf` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11673, Requested 2996. Please try again in 13.345s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n"
+        },
+        {
+          "attempt": 2,
+          "status": "pass"
+        }
+      ],
+      "themes": [
+        "User Experience",
+        "Trading Platform",
+        "Customer Support",
+        "Fees and Charges",
+        "Investment Options"
+      ]
+    }
+  ],
+  "final_attempts": [
+    {
+      "attempt": 1,
+      "status": "pass"
+    }
+  ],
+  "themes_path": "phase2_theming/outputs/themes_March-W4-2026.json",
+  "review_theme_map_path": "phase2_theming/outputs/review_theme_map_March-W4-2026.json"
+}

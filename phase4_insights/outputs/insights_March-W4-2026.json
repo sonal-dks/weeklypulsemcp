@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-26T21:09:23.695687+00:00",
+  "generated_at_utc": "2026-03-27T13:16:43.294674+00:00",
   "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
   "status": "pass",
   "input_themes_path": "phase2_theming/outputs/themes_March-W4-2026.json",
@@ -7,32 +7,54 @@
   "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
   "top_themes": [
     {
-      "theme": "{'theme': 'Performance Issues', 'keywords': ['slow', 'lag', 'performance']}",
-      "frequency": 0,
-      "avg_sentiment": 0.0,
-      "negative_share": 0.0,
-      "score": 0.0
+      "theme": "User Experience",
+      "frequency": 510,
+      "avg_sentiment": 0.2517,
+      "negative_share": 0.2255,
+      "score": 315.0196
     },
     {
-      "theme": "{'theme': 'Customer Service', 'keywords': ['support', 'response', 'service']}",
-      "frequency": 0,
-      "avg_sentiment": 0.0,
-      "negative_share": 0.0,
-      "score": 0.0
+      "theme": "Trading Issues",
+      "frequency": 146,
+      "avg_sentiment": 0.0935,
+      "negative_share": 0.3699,
+      "score": 102.3945
     },
     {
-      "theme": "{'theme': 'App Features', 'keywords': ['feature', 'update', 'missing']}",
-      "frequency": 0,
-      "avg_sentiment": 0.0,
-      "negative_share": 0.0,
-      "score": 0.0
+      "theme": "Investment Options",
+      "frequency": 109,
+      "avg_sentiment": 0.34,
+      "negative_share": 0.1927,
+      "score": 73.1064
     }
   ],
-  "quotes": [],
+  "quotes": [
+    {
+      "review_id": "ed608ac6-a3b0-4010-9dbf-fba1d7f79d6d",
+      "theme": "User Experience",
+      "text": "its very good app clean and simple but it will be more beneficial if they add grouping system in watchlists like kite have launched recently",
+      "date": "2026-03-11",
+      "rating": 5
+    },
+    {
+      "review_id": "d8edfe75-4d0d-413e-8739-c5385dae2ffa",
+      "theme": "Trading Issues",
+      "text": "Excellent application. unfortunately I closed my trading account. Now I want to reopen my trading account. But there are no option to reopen",
+      "date": "2026-03-21",
+      "rating": 1
+    },
+    {
+      "review_id": "aad405d6-55f8-4f18-8b64-046521d9ceb5",
+      "theme": "Investment Options",
+      "text": "Overall Good but must be a separate Section for all Portfolio. where I can see all my investment in one place (ETF ,MF , Stocks , Bonds etc.)",
+      "date": "2026-03-20",
+      "rating": 1
+    }
+  ],
   "action_ideas": [
-    "Implement a dedicated task force to diagnose and fix core performance bottlenecks.",
-    "Streamline customer support workflows and enhance agent training for faster, better service.",
-    "Conduct user surveys and analyze feedback to prioritize development of most requested app features."
+    "Enhance watchlist functionality by adding a grouping system for better organization.",
+    "Create a unified portfolio section to display all investment types (stocks, ETFs, MFs) in one place.",
+    "Develop a clear, accessible feature for users to reopen previously closed trading accounts."
   ],
   "pulse_path": "phase4_insights/outputs/pulse_March-W4-2026.md"
 }

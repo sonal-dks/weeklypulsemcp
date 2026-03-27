@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-24T08:45:59.249782+00:00",
+  "generated_at_utc": "2026-03-27T13:13:14.992089+00:00",
   "phase": "Phase 1 (Backend): Foundation + Ingestion + Cleaning (Combined)",
   "status": "pass",
   "config": {
@@ -8,7 +8,7 @@
     "theme_count": 5,
     "max_themes": 5,
     "top_reported_themes": 3,
-    "email_recipient": "owner@example.com",
+    "email_recipient": "kumarsonal100@gmail.com",
     "playstore_lang": "en",
     "playstore_country": "in",
     "batch_size": 200,

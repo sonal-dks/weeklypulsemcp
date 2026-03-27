@@ -1,8 +1,8 @@
 {
-  "generated_at_utc": "2026-03-26T21:07:23.848949+00:00",
+  "generated_at_utc": "2026-03-27T13:18:17.769815+00:00",
   "phase": "Phase 6 (Backend): Orchestration, Observability, and QA",
   "week": "March-W4-2026",
-  "status": "fail",
+  "status": "pass",
   "inputs": {
     "config_check": "phase1_pipeline/outputs/config_check.json",
     "themes": "phase2_theming/outputs/themes_March-W4-2026.json",
@@ -12,8 +12,14 @@
     "doc_append_report": "phase5_delivery/outputs/doc_append_report_March-W4-2026.json"
   },
   "high_level_metrics": {
-    "theme_summary_counts": {},
-    "word_count": 155,
+    "theme_summary_counts": {
+      "User Experience": 732,
+      "Fees": 3,
+      "Customer Support": 52,
+      "Investment Options": 53,
+      "Trading Issues": 88
+    },
+    "word_count": 211,
     "doc_append_status": "pass"
   },
   "combined_payload_snapshot": {
@@ -35,19 +41,19 @@
       "details": {
         "theme_count": 5,
         "themes": [
-          "{'theme': 'Performance Issues', 'keywords': ['slow', 'lag', 'performance']}",
-          "{'theme': 'Customer Service', 'keywords': ['support', 'response', 'service']}",
-          "{'theme': 'App Features', 'keywords': ['feature', 'update', 'missing']}",
-          "{'theme': 'Pricing Concerns', 'keywords': ['fee', 'charge', 'expensive']}",
-          "{'theme': 'User Interface', 'keywords': ['ui', 'design', 'navigation']}"
+          "User Experience",
+          "Fees",
+          "Customer Support",
+          "Investment Options",
+          "Trading Issues"
         ]
       }
     },
     {
       "gate": "insights_3_quotes_3_actions",
-      "status": "fail",
+      "status": "pass",
       "details": {
-        "quotes_count": 0,
+        "quotes_count": 3,
         "action_ideas_count": 3
       }
     },
@@ -55,7 +61,7 @@
       "gate": "pulse_wordcount_and_pii",
       "status": "pass",
       "details": {
-        "word_count": 155,
+        "word_count": 211,
         "pii_pattern_matches": 0
       }
     },

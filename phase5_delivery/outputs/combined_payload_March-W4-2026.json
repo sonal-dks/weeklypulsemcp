@@ -1,0 +1,25 @@
+{
+  "date": "March-W4-2026",
+  "weekly_pulse": {
+    "themes": [
+      "User Experience",
+      "Trading Issues",
+      "Investment Options"
+    ],
+    "quotes": [
+      "its very good app clean and simple but it will be more beneficial if they add grouping system in watchlists like kite have launched recently",
+      "Excellent application. unfortunately I closed my trading account. Now I want to reopen my trading account. But there are no option to reopen",
+      "Overall Good but must be a separate Section for all Portfolio. where I can see all my investment in one place (ETF ,MF , Stocks , Bonds etc.)"
+    ],
+    "action_ideas": [
+      "Enhance watchlist functionality by adding a grouping system for better organization.",
+      "Create a unified portfolio section to display all investment types (stocks, ETFs, MFs) in one place.",
+      "Develop a clear, accessible feature for users to reopen previously closed trading accounts."
+    ]
+  },
+  "fee_scenario": "",
+  "explanation_bullets": [],
+  "source_links": [],
+  "last_checked": "March-W4-2026",
+  "fee_funds": []
+}

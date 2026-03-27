@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-24T08:46:07.880178+00:00",
+  "generated_at_utc": "2026-03-27T13:13:21.087120+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-03-04",
-  "max_review_date": "2026-03-23",
+  "min_review_date": "2026-03-05",
+  "max_review_date": "2026-03-26",
   "sample_records": [
     {
-      "review_id": "1ecd4bd0-5ae6-44e5-80c0-a9ed973cb8b1",
+      "review_id": "ce18a6b3-1273-4586-815e-1359c0f248d9",
       "rating": 5,
-      "text": "excellent",
-      "date": "2026-03-23",
+      "text": "cool best mobile application",
+      "date": "2026-03-26",
       "helpful_count": 0,
-      "ingested_at": "2026-03-24T08:46:07.865060+00:00"
+      "ingested_at": "2026-03-27T13:13:21.041940+00:00"
     },
     {
-      "review_id": "35debc3c-43a8-4011-8d6f-16071b3d1d13",
+      "review_id": "d21a08ae-060b-484e-bcfb-dd8c4629cee6",
       "rating": 5,
-      "text": "goog अभी तक फायदा नहीं हुआ",
-      "date": "2026-03-23",
+      "text": "this app is great iam extremely likely this app because the app interface was absolutely great and easy process to get loan",
+      "date": "2026-03-26",
       "helpful_count": 0,
-      "ingested_at": "2026-03-24T08:46:07.865072+00:00"
+      "ingested_at": "2026-03-27T13:13:21.041959+00:00"
     },
     {
-      "review_id": "8cada0d0-004d-4c3f-ad34-3dbf36abd929",
-      "rating": 5,
-      "text": "Very easy to use & operate",
-      "date": "2026-03-23",
+      "review_id": "89fba4a8-242e-45af-8edd-f35a3beab5a1",
+      "rating": 1,
+      "text": "no good",
+      "date": "2026-03-26",
       "helpful_count": 0,
-      "ingested_at": "2026-03-24T08:46:07.865077+00:00"
+      "ingested_at": "2026-03-27T13:13:21.041965+00:00"
     },
     {
-      "review_id": "edc98848-a45a-49d5-a573-cb51dd6189ee",
-      "rating": 5,
-      "text": "good",
-      "date": "2026-03-23",
+      "review_id": "174ed7d6-0b67-43e4-8f99-872248740ccf",
+      "rating": 1,
+      "text": "WHY Tracking external funds is currently paused ???? You could have done it from the beginning. It's not right to suddenly stop it now.",
+      "date": "2026-03-26",
       "helpful_count": 0,
-      "ingested_at": "2026-03-24T08:46:07.865079+00:00"
+      "ingested_at": "2026-03-27T13:13:21.041973+00:00"
     },
     {
-      "review_id": "8d3d7f21-48f9-4dfc-93b6-f01a899e026f",
+      "review_id": "e4a54319-64b9-4066-9aec-af110e189bfe",
       "rating": 5,
-      "text": "wonderful app for mutual fund n sip",
-      "date": "2026-03-23",
+      "text": "good 😊",
+      "date": "2026-03-26",
       "helpful_count": 0,
-      "ingested_at": "2026-03-24T08:46:07.865082+00:00"
+      "ingested_at": "2026-03-27T13:13:21.041979+00:00"
     }
   ]
 }
