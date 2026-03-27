@@ -59,6 +59,57 @@ async function ensureGmailCredentialsPath() {
   return target;
 }
 
+async function ensureGcpOAuthKeysFile(homeDir) {
+  const targetDir = path.join(homeDir, ".gmail-mcp");
+  const target = path.join(targetDir, "gcp-oauth.keys.json");
+
+  if (await fileExists(target)) {
+    return target;
+  }
+
+  const rawB64 = (process.env.GCP_OAUTH_KEYS_JSON_B64 || process.env.GMAIL_OAUTH_KEYS_JSON_B64 || "").trim();
+  const rawJson = (process.env.GCP_OAUTH_KEYS_JSON || process.env.GMAIL_OAUTH_KEYS_JSON || "").trim();
+  let payload = "";
+
+  if (rawB64) {
+    try {
+      payload = Buffer.from(rawB64, "base64").toString("utf8");
+    } catch {
+      throw new Error("Invalid GCP_OAUTH_KEYS_JSON_B64.");
+    }
+  } else if (rawJson) {
+    payload = rawJson;
+  } else {
+    const cid = (process.env.GOOGLE_CLIENT_ID || "").trim();
+    const csec = (process.env.GOOGLE_CLIENT_SECRET || "").trim();
+    if (!cid || !csec) {
+      throw new Error(
+        "Missing OAuth keys. Set GCP_OAUTH_KEYS_JSON_B64 (preferred) or GOOGLE_CLIENT_ID + GOOGLE_CLIENT_SECRET."
+      );
+    }
+    // Minimal OAuth client keys structure used by Gmail MCP auth loader.
+    payload = JSON.stringify({
+      installed: {
+        client_id: cid,
+        client_secret: csec,
+        auth_uri: "https://accounts.google.com/o/oauth2/auth",
+        token_uri: "https://oauth2.googleapis.com/token",
+        redirect_uris: ["http://localhost"],
+      },
+    });
+  }
+
+  try {
+    JSON.parse(payload);
+  } catch {
+    throw new Error("Invalid OAuth keys JSON.");
+  }
+
+  await fs.mkdir(targetDir, { recursive: true });
+  await fs.writeFile(target, payload, "utf8");
+  return target;
+}
+
 async function readJson(filePath) {
   return JSON.parse(await fs.readFile(filePath, "utf8"));
 }
@@ -144,6 +195,7 @@ async function sendViaGmailMcp({ to, subject, htmlBody }) {
   await fs.mkdir(homeTmp, { recursive: true });
   await fs.mkdir(xdgTmp, { recursive: true });
   await fs.mkdir(npmCache, { recursive: true });
+  await ensureGcpOAuthKeysFile(homeTmp);
 
   const transport = new StdioClientTransport({
     command: process.env.GOOGLE_GMAIL_MCP_COMMAND || "npx",
