@@ -78,11 +78,28 @@ def _ensure_gmail_credentials_file_from_env() -> None:
     os.environ["GMAIL_CREDENTIALS_PATH"] = target
 
 
+def _log_paths() -> tuple[Path, Path]:
+    """
+    Resolve writable log paths.
+
+    Vercel and other serverless runtimes allow writes under /tmp only.
+    Locally, keep using project relative paths.
+    """
+    if os.environ.get("VERCEL", "").strip() == "1":
+        return Path("/tmp/ui_delivery_runs.jsonl"), Path("/tmp/ui_load_errors.log")
+    return UI_DELIVERY_LOG, UI_ERRORS_LOG
+
+
 def log_load_error(error: str) -> None:
-    UI_ERRORS_LOG.parent.mkdir(parents=True, exist_ok=True)
+    _, err_path = _log_paths()
     payload = {"timestamp_utc": datetime.now(timezone.utc).isoformat(), "error": error}
-    with UI_ERRORS_LOG.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(payload, ensure_ascii=False) + "\n")
+    try:
+        err_path.parent.mkdir(parents=True, exist_ok=True)
+        with err_path.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(payload, ensure_ascii=False) + "\n")
+    except Exception:
+        # Logging must never fail request handling.
+        pass
 
 
 def parse_recipients(raw_text: str) -> list[str]:
@@ -235,7 +252,12 @@ def run_console_delivery(
         "doc_url": doc_url,
         "email_attempts": email_attempts,
     }
-    UI_DELIVERY_LOG.parent.mkdir(parents=True, exist_ok=True)
-    with UI_DELIVERY_LOG.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(run_report, ensure_ascii=False) + "\n")
+    out_path, _ = _log_paths()
+    try:
+        out_path.parent.mkdir(parents=True, exist_ok=True)
+        with out_path.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(run_report, ensure_ascii=False) + "\n")
+    except Exception:
+        # Best-effort telemetry only.
+        pass
     return run_report
