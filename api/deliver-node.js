@@ -137,12 +137,28 @@ async function loadFeePreviewText(week, fundNames) {
 
 async function sendViaGmailMcp({ to, subject, htmlBody }) {
   const gmailPath = await ensureGmailCredentialsPath();
+  const tmp = os.tmpdir();
+  const homeTmp = path.join(tmp, "home");
+  const xdgTmp = path.join(tmp, "xdg");
+  const npmCache = path.join(tmp, "npm-cache");
+  await fs.mkdir(homeTmp, { recursive: true });
+  await fs.mkdir(xdgTmp, { recursive: true });
+  await fs.mkdir(npmCache, { recursive: true });
+
   const transport = new StdioClientTransport({
     command: process.env.GOOGLE_GMAIL_MCP_COMMAND || "npx",
     args: ["-y", process.env.GOOGLE_GMAIL_MCP_PACKAGE || "@gongrzhe/server-gmail-autoauth-mcp"],
     env: {
       ...process.env,
       GMAIL_CREDENTIALS_PATH: gmailPath,
+      HOME: homeTmp,
+      XDG_CONFIG_HOME: xdgTmp,
+      NPM_CONFIG_CACHE: npmCache,
+      npm_config_cache: npmCache,
+      npm_config_update_notifier: "false",
+      npm_config_audit: "false",
+      npm_config_fund: "false",
+      CI: "1",
       PYTHONUNBUFFERED: "1",
     },
   });
