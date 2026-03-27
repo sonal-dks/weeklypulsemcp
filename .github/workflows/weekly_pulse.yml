@@ -8,10 +8,8 @@ on:
 
 jobs:
   run:
-    # Google Docs MCP stdio requires persisted OAuth tokens at:
-    #   ~/.config/google-docs-mcp/
     # Gmail MCP is NOT used here — email is sent from the UI only.
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
@@ -25,12 +23,24 @@ jobs:
       - name: Install dependencies (scheduler sub-phase)
         run: bash scheduler/scripts/install_deps.sh
 
+      - name: Materialize Google service account key
+        run: |
+          KEY_PATH="${RUNNER_TEMP}/google-sa.json"
+          printf '%s' '${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}' > "${KEY_PATH}"
+          echo "GOOGLE_APPLICATION_CREDENTIALS=${KEY_PATH}" >> "${GITHUB_ENV}"
+          echo "SERVICE_ACCOUNT_PATH=${KEY_PATH}" >> "${GITHUB_ENV}"
+
       - name: Run weekly pipeline (scheduler sub-phase)
         env:
           GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GOOGLE_DOC_ID: ${{ secrets.GOOGLE_DOC_ID }}
+          EMAIL_RECIPIENT: ${{ secrets.EMAIL_RECIPIENT }}
+          DELIVERY_MODE: ${{ secrets.DELIVERY_MODE }}
+          GDOCS_MCP_TRANSPORT: ${{ secrets.GDOCS_MCP_TRANSPORT }}
           GOOGLE_CLIENT_ID: ${{ secrets.GOOGLE_CLIENT_ID }}
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
+          GOOGLE_APPLICATION_CREDENTIALS: ${{ env.GOOGLE_APPLICATION_CREDENTIALS }}
+          SERVICE_ACCOUNT_PATH: ${{ env.SERVICE_ACCOUNT_PATH }}
           PYTHONPATH: "."
         run: bash scheduler/scripts/run_weekly_pipeline.sh
