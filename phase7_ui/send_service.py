@@ -6,7 +6,10 @@ Email: pulse + selected fee explainer (varies per send).
 
 from __future__ import annotations
 
+import base64
+import binascii
 import json
+import os
 import re
 from datetime import datetime, timezone
 from pathlib import Path
@@ -34,6 +37,45 @@ from phase5_delivery.src.path_resolver import (
 
 UI_DELIVERY_LOG = Path("phase7_ui/outputs/ui_delivery_runs.jsonl")
 UI_ERRORS_LOG = Path("phase7_ui/outputs/ui_load_errors.log")
+
+
+def _ensure_gmail_credentials_file_from_env() -> None:
+    """
+    Materialize Gmail MCP credentials from env for serverless runtimes (e.g., Vercel).
+
+    Priority:
+    1) Existing GMAIL_CREDENTIALS_PATH file (do nothing)
+    2) GMAIL_CREDENTIALS_JSON_B64 (base64 JSON) -> write /tmp/gmail-credentials.json
+    3) GMAIL_CREDENTIALS_JSON (raw JSON) -> write /tmp/gmail-credentials.json
+    """
+    existing = os.environ.get("GMAIL_CREDENTIALS_PATH", "").strip()
+    if existing and Path(existing).is_file():
+        return
+
+    target = "/tmp/gmail-credentials.json"
+    raw_b64 = os.environ.get("GMAIL_CREDENTIALS_JSON_B64", "").strip()
+    raw_json = os.environ.get("GMAIL_CREDENTIALS_JSON", "").strip()
+    payload = ""
+
+    if raw_b64:
+        try:
+            payload = base64.b64decode(raw_b64).decode("utf-8")
+        except (binascii.Error, UnicodeDecodeError) as exc:
+            raise ValueError("Invalid GMAIL_CREDENTIALS_JSON_B64. Must be valid base64-encoded JSON.") from exc
+    elif raw_json:
+        payload = raw_json
+    else:
+        return
+
+    try:
+        parsed = json.loads(payload)
+        if not isinstance(parsed, dict):
+            raise ValueError("Gmail credentials JSON must be an object.")
+    except json.JSONDecodeError as exc:
+        raise ValueError("Invalid Gmail credentials JSON in environment.") from exc
+
+    Path(target).write_text(json.dumps(parsed, ensure_ascii=False), encoding="utf-8")
+    os.environ["GMAIL_CREDENTIALS_PATH"] = target
 
 
 def log_load_error(error: str) -> None:
@@ -126,6 +168,7 @@ def run_console_delivery(
     delivery_token: str,
 ) -> dict[str, Any]:
     """Send email only (no Doc append here — Doc is handled by the scheduler)."""
+    _ensure_gmail_credentials_file_from_env()
     cfg = Phase5Config()
     if not recipients:
         raise ValueError("At least one recipient is required")
