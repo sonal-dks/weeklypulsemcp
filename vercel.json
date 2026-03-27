@@ -1,8 +1,14 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [{ "source": "/api/(.*)", "destination": "/api/index" }],
+  "rewrites": [
+    { "source": "/api/deliver", "destination": "/api/deliver-node" },
+    { "source": "/api/(.*)", "destination": "/api/index" }
+  ],
   "functions": {
     "api/index.py": {
+      "maxDuration": 60
+    },
+    "api/deliver-node.js": {
       "maxDuration": 60
     }
   }

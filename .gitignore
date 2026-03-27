@@ -20,6 +20,7 @@ __pycache__/
 .DS_Store
 .idea/
 .vscode/
+node_modules/
 
 # Local run logs
 *.log

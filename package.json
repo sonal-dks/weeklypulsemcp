@@ -1,5 +1,8 @@
 {
   "name": "weeklypulsemcp",
   "private": true,
-  "description": "Weekly Pulse — Vercel hosts public/ + api/*.py"
+  "description": "Weekly Pulse — Vercel hosts public/ + api/*.py",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.28.0"
+  }
 }

@@ -440,8 +440,7 @@ ERROR: MISSING_REQUIRED_INPUT
       - Google Docs MCP tokens: `~/.config/google-docs-mcp/`
     - **Gmail MCP tokens are NOT needed on the runner** — email is sent from UI only.
   - Runner requirement for MCP Doc append:
-    - Phase 5 uses **stdio MCP** (`npx ...`) and relies on persisted OAuth tokens in the runner home directory.
-    - Recommended: use a **self-hosted GitHub Actions runner** (so tokens can persist).
+    - GitHub Actions runs on `ubuntu-latest` with a service-account JSON materialized at runtime (no persisted local OAuth cache required).
   - Observability: structured logs + lightweight metrics dashboard
   - QA: pre-send assertions as automated checks
 - Data validation:
@@ -467,7 +466,7 @@ ERROR: MISSING_REQUIRED_INPUT
   - Scheduler computes one month-week tag (`Month-WN-Year`, e.g. `March-W4-2026`) per workflow run via `shared.week_utils.current_week_tag()`.
   - It exports week-specific paths before downstream phases (`THEMES_PATH`, `REVIEW_THEME_MAP_PATH`, `PULSE_PATH`, `INSIGHTS_PATH`, `WEEK_TAG`) so all phases use consistent naming.
 - Runner model:
-  - `runs-on: self-hosted` to preserve MCP stdio OAuth token state for Google Docs.
+  - `runs-on: ubuntu-latest` with service-account credentials injected from GitHub Secrets.
 
 ### Phase 7 (Frontend/UI): Send console (email trigger)
 - Purpose: operator screen to deliver the weekly note + fee explainer **via email only**.
@@ -492,7 +491,9 @@ ERROR: MISSING_REQUIRED_INPUT
   - Streamlit config: `.streamlit/config.toml` enforces `base = "light"` with matching palette.
 - Tech:
   - Production frontend: static web app (`public/index.html`) deployed on Vercel.
-  - Backend API: FastAPI (`phase7_ui/api.py`) served by Vercel Python function entry (`api/index.py`).
+  - Backend API:
+    - FastAPI (`phase7_ui/api.py`) served by Vercel Python function entry (`api/index.py`) for read/preview endpoints.
+    - Dedicated Vercel Node function (`api/deliver-node.js`) handles `POST /api/deliver` and invokes Gmail MCP via `npx` (MCP-only delivery path).
   - Local fallback UI (optional): Streamlit (`phase7_ui/app.py`) for operator testing.
   - Delivery: reuses Phase 5 Gmail MCP stdio helpers for email only. Multi-recipient sends call Gmail with **`mode=send`** explicitly.
   - API endpoints:
@@ -593,16 +594,19 @@ Weekly Groww Product Pulse - March-W4-2026
 ## Deployment (Vercel)
 - Right now (single source of truth):
   - Frontend on Vercel: static send console (`public/index.html`) with week dropdown.
-  - Backend on Vercel: FastAPI endpoints from `phase7_ui/api.py` via `api/index.py`.
-  - Scheduler: GitHub Actions workflow `.github/workflows/weekly_pulse.yml` (self-hosted runner).
+  - Backend on Vercel:
+    - FastAPI endpoints from `phase7_ui/api.py` via `api/index.py`
+    - Node endpoint `api/deliver-node.js` for `/api/deliver` (Gmail MCP stdio via `npx`)
+  - Scheduler: GitHub Actions workflow `.github/workflows/weekly_pulse.yml` (`ubuntu-latest` runner).
 - Delivery tech in deployed stack:
   - Google Docs: MCP stdio (`@a-bonus/google-docs-mcp`) with `Month-WN-Year` upsert — **scheduler only**.
-  - Gmail: MCP stdio (`@gongrzhe/server-gmail-autoauth-mcp`) — **Phase 7 UI only**.
+  - Gmail: MCP stdio (`@gongrzhe/server-gmail-autoauth-mcp`) from Node `/api/deliver` — **Phase 7 UI only**.
 - Fallback options (explicit):
-  - If Vercel runtime cannot host stdio/OAuth token state for Gmail MCP, run email delivery from the self-hosted runner or local Streamlit console where stdio MCP is available.
+  - If Node `/api/deliver` cannot access valid Gmail credentials, email send fails with clear API error; fallback is local Streamlit console where stdio MCP is available.
   - No bridge layer is used.
 - Secrets/config on Vercel:
   - Configure only runtime env vars required by Phase 7 API and delivery paths; keep secrets in Vercel settings.
+  - For Node `/api/deliver`, set `DELIVERY_TRIGGER_TOKEN` and `GMAIL_CREDENTIALS_JSON_B64` (or `GMAIL_CREDENTIALS_JSON`) so runtime can materialize `/tmp/gmail-credentials.json`.
   - Do not commit runtime secrets or OAuth token files.
 - Manual verification after deploy:
   - Confirm weekly GitHub Actions scheduled run logs.
