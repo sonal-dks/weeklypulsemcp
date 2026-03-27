@@ -6,6 +6,9 @@ on:
     # Every Monday 11:00 AM IST = 05:30 UTC
     - cron: "30 5 * * 1"
 
+permissions:
+  contents: write
+
 jobs:
   run:
     # Gmail MCP is NOT used here — email is sent from the UI only.
@@ -55,3 +58,27 @@ jobs:
           GMAIL_CREDENTIALS_PATH: ${{ env.GMAIL_CREDENTIALS_PATH }}
           PYTHONPATH: "."
         run: bash scheduler/scripts/run_weekly_pipeline.sh
+
+      - name: Commit outputs back to repository (always)
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          # Force-add output artifacts even if ignored by .gitignore.
+          git add -f \
+            phase1_pipeline/outputs \
+            phase2_theming/outputs \
+            phase3_clustering/outputs \
+            phase4_insights/outputs \
+            phase4_5_fee_scraper/outputs \
+            phase5_delivery/outputs \
+            phase6_ops/outputs || true
+
+          if git diff --cached --quiet; then
+            echo "No output changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore(outputs): update scheduler run artifacts [skip ci]"
+          git push
