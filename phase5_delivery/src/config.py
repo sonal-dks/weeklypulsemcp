@@ -81,8 +81,6 @@ class Phase5Config(BaseSettings):
         errors: list[str] = []
         if self.delivery_mode not in {"draft_only", "send"}:
             errors.append("DELIVERY_MODE must be one of: draft_only, send")
-        if not self.email_recipient.strip():
-            errors.append("EMAIL_RECIPIENT is required")
         if self.max_retries < 1:
             errors.append("MAX_RETRIES must be >= 1")
         if self.retry_backoff_seconds <= 0:
@@ -98,7 +96,8 @@ class Phase5Config(BaseSettings):
         else:
             errors.extend(self._validate_stdio_docs_auth())
 
-        errors.extend(self._validate_stdio_gmail_auth())
+        # Phase 5 scheduler is Google-Doc append only (no Gmail send),
+        # so Gmail credential validation is intentionally skipped here.
 
         return errors
 

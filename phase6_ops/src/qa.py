@@ -28,6 +28,26 @@ def _read_text(path: str) -> str:
     return Path(path).read_text(encoding="utf-8")
 
 
+def _read_json_or_default(path: str, default: Any) -> Any:
+    p = Path(path)
+    if not p.exists():
+        return default
+    try:
+        return _read_json(path)
+    except Exception:
+        return default
+
+
+def _read_text_or_default(path: str, default: str = "") -> str:
+    p = Path(path)
+    if not p.exists():
+        return default
+    try:
+        return _read_text(path)
+    except Exception:
+        return default
+
+
 def detect_latest_week_tag() -> str:
     from shared.week_utils import current_week_tag
 
@@ -112,15 +132,21 @@ def check_run_completeness(paths: dict[str, str]) -> GateResult:
 
 
 def build_run_summary(*, week: str, paths: dict[str, str]) -> dict[str, Any]:
-    config_check = _read_json(paths["phase1_config_check"])
-    themes_payload = _read_json(paths["phase2_themes"])
-    insights_payload = _read_json(paths["phase4_insights"])
-    pulse_text = _read_text(paths["phase4_pulse"])
-    combined_payload = _read_json(paths["phase5_combined_payload"])
-    doc_report = _read_json(paths["phase5_doc_report"])
-
     gates: list[GateResult] = []
-    gates.append(check_run_completeness(paths))
+    completeness = check_run_completeness(paths)
+    gates.append(completeness)
+
+    # Read inputs safely so Phase 6 can still write a summary even when
+    # an upstream artifact is missing/corrupted.
+    config_check = _read_json_or_default(paths["phase1_config_check"], {"status": "missing"})
+    themes_payload = _read_json_or_default(paths["phase2_themes"], {"themes": [], "theme_summary_counts": {}})
+    insights_payload = _read_json_or_default(
+        paths["phase4_insights"], {"status": "missing", "quotes": [], "action_ideas": []}
+    )
+    pulse_text = _read_text_or_default(paths["phase4_pulse"], "")
+    combined_payload = _read_json_or_default(paths["phase5_combined_payload"], {})
+    doc_report = _read_json_or_default(paths["phase5_doc_report"], {"status": "missing"})
+
     gates.append(check_theme_count(themes_payload))
     gates.append(check_insights_quotes_actions(insights_payload))
     gates.append(check_pulse_wordcount_and_pii(pulse_text))

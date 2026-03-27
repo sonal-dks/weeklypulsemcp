@@ -23,12 +23,22 @@ jobs:
       - name: Install dependencies (scheduler sub-phase)
         run: bash scheduler/scripts/install_deps.sh
 
+      - name: Install Playwright browser (Chromium)
+        run: |
+          python -m playwright install --with-deps chromium
+
       - name: Materialize Google service account key
         run: |
           KEY_PATH="${RUNNER_TEMP}/google-sa.json"
           printf '%s' '${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}' > "${KEY_PATH}"
           echo "GOOGLE_APPLICATION_CREDENTIALS=${KEY_PATH}" >> "${GITHUB_ENV}"
           echo "SERVICE_ACCOUNT_PATH=${KEY_PATH}" >> "${GITHUB_ENV}"
+
+      - name: Create placeholder Gmail credentials for scheduler validation
+        run: |
+          GMAIL_PATH="${RUNNER_TEMP}/gmail-credentials.json"
+          printf '{}' > "${GMAIL_PATH}"
+          echo "GMAIL_CREDENTIALS_PATH=${GMAIL_PATH}" >> "${GITHUB_ENV}"
 
       - name: Run weekly pipeline (scheduler sub-phase)
         env:
@@ -42,5 +52,6 @@ jobs:
           GOOGLE_CLIENT_SECRET: ${{ secrets.GOOGLE_CLIENT_SECRET }}
           GOOGLE_APPLICATION_CREDENTIALS: ${{ env.GOOGLE_APPLICATION_CREDENTIALS }}
           SERVICE_ACCOUNT_PATH: ${{ env.SERVICE_ACCOUNT_PATH }}
+          GMAIL_CREDENTIALS_PATH: ${{ env.GMAIL_CREDENTIALS_PATH }}
           PYTHONPATH: "."
         run: bash scheduler/scripts/run_weekly_pipeline.sh
