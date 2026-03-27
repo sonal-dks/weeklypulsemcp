@@ -35,10 +35,6 @@ from phase5_delivery.src.path_resolver import (
     resolve_phase4_for_week,
 )
 
-UI_DELIVERY_LOG = Path("phase7_ui/outputs/ui_delivery_runs.jsonl")
-UI_ERRORS_LOG = Path("phase7_ui/outputs/ui_load_errors.log")
-
-
 def _ensure_gmail_credentials_file_from_env() -> None:
     """
     Materialize Gmail MCP credentials from env for serverless runtimes (e.g., Vercel).
@@ -78,28 +74,9 @@ def _ensure_gmail_credentials_file_from_env() -> None:
     os.environ["GMAIL_CREDENTIALS_PATH"] = target
 
 
-def _log_paths() -> tuple[Path, Path]:
-    """
-    Resolve writable log paths.
-
-    Vercel and other serverless runtimes allow writes under /tmp only.
-    Locally, keep using project relative paths.
-    """
-    if os.environ.get("VERCEL", "").strip() == "1":
-        return Path("/tmp/ui_delivery_runs.jsonl"), Path("/tmp/ui_load_errors.log")
-    return UI_DELIVERY_LOG, UI_ERRORS_LOG
-
-
 def log_load_error(error: str) -> None:
-    _, err_path = _log_paths()
-    payload = {"timestamp_utc": datetime.now(timezone.utc).isoformat(), "error": error}
-    try:
-        err_path.parent.mkdir(parents=True, exist_ok=True)
-        with err_path.open("a", encoding="utf-8") as f:
-            f.write(json.dumps(payload, ensure_ascii=False) + "\n")
-    except Exception:
-        # Logging must never fail request handling.
-        pass
+    # Logging intentionally disabled for cleaner frontend operation.
+    _ = error
 
 
 def parse_recipients(raw_text: str) -> list[str]:
@@ -244,7 +221,7 @@ def run_console_delivery(
         )
         email_attempts[recipient] = {"result": result, "attempts": attempts}
 
-    run_report = {
+    return {
         "generated_at_utc": datetime.now(timezone.utc).isoformat(),
         "week": week,
         "recipients": recipients,
@@ -252,12 +229,3 @@ def run_console_delivery(
         "doc_url": doc_url,
         "email_attempts": email_attempts,
     }
-    out_path, _ = _log_paths()
-    try:
-        out_path.parent.mkdir(parents=True, exist_ok=True)
-        with out_path.open("a", encoding="utf-8") as f:
-            f.write(json.dumps(run_report, ensure_ascii=False) + "\n")
-    except Exception:
-        # Best-effort telemetry only.
-        pass
-    return run_report

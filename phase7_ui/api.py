@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import traceback
 from typing import Any
 
 from fastapi import FastAPI, HTTPException
@@ -18,7 +17,6 @@ from phase7_ui.send_service import (
     fee_preview_text,
     is_valid_email,
     load_funds_lookup,
-    log_load_error,
     parse_recipients,
     run_console_delivery,
 )
@@ -140,10 +138,6 @@ def deliver(req: DeliverRequest) -> DeliverResponse:
             delivery_token=req.delivery_token,
         )
     except Exception as exc:  # noqa: BLE001
-        tb = traceback.format_exc()
-        # Temporary diagnostics: write detailed traces for Vercel troubleshooting.
-        log_load_error(f"/api/deliver failed: {exc}\n{tb}")
-        print(f"[phase7][deliver_error] week={week} recipients={len(recipients)} err={exc}\n{tb}", flush=True)
         msg = str(exc)
         if "token" in msg.lower():
             raise HTTPException(status_code=403, detail=msg) from exc
