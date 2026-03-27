@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import traceback
 from typing import Any
 
 from fastapi import FastAPI, HTTPException
@@ -128,10 +129,10 @@ def deliver(req: DeliverRequest) -> DeliverResponse:
     if not recipients:
         raise HTTPException(status_code=400, detail="At least one recipient is required")
 
-    fee_path = find_latest_fee_data_path_for_week(week)
-    lookup = load_funds_lookup(fee_path)
-    fee_blocks = fee_blocks_for_selected(req.fund_names, lookup)
     try:
+        fee_path = find_latest_fee_data_path_for_week(week)
+        lookup = load_funds_lookup(fee_path)
+        fee_blocks = fee_blocks_for_selected(req.fund_names, lookup)
         report = run_console_delivery(
             recipients=recipients,
             fee_funds=fee_blocks,
@@ -139,7 +140,10 @@ def deliver(req: DeliverRequest) -> DeliverResponse:
             delivery_token=req.delivery_token,
         )
     except Exception as exc:  # noqa: BLE001
-        log_load_error(str(exc))
+        tb = traceback.format_exc()
+        # Temporary diagnostics: write detailed traces for Vercel troubleshooting.
+        log_load_error(f"/api/deliver failed: {exc}\n{tb}")
+        print(f"[phase7][deliver_error] week={week} recipients={len(recipients)} err={exc}\n{tb}", flush=True)
         msg = str(exc)
         if "token" in msg.lower():
             raise HTTPException(status_code=403, detail=msg) from exc
