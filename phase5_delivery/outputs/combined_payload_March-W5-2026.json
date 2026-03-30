@@ -1,0 +1,25 @@
+{
+  "date": "March-W5-2026",
+  "weekly_pulse": {
+    "themes": [
+      "User Experience",
+      "Trading",
+      "Fees"
+    ],
+    "quotes": [
+      "its very good app clean and simple but it will be more beneficial if they add grouping system in watchlists like kite have launched recently",
+      "Excellent application. unfortunately I closed my trading account. Now I want to reopen my trading account. But there are no option to reopen",
+      "The app is crashing today sir . Despite logging through mobile verification, it is automatically getting logged out even after catching otp"
+    ],
+    "action_ideas": [
+      "Implement a watchlist grouping system to enhance organization and user experience.",
+      "Develop a clear process and feature for users to easily reopen closed trading accounts.",
+      "Prioritize fixing app crashing and automatic logout issues to improve stability and login reliability."
+    ]
+  },
+  "fee_scenario": "",
+  "explanation_bullets": [],
+  "source_links": [],
+  "last_checked": "March-W5-2026",
+  "fee_funds": []
+}

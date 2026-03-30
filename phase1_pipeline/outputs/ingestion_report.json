@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-03-27T13:13:21.087120+00:00",
+  "generated_at_utc": "2026-03-30T07:08:23.485285+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -11,47 +11,47 @@
     "skipped_duplicate_in_batch": 0
   },
   "min_review_date": "2026-03-05",
-  "max_review_date": "2026-03-26",
+  "max_review_date": "2026-03-29",
   "sample_records": [
     {
-      "review_id": "ce18a6b3-1273-4586-815e-1359c0f248d9",
+      "review_id": "38431e8f-ef36-4d11-b291-f79d82b580a1",
       "rating": 5,
-      "text": "cool best mobile application",
-      "date": "2026-03-26",
+      "text": "very good",
+      "date": "2026-03-29",
       "helpful_count": 0,
-      "ingested_at": "2026-03-27T13:13:21.041940+00:00"
+      "ingested_at": "2026-03-30T07:08:23.436283+00:00"
     },
     {
-      "review_id": "d21a08ae-060b-484e-bcfb-dd8c4629cee6",
+      "review_id": "07358359-e888-4ada-a5e7-3482318dcac3",
       "rating": 5,
-      "text": "this app is great iam extremely likely this app because the app interface was absolutely great and easy process to get loan",
-      "date": "2026-03-26",
+      "text": "best app",
+      "date": "2026-03-29",
       "helpful_count": 0,
-      "ingested_at": "2026-03-27T13:13:21.041959+00:00"
+      "ingested_at": "2026-03-30T07:08:23.436299+00:00"
     },
     {
-      "review_id": "89fba4a8-242e-45af-8edd-f35a3beab5a1",
-      "rating": 1,
-      "text": "no good",
-      "date": "2026-03-26",
-      "helpful_count": 0,
-      "ingested_at": "2026-03-27T13:13:21.041965+00:00"
-    },
-    {
-      "review_id": "174ed7d6-0b67-43e4-8f99-872248740ccf",
-      "rating": 1,
-      "text": "WHY Tracking external funds is currently paused ???? You could have done it from the beginning. It's not right to suddenly stop it now.",
-      "date": "2026-03-26",
-      "helpful_count": 0,
-      "ingested_at": "2026-03-27T13:13:21.041973+00:00"
-    },
-    {
-      "review_id": "e4a54319-64b9-4066-9aec-af110e189bfe",
+      "review_id": "7e09692a-d7f6-4b26-9f94-96ae6414c126",
       "rating": 5,
-      "text": "good 😊",
-      "date": "2026-03-26",
+      "text": "super 😉",
+      "date": "2026-03-29",
       "helpful_count": 0,
-      "ingested_at": "2026-03-27T13:13:21.041979+00:00"
+      "ingested_at": "2026-03-30T07:08:23.436307+00:00"
+    },
+    {
+      "review_id": "81aa1a1f-3c13-4a06-a10c-5f1afc40037e",
+      "rating": 5,
+      "text": "well experienced",
+      "date": "2026-03-29",
+      "helpful_count": 0,
+      "ingested_at": "2026-03-30T07:08:23.436313+00:00"
+    },
+    {
+      "review_id": "0d8793ff-25d8-4411-9fa2-306696f96d01",
+      "rating": 5,
+      "text": "good",
+      "date": "2026-03-29",
+      "helpful_count": 0,
+      "ingested_at": "2026-03-30T07:08:23.436317+00:00"
     }
   ]
 }

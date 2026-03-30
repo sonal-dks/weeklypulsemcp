@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-03-30T07:11:50.556109+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_March-W5-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "User Experience",
+      "frequency": 522,
+      "avg_sentiment": 0.21,
+      "negative_share": 0.2605,
+      "score": 323.6215
+    },
+    {
+      "theme": "Trading",
+      "frequency": 145,
+      "avg_sentiment": 0.2199,
+      "negative_share": 0.3034,
+      "score": 99.1379
+    },
+    {
+      "theme": "Fees",
+      "frequency": 140,
+      "avg_sentiment": 0.2448,
+      "negative_share": 0.2357,
+      "score": 93.4286
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "ed608ac6-a3b0-4010-9dbf-fba1d7f79d6d",
+      "theme": "User Experience",
+      "text": "its very good app clean and simple but it will be more beneficial if they add grouping system in watchlists like kite have launched recently",
+      "date": "2026-03-11",
+      "rating": 5
+    },
+    {
+      "review_id": "d8edfe75-4d0d-413e-8739-c5385dae2ffa",
+      "theme": "Trading",
+      "text": "Excellent application. unfortunately I closed my trading account. Now I want to reopen my trading account. But there are no option to reopen",
+      "date": "2026-03-21",
+      "rating": 1
+    },
+    {
+      "review_id": "28ef7bdb-eb99-4ddf-8518-ad797e38abd7",
+      "theme": "Fees",
+      "text": "The app is crashing today sir . Despite logging through mobile verification, it is automatically getting logged out even after catching otp",
+      "date": "2026-03-24",
+      "rating": 3
+    }
+  ],
+  "action_ideas": [
+    "Implement a watchlist grouping system to enhance organization and user experience.",
+    "Develop a clear process and feature for users to easily reopen closed trading accounts.",
+    "Prioritize fixing app crashing and automatic logout issues to improve stability and login reliability."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_March-W5-2026.md"
+}
