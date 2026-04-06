@@ -1,0 +1,25 @@
+{
+  "date": "April-W1-2026",
+  "weekly_pulse": {
+    "themes": [
+      "User Experience",
+      "Trading Platform",
+      "Customer Support"
+    ],
+    "quotes": [
+      "its very good app clean and simple but it will be more beneficial if they add grouping system in watchlists like kite have launched recently",
+      "Excellent application. unfortunately I closed my trading account. Now I want to reopen my trading account. But there are no option to reopen",
+      "The customer support is absolute trash. I'm convinced the other reviews are simply bots. There is literally no agents to contact. Just the AI."
+    ],
+    "action_ideas": [
+      "Integrate human agents into customer support to address user frustration with AI-only interactions.",
+      "Implement a watchlist grouping system within the trading platform to enhance organization and user experience.",
+      "Develop a clear process and interface for users to reopen closed trading accounts, improving [REDACTED] UX."
+    ]
+  },
+  "fee_scenario": "",
+  "explanation_bullets": [],
+  "source_links": [],
+  "last_checked": "April-W1-2026",
+  "fee_funds": []
+}

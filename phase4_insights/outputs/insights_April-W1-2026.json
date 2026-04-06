@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-04-06T07:14:00.638883+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_April-W1-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "User Experience",
+      "frequency": 526,
+      "avg_sentiment": 0.2357,
+      "negative_share": 0.2395,
+      "score": 325.1817
+    },
+    {
+      "theme": "Trading Platform",
+      "frequency": 192,
+      "avg_sentiment": 0.2271,
+      "negative_share": 0.2552,
+      "score": 125.4083
+    },
+    {
+      "theme": "Customer Support",
+      "frequency": 74,
+      "avg_sentiment": -0.1033,
+      "negative_share": 0.5946,
+      "score": 68.1838
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "ed608ac6-a3b0-4010-9dbf-fba1d7f79d6d",
+      "theme": "User Experience",
+      "text": "its very good app clean and simple but it will be more beneficial if they add grouping system in watchlists like kite have launched recently",
+      "date": "2026-03-11",
+      "rating": 5
+    },
+    {
+      "review_id": "d8edfe75-4d0d-413e-8739-c5385dae2ffa",
+      "theme": "Trading Platform",
+      "text": "Excellent application. unfortunately I closed my trading account. Now I want to reopen my trading account. But there are no option to reopen",
+      "date": "2026-03-21",
+      "rating": 1
+    },
+    {
+      "review_id": "6b2ffaa3-5215-4ae6-9917-eb450481fd11",
+      "theme": "Customer Support",
+      "text": "The customer support is absolute trash. I'm convinced the other reviews are simply bots. There is literally no agents to contact. Just the AI.",
+      "date": "2026-04-02",
+      "rating": 1
+    }
+  ],
+  "action_ideas": [
+    "Integrate human agents into customer support to address user frustration with AI-only interactions.",
+    "Implement a watchlist grouping system within the trading platform to enhance organization and user experience.",
+    "Develop a clear process and interface for users to reopen closed trading accounts, improving [REDACTED] UX."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_April-W1-2026.md"
+}
