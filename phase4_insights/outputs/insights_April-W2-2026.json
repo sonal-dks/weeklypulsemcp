@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-04-13T07:32:23.404219+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_April-W2-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "User Experience",
+      "frequency": 532,
+      "avg_sentiment": 0.2752,
+      "negative_share": 0.2312,
+      "score": 328.4481
+    },
+    {
+      "theme": "Fees",
+      "frequency": 141,
+      "avg_sentiment": 0.2528,
+      "negative_share": 0.2766,
+      "score": 95.6638
+    },
+    {
+      "theme": "Trading Issues",
+      "frequency": 117,
+      "avg_sentiment": 0.1646,
+      "negative_share": 0.2906,
+      "score": 81.8239
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "28ef7bdb-eb99-4ddf-8518-ad797e38abd7",
+      "theme": "User Experience",
+      "text": "The app is crashing today sir . Despite logging through mobile verification, it is automatically getting logged out even after catching otp",
+      "date": "2026-03-24",
+      "rating": 3
+    },
+    {
+      "review_id": "151fb150-832e-4522-a2c9-8af500b8f51d",
+      "theme": "Fees",
+      "text": "everything is fine can you make different app for upi if possible like full payment app upi, card , fd , and rewards and credit card facilities",
+      "date": "2026-04-05",
+      "rating": 3
+    },
+    {
+      "review_id": "d8edfe75-4d0d-413e-8739-c5385dae2ffa",
+      "theme": "Trading Issues",
+      "text": "Excellent application. unfortunately I closed my trading account. Now I want to reopen my trading account. But there are no option to reopen",
+      "date": "2026-03-21",
+      "rating": 1
+    }
+  ],
+  "action_ideas": [
+    "Prioritize fixing app crashes and persistent login/logout issues, especially post-OTP verification.",
+    "Develop a clear in-app option and process for users to easily reopen closed trading accounts.",
+    "Improve overall platform stability and performance, particularly for critical trading functionalities."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_April-W2-2026.md"
+}

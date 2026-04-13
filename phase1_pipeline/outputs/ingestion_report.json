@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-06T07:10:35.887523+00:00",
+  "generated_at_utc": "2026-04-13T07:28:51.551557+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-03-09",
-  "max_review_date": "2026-04-05",
+  "min_review_date": "2026-03-14",
+  "max_review_date": "2026-04-12",
   "sample_records": [
     {
-      "review_id": "1b43d1b2-0a47-4603-9567-237635db9e95",
+      "review_id": "8824a4db-26d9-4f83-bd58-a31016985b44",
       "rating": 5,
-      "text": "good 👍",
-      "date": "2026-04-05",
+      "text": "good",
+      "date": "2026-04-12",
       "helpful_count": 0,
-      "ingested_at": "2026-04-06T07:10:35.829202+00:00"
+      "ingested_at": "2026-04-13T07:28:51.506649+00:00"
     },
     {
-      "review_id": "342c3bdf-a859-498b-a5e0-defec769cb5c",
+      "review_id": "7ee7a72b-8aee-4d60-882d-f6c6c55d3bb5",
       "rating": 5,
-      "text": "mast",
-      "date": "2026-04-05",
+      "text": "Good",
+      "date": "2026-04-12",
       "helpful_count": 0,
-      "ingested_at": "2026-04-06T07:10:35.829222+00:00"
+      "ingested_at": "2026-04-13T07:28:51.506663+00:00"
     },
     {
-      "review_id": "5693d4af-e9bd-40a5-a498-fc35fa8a973f",
+      "review_id": "c6bb0311-3227-46fb-afdc-7f5333656397",
       "rating": 5,
-      "text": "best app",
-      "date": "2026-04-05",
+      "text": "Good",
+      "date": "2026-04-12",
       "helpful_count": 0,
-      "ingested_at": "2026-04-06T07:10:35.829232+00:00"
+      "ingested_at": "2026-04-13T07:28:51.506668+00:00"
     },
     {
-      "review_id": "6042b410-c869-4704-838c-04f8e043a150",
-      "rating": 5,
-      "text": "very good and simple app",
-      "date": "2026-04-05",
+      "review_id": "7260445a-14c5-417c-904f-6cdf84da09fd",
+      "rating": 1,
+      "text": "good but brokering charge jata hai",
+      "date": "2026-04-12",
       "helpful_count": 0,
-      "ingested_at": "2026-04-06T07:10:35.829242+00:00"
+      "ingested_at": "2026-04-13T07:28:51.506675+00:00"
     },
     {
-      "review_id": "9dc8cc95-fb74-44a5-91ea-7be241244472",
+      "review_id": "31d83600-d67d-4983-9998-888a4a4931a4",
       "rating": 5,
-      "text": "this is the best for everyone .",
-      "date": "2026-04-05",
+      "text": "easy to use",
+      "date": "2026-04-12",
       "helpful_count": 0,
-      "ingested_at": "2026-04-06T07:10:35.829253+00:00"
+      "ingested_at": "2026-04-13T07:28:51.506680+00:00"
     }
   ]
 }
