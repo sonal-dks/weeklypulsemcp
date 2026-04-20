@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-13T07:28:51.551557+00:00",
+  "generated_at_utc": "2026-04-20T07:29:35.514150+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-03-14",
-  "max_review_date": "2026-04-12",
+  "min_review_date": "2026-03-21",
+  "max_review_date": "2026-04-19",
   "sample_records": [
     {
-      "review_id": "8824a4db-26d9-4f83-bd58-a31016985b44",
+      "review_id": "43170370-4d52-4a22-9fa2-3265d20380f3",
+      "rating": 5,
+      "text": "ijop",
+      "date": "2026-04-19",
+      "helpful_count": 0,
+      "ingested_at": "2026-04-20T07:29:35.469402+00:00"
+    },
+    {
+      "review_id": "2714eda6-8437-4125-b3bc-b9a1efa90e41",
       "rating": 5,
       "text": "good",
-      "date": "2026-04-12",
+      "date": "2026-04-19",
       "helpful_count": 0,
-      "ingested_at": "2026-04-13T07:28:51.506649+00:00"
+      "ingested_at": "2026-04-20T07:29:35.469414+00:00"
     },
     {
-      "review_id": "7ee7a72b-8aee-4d60-882d-f6c6c55d3bb5",
+      "review_id": "e0f2e5a0-6df7-4438-a5d2-3964f547416a",
+      "rating": 4,
+      "text": "👌👌",
+      "date": "2026-04-19",
+      "helpful_count": 0,
+      "ingested_at": "2026-04-20T07:29:35.469421+00:00"
+    },
+    {
+      "review_id": "f910103c-7f96-4d4a-abd7-b1f3254d9e59",
       "rating": 5,
       "text": "Good",
-      "date": "2026-04-12",
+      "date": "2026-04-19",
       "helpful_count": 0,
-      "ingested_at": "2026-04-13T07:28:51.506663+00:00"
+      "ingested_at": "2026-04-20T07:29:35.469425+00:00"
     },
     {
-      "review_id": "c6bb0311-3227-46fb-afdc-7f5333656397",
+      "review_id": "e4bb2fbd-38a0-4ee8-ba9c-3f0954f57c4e",
       "rating": 5,
-      "text": "Good",
-      "date": "2026-04-12",
+      "text": "I m very happy",
+      "date": "2026-04-19",
       "helpful_count": 0,
-      "ingested_at": "2026-04-13T07:28:51.506668+00:00"
-    },
-    {
-      "review_id": "7260445a-14c5-417c-904f-6cdf84da09fd",
-      "rating": 1,
-      "text": "good but brokering charge jata hai",
-      "date": "2026-04-12",
-      "helpful_count": 0,
-      "ingested_at": "2026-04-13T07:28:51.506675+00:00"
-    },
-    {
-      "review_id": "31d83600-d67d-4983-9998-888a4a4931a4",
-      "rating": 5,
-      "text": "easy to use",
-      "date": "2026-04-12",
-      "helpful_count": 0,
-      "ingested_at": "2026-04-13T07:28:51.506680+00:00"
+      "ingested_at": "2026-04-20T07:29:35.469431+00:00"
     }
   ]
 }

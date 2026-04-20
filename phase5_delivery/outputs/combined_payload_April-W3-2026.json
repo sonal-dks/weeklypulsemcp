@@ -1,0 +1,25 @@
+{
+  "date": "April-W3-2026",
+  "weekly_pulse": {
+    "themes": [
+      "Fees",
+      "Experience",
+      "Trading"
+    ],
+    "quotes": [
+      "The app is crashing today sir . Despite logging through mobile verification, it is automatically getting logged out even after catching otp",
+      "• Best for Beginners: \"Trading ke liye sabse simple aur clean interface.\" • Smooth Experience: \"Stock aur Mutual Funds ke liye ek dum badhiya app.\"",
+      "Excellent application. unfortunately I closed my trading account. Now I want to reopen my trading account. But there are no option to reopen"
+    ],
+    "action_ideas": [
+      "Review and optimize fee structures, clearly communicating value to reduce negative sentiment.",
+      "Implement a clear, accessible process for users to reopen closed trading accounts.",
+      "Prioritize fixing app crashes and login issues to ensure a stable and reliable user experience."
+    ]
+  },
+  "fee_scenario": "",
+  "explanation_bullets": [],
+  "source_links": [],
+  "last_checked": "April-W3-2026",
+  "fee_funds": []
+}
