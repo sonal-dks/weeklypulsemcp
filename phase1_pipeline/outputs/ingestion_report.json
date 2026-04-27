@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-04-20T07:29:35.514150+00:00",
+  "generated_at_utc": "2026-04-27T07:55:01.458969+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-03-21",
-  "max_review_date": "2026-04-19",
+  "min_review_date": "2026-03-25",
+  "max_review_date": "2026-04-26",
   "sample_records": [
     {
-      "review_id": "43170370-4d52-4a22-9fa2-3265d20380f3",
+      "review_id": "0faa460c-e567-4fa8-a60d-aa72058e4a65",
       "rating": 5,
-      "text": "ijop",
-      "date": "2026-04-19",
+      "text": "good, but brokerage fee increased for equity stocks.",
+      "date": "2026-04-26",
       "helpful_count": 0,
-      "ingested_at": "2026-04-20T07:29:35.469402+00:00"
+      "ingested_at": "2026-04-27T07:55:01.414760+00:00"
     },
     {
-      "review_id": "2714eda6-8437-4125-b3bc-b9a1efa90e41",
+      "review_id": "b0460228-68d8-4d66-a5e8-5d1f164f34d5",
       "rating": 5,
-      "text": "good",
-      "date": "2026-04-19",
+      "text": "nice app",
+      "date": "2026-04-26",
       "helpful_count": 0,
-      "ingested_at": "2026-04-20T07:29:35.469414+00:00"
+      "ingested_at": "2026-04-27T07:55:01.414772+00:00"
     },
     {
-      "review_id": "e0f2e5a0-6df7-4438-a5d2-3964f547416a",
-      "rating": 4,
-      "text": "👌👌",
-      "date": "2026-04-19",
+      "review_id": "6dfa37c5-69ee-483a-93d7-d74f631cb62e",
+      "rating": 5,
+      "text": "ok",
+      "date": "2026-04-26",
       "helpful_count": 0,
-      "ingested_at": "2026-04-20T07:29:35.469421+00:00"
+      "ingested_at": "2026-04-27T07:55:01.414777+00:00"
     },
     {
-      "review_id": "f910103c-7f96-4d4a-abd7-b1f3254d9e59",
-      "rating": 5,
-      "text": "Good",
-      "date": "2026-04-19",
+      "review_id": "a9f6aa60-c1b4-4521-b9b5-845b44dd4f25",
+      "rating": 1,
+      "text": "not understand",
+      "date": "2026-04-26",
       "helpful_count": 0,
-      "ingested_at": "2026-04-20T07:29:35.469425+00:00"
+      "ingested_at": "2026-04-27T07:55:01.414782+00:00"
     },
     {
-      "review_id": "e4bb2fbd-38a0-4ee8-ba9c-3f0954f57c4e",
-      "rating": 5,
-      "text": "I m very happy",
-      "date": "2026-04-19",
+      "review_id": "665c5b7a-7d95-46d1-97ed-503c115b3949",
+      "rating": 1,
+      "text": "Problem is Groww is not accepting their fault and rather putting the blame on the bank. Do not play like broken record “order was not placed has the payment through netbanking could not be processed”. I have provided you my bank statement as well for those order transactions. Kindly accept your fault that you have a system or process issue in the back end. Ticket number 25702640. There are several mail trail available. Again, I am going to explain one transaction below out of 8 orders: -",
+      "date": "2026-04-26",
       "helpful_count": 0,
-      "ingested_at": "2026-04-20T07:29:35.469431+00:00"
+      "ingested_at": "2026-04-27T07:55:01.414811+00:00"
     }
   ]
 }

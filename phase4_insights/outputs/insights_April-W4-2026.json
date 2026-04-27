@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-04-27T07:58:32.173458+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_April-W4-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "Fees",
+      "frequency": 531,
+      "avg_sentiment": 0.2541,
+      "negative_share": 0.2618,
+      "score": 329.0708
+    },
+    {
+      "theme": "Support",
+      "frequency": 208,
+      "avg_sentiment": 0.0999,
+      "negative_share": 0.399,
+      "score": 140.7615
+    },
+    {
+      "theme": "Interface",
+      "frequency": 124,
+      "avg_sentiment": 0.4916,
+      "negative_share": 0.1371,
+      "score": 79.8839
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "c6b69176-9f39-4b7f-98f8-8f0d9b88c0fa",
+      "theme": "Fees",
+      "text": "bug problem hai kabhi kabhi screen show nhi hota itna to loss ho jayaga bhut let work karta hai screen push ho jata hai mera bhut loss hua hai",
+      "date": "2026-04-02",
+      "rating": 1
+    },
+    {
+      "review_id": "d0725d41-9cf2-403c-ab79-e81cac808e7b",
+      "theme": "Support",
+      "text": "too much pricing switching to another operator. maket order also they are tkaing price 118 too much for everything. link you adhar 118 lol 😆",
+      "date": "2026-04-22",
+      "rating": 1
+    },
+    {
+      "review_id": "fcfe3080-de6e-4560-a906-dc01cc202fd3",
+      "theme": "Interface",
+      "text": "Third class interface... not at all user friendly. Even when there is high speed internet available, the app doesn't work saying \"No internet\".",
+      "date": "2026-04-15",
+      "rating": 1
+    }
+  ],
+  "action_ideas": [
+    "Review and optimize pricing structure, especially for market orders and ancillary services, to reduce customer churn.",
+    "Prioritize fixing critical app bugs causing screen display issues and \"no internet\" errors to prevent user losses.",
+    "Improve app interface usability and responsiveness, ensuring reliable performance even with high-speed internet."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_April-W4-2026.md"
+}

@@ -1,22 +1,23 @@
 {
-  "generated_at_utc": "2026-04-27T07:58:15.061009+00:00",
-  "input_review_theme_map_path": "phase2_theming/outputs/review_theme_map_April-W4-2026.json",
-  "themes_path": "phase2_theming/outputs/themes_April-W4-2026.json",
+  "generated_at_utc": "2026-04-27T07:56:14.000869+00:00",
+  "input_processed_reviews_path": "phase1_pipeline/outputs/processed_reviews.json",
+  "theme_count": 5,
+  "review_count": 967,
   "mapping": [
     {
       "review_id": "665c5b7a-7d95-46d1-97ed-503c115b3949",
       "text": "Problem is Groww is not accepting their fault and rather putting the blame on the bank. Do not play like broken record “order was not placed has the payment through netbanking could not be processed”. I have provided you my bank statement as well for those order transactions. Kindly accept your fault that you have a system or process issue in the back end. Ticket number 25702640. There are several mail trail available. Again, I am going to explain one transaction below out of 8 orders: -",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "0faa460c-e567-4fa8-a60d-aa72058e4a65",
       "text": "good, but brokerage fee increased for equity stocks.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "eff7cbee-64d6-4853-ba28-913f6ed3aabd",
       "text": "refund amount should be given to any bank account of original holder ....remove cheque book photo copy proof option",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "f73e1241-487e-4801-8a89-6be833377733",
@@ -26,112 +27,112 @@
     {
       "review_id": "1ba05fb9-8066-448e-a994-a52156b66262",
       "text": "this app was super 👌 begin trader",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "3960bc00-2c9c-4ed0-8709-153eadb96e8c",
       "text": "I cannot see the holdings tab values for the last couple of days and the issue is still not resolved yet . Am I the one facing this issue or everyone ? UI wise app looks good and easy to track. kindly address the above issue",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "322e43eb-5c6a-4950-92df-2e8ad9f6af2a",
       "text": "You guys should give an option for instant withdrawal You are asking me to return the money I withdrew yesterday after just four days.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e190fa8d-0dd7-42d2-851e-d4be34903bbb",
       "text": "Why does mutual fund redemption process take 6 days",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9014801e-c173-4d25-bbd7-94d810bae389",
       "text": "⛔RSI removed in new updates but over all experience is Good👌 service on top catagory. really best in all available application options in market💐",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "40ff8e83-e0ca-454a-bf98-ecba5f610af6",
       "text": "The best sip planner helped me plan five different life goals,",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "a704c374-6fe3-4651-aee3-183961d0962d",
       "text": "Various drawings gets deleted after a day. So analysis drawings has to be drawn again. Also Daily closing Candle of Index showing different value after market is closed though Index Value shows actual closing price at Home Page. Your technical team needs to work on it or else you are going to lose customers.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "6ab422a5-38b0-429a-b293-1377e0cbc85f",
       "text": "all expense ratios are incorrect on Groww. that's not acceptable. For ex, TrustMF Midcap or TrustMF small cap is mentioned 2%, in reality it's 0.45%.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "77d72bb2-7346-47e1-b457-70e1650e2965",
       "text": "lost my old mobile phone unable to login and not even able change the number so jumped to kite!!",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "cd71a6b0-5650-47fd-8667-5be9ac5855a6",
       "text": "In the holdings section, total shares, invested amount, total P&L in percentage, and day’s P&L in percentage should be shown, just like in Zerodha Kite. This essential information should be visible on a single screen, not after tapping or using filters. This is necessary to take appropriate action to exit from positions. Without this data, trading in Groww is not convenient.",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9ad6ffe9-5453-4975-b2ef-4b05f379e3af",
       "text": "this is nice and beautiful app 😍😍💘😍💘😍😍💘😍😍😍😍",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "66327a1f-9766-475a-9d28-018fb856a129",
       "text": "grow account open kyu nhi ho rha hai",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d5f824db-453e-4538-bd84-aab39182d418",
       "text": "add more important indicators CPR indicatore and achored vwap with bands and ORB",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "baf6dd03-4740-4080-a0ad-674b12496101",
       "text": "The tradingview chart from groww app is not working. And also it is not properly showing the 52 weeks high and low.. Too much bugs and glitches. Probably have to shift to another broker",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "622fb9ad-d73f-4601-bb64-f9a7017de51f",
       "text": "This app charges more brokerage",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "46046548-2672-485b-85e7-c138695ebbe2",
       "text": "it's showing wrong 52 weeks high and low. it is same as day high and day low. it's the major issue in the app.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5db0657f-16f5-4ade-8390-aa105ffebec2",
       "text": "The whole app has been ruined, after the April day by day changes, Today's High Low & 52 weeks High Low showing same, Sensex/Nifty Index Expiry are not shown, under any similar stock category, something else stocks are shown & why the market depth has been moved upward, why ?",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c80be04d-07a5-44db-b0c1-1770cdbd76b2",
       "text": "I receive notifications from Groww, but there is no option in the app to view all notifications in one place. Once the notification panel is cleared, all notifications are gone and cannot be accessed again. I request that you provide a feature in the app to view daily notifications or notification history",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "97c49006-8ffc-48c3-a8dc-3b3def6aa528",
       "text": "please don't use this , policy is for profit, customer is money, uninstall this app now",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "de529178-93e6-4964-bdb0-fb8b8c1582cd",
       "text": "this broker is hiding some data .It is not transparent .The transaction is not showing all something hiding the credit. And after release the trade the profit also did not show that much profit and which time will adding didn't show. Now I experience myself this broker is hiding transaction data so that we didn't know whether the profit credit or not credit after release the trade.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "110b5fec-4a88-4751-9103-62402413f2ff",
       "text": "Aap scervis working Castumer saport not good very puar scervis Payment issue not resolved May complain But no any action not good service not good work pese kha gye h bina puche bank me transfer kr kre h or bolte guidline h ase kisi k pese bina kisi permission k ap kese bank me transfer kr re ho gatiya service h grow application ki",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d0f1da8a-bdbe-4e82-9a2e-bf44f42566bf",
       "text": "what's this App for? i never see's a profit from the past three months!!",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "698e535a-7248-4073-93ef-25508cdce576",
@@ -141,12 +142,12 @@
     {
       "review_id": "33629288-1e2e-42e1-b9e7-cc484a8ebb33",
       "text": "New update is so pathetic Mobile terminal view got downgraded and cant use the Tools to analyse",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "fd4f545b-ccce-4128-b90d-4ad49248c595",
       "text": "beech market me app stop working...it's loading it's more than 15min",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c2a48ab1-4eea-4926-8168-9fdc0422ac4d",
@@ -156,147 +157,147 @@
     {
       "review_id": "fadbb448-2b28-4401-b3c3-4ed520b5fc78",
       "text": "This App is fek and Extra Charge",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "a6d4accc-c3d8-466b-9493-dcebef655aff",
       "text": "sl trail jumping not awailable its big poor condition then other app. please give this function hidden charge is very high with gst.realy grow charge 150 rupies per order and sl and tg process when we change sl then sl will not hit same point. and comodity not awailable",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "150b0185-f3f5-4f90-9841-a0a939c2c99b",
       "text": "very bad app i was playing candy crush then this ad came this literally is waste of time wasted my 17 min very unsatisfied with this app",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ae4f5151-31a7-4a67-8545-76f762c78581",
       "text": "worst app,even a simple functionality of transfer of funds are not working through net banking using your linked account.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "da0a4da0-62b1-4c71-8697-00c234f2515b",
       "text": "too much brokerage charges...I have given 2 lack in brokerage charges on FNO",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b303dca0-2e23-4642-af20-dc706efb4d74",
       "text": "Use this app since 2021...... best app for beginners....UI is user friendly",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b9f51430-e776-47ff-b7f0-0c6611a9a2b1",
       "text": "Best and easiest platform for investment.",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "748b9db4-82b0-4f16-823c-d367a5238faa",
       "text": "after recent updates issue in some stocks for 52 weeks highs and lows and full chart issue",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "07db49a0-337a-41e0-9fb2-78136a4c2afb",
       "text": "Nice app Groww stock app",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "134e5a74-d32b-4eea-80c3-fc31c1001b61",
       "text": "Not good for customers , good for manipulation with hni",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "19c21b9b-0662-468a-ab5c-1f53cdee2e90",
       "text": "repeated ads. is headache. pl. stop this ad in my mobile. please stop this ad",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "68b6dbe3-079c-4740-8a84-87465ec93c35",
       "text": "Data ke sath play krte hain data bech ke big money ko ya khud manipulation krte hai , i have experience with tata elxsi full manipulation krte hain ye dont use it",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "8899bad4-8557-4184-940f-0b9760203bfd",
       "text": "Thanks for working on my feedback 🤗 updated april23 April 2026 the basket button is slow in response, I have to press it multiple time to turn is on off... make it more responsive pls",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "6c743b45-9fde-485d-8ffb-ab69092a6b15",
       "text": "It activated my F&O using a trick, I accidentally clicked on a button",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "977e4bf5-8afe-486d-80f8-ad020d6bcc0d",
       "text": "worst application and customer care. Do not use at all.They do not solve your queries copy paste random answers and close the chat before asking for user confirmation. Please avoid the application and try using some other app for investment.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "8b491aaa-1698-4f2f-b077-d3b738154e2c",
       "text": "I wants to delete my account before approx 6 months and try 2-3 times but groww management may be poor in this.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "489a7821-bdc1-41a4-aa7a-73857522ae73",
       "text": "it's very bad application 😕 extra charge much higher I hate this application",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "049865a3-8425-43b8-8eaa-2d16a3d3ad35",
       "text": "If we pledge our shares once and later unpledge them, we are being charged twice — once for pledging and once for unpledging. That itself is understandable, but the problem is that I have been charged multiple times even though I performed this action only once. After pledging and unpledging my shares one time, I did not perform any further pledge or unpledge transactions. However, I am still being charged repeatedly.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "76468e6f-4bec-435b-95fe-0d0183520080",
       "text": "hi,first of all I want to say thank u because this apps changed me a lot",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "77dfc6a2-02f3-4819-bbf4-8ea489943fde",
       "text": "bast experience and smooth run",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "31b8313b-717c-46a6-8ea5-199b36d68dd6",
       "text": "order box start with 0 .0 .insted this the presnt price to be ther .",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "76e335b6-d3ec-4c62-892e-4458ae85162f",
       "text": "SWP missing, STP not allowed SWP option has been missing for a long time now on the app. When are you planning to bring it.? And why is STP not allowed for SoA funds now? You started as the flexible platform for investing. By trying to lock down investors or forcing them to use Demat MF will just lead negativity and bad taste.",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "32c7f94d-32b8-4b5b-a6b2-1eb1078b741e",
       "text": "why this app need daily update I'm not satisfied with this thing",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "7e96152c-f3a7-44df-8929-b479f4cfa3a2",
       "text": "even after trying to sell my shares for about 5 times applyng the tpin and otp its showing error which is frustrating.Where even 1 second matter here i am trying for about 5 minutes.This is the first time i am facing this issue befire it wasent like this.i dont know whats wrong with this app.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d0725d41-9cf2-403c-ab79-e81cac808e7b",
       "text": "too much pricing switching to another operator. maket order also they are tkaing price 118 too much for everything. link you adhar 118 lol 😆",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9a1d5ec3-0319-4027-b6ed-644f234dbde8",
       "text": "when ever I sell showing different value it's being 3 time in a single day.. I got losses due to it",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "12196747-2b1c-4d03-a9cc-6899de73bbd4",
       "text": "never use this grow app, external charge is too much high",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "08f2eb28-64db-428e-bcb8-57b7ae4cac26",
       "text": "I couldnt even set a pswd even after following the instructions and suggestion they provided... so if anybody failing to set a pswd kindly switch to another app instead of hanging here (and you know how valuable our time in trading)",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "1e7c4035-7b36-4f87-b4ff-cd7e91ce435f",
       "text": "I have been using the Grow app for about three and a half years.It would be good if you added some more new features. Such as a trailing stop loss. Scalping mode of F And O stock",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d0448fa7-7d35-4557-800e-46d945b8979e",
@@ -306,97 +307,97 @@
     {
       "review_id": "d1e6e034-c7fb-4a58-bc63-5ebea8c03780",
       "text": "application is giving live data compare to other apps it is lagging too much please look into it",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "7fdbbdc5-c099-4175-9266-8efc81e3dfdd",
       "text": "Good for trading share market",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9a4326ea-826d-4922-b936-552cfe7bc1fa",
       "text": "auto save is not working drawings are not getting saved very disgusting. and sync is not working properly between web and mobile Today itself open account and same day closing or otherwise fix it",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b6c8b83c-d20f-4fc0-aa9d-8c679fb424b5",
       "text": "New use this app fully fraud and unwanted brokerage charge was to to to high like today I took 3 MTF trade and then totally I have to paid 1700 approximately which is totally unwanted I uninstall this app and also deleted my demat from this site .",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ce64821f-21a9-4179-94df-9d001c22dc37",
       "text": "Please add daily P/L dashboard on monthly calender.",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "4e57df60-d70e-4e2b-b5ce-a76ff0277a57",
       "text": "Sometimes the wrong calculation is displayed, at closing time some other value was shown and at the end of days calculation changed to less value.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "443982b1-45ea-450c-8713-570732a4e7bc",
       "text": "Every single time it says PAN and BANK name missmatch literally i just have Name like shripada mg in bank and adhar and in pan it's compulsory name like malali Ganapathi shripada it include father name but it's rejecting because of my name",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "165da23f-26db-4c72-8536-6bff89a423b5",
       "text": "don't use this money West app groww nahi hoga.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "2fa10a45-9fad-4421-b0ed-5abf415ce342",
       "text": "bro pls solve my problem ive login from wrong which is mine but upi is not available on that number now your asking 50 rs it doesnt make sence please make change in it",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "3b8ca183-48fa-4774-8ad5-2cf0bfc82fa7",
       "text": "SBSE BEST APP LEKIN BROKERAGE SBSE HIGH BHI HAI...MTF ME...",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "0897964b-e2e7-4d9c-8919-7cee1d932732",
       "text": "now grow is totally froud",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "660316b0-4200-4631-9b66-d81041bdd65d",
       "text": "awesome app and perfect design for new generation",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9a78dd9c-2b5a-4d0b-b600-019b60a8bd05",
       "text": "worst application to trade at",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d02646c3-8b93-4cdc-9903-23d3735ee416",
       "text": "New update is bakwaas... Back to back update",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "fa4cfb10-f1a5-49f6-adb3-41a2584d8f4d",
       "text": "worst work stoploss doesn't work on this app also very glitches happened. switching to another broker. now groww is scamming on points it's very bad.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ae765bfd-3007-4525-922d-359f732548a2",
       "text": "good 💯 percent sahi hai",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5fd53f6b-e6f6-47e3-9458-ad52096c6425",
       "text": "dear team, please develop position widget, so we can track it from mobile home screen.",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e3278b19-a458-4be8-ae05-daaa7eb9c66e",
       "text": "1. After new update no expiry is written - when it is there - earlier it was written that today its expiry day . 2. index and sensex is now so small its look very bad . 3. when some news comes for particular stocks then that stocks must get one symbol like bell so that one know and open the news about that stock ... now i again again have to look for news section of every stock for any update. so kinldy do the change as soon as possible. ??? nothing is done for the same .",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b22b741d-cdde-4167-b22f-8b12b94b522a",
       "text": "nice app work all india No- 1",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "27ddef2f-f23f-4f12-a299-c077412e17a5",
@@ -406,42 +407,42 @@
     {
       "review_id": "a35ab9d7-a4e6-4d67-9b25-298de6ed43f6",
       "text": "the last update for GTT OR TRIGGER ORDER IS JUST WASTE OF TIME FOR CUSTOMERS ❌❌❌🚫🚫🚫🚫",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "3063c3c6-bd3a-4275-874e-83cbb5eb5123",
       "text": "The New Update from Groww app is just third class they are doing anything by there side they have Activated DDPI BY THEMSELVES AND CHARGED ME 118 RS WITHOUT MY PERMISSION AND AFTER ASKING GROWW CUSTOMER SERVICE THEY ADVISED ME TO DO SO .........",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "bc0fe0fd-c880-4f90-be69-b4fe80761064",
       "text": "it lag alot cant se price movement, candle formation even i updated still same issue iam facing",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "592391b5-bb70-42e7-b2a8-ff52b34d6bee",
       "text": "app is lagging most of time. not able to place the trade properly.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "27efcc5d-35cd-4c22-850f-ff57d7b89190",
       "text": "very good app.. it's useful",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "dbafde1c-1e6f-4ecb-9636-d998b99d6606",
       "text": "They are increased their brokarage chargesand it's not good",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "bdc2cd4c-960b-4ec1-ab83-98e967205c92",
       "text": "Croww app is very good services to investors",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "30fd64fe-a4e1-42e1-a924-d907170f0028",
       "text": "MY LOVELY GROWW OFFICIAL OPTION MY BETTER PLATFORM INDIA'S 1RANK INDIAN🪄💝",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "1eb7192a-7bef-46d1-8f3b-0e397661e3a9",
@@ -451,67 +452,67 @@
     {
       "review_id": "90d0d589-e44c-410e-92dd-b1a2e5ff5888",
       "text": "Awesome 😎 For BUILDING WEALTH THROUGH DISCIPLINE & SMART INVESTING.....",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b931726f-0dc9-4e14-acd9-5f3165e08754",
       "text": "smooth and easy to use",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "68359648-ee8f-4012-ac6d-c183d031c60b",
       "text": "facing an issue with groww watchlist App shows limit of 100 items, but I am getting the error \"you can only add 100 items\" Even when I try to add more than 10 stocks. This looks like a bug. Please fix this issue as soon as possible. Unable to use watchlist properly. kindly check and resolve because of this issue,I am not able to use the app properly and it's disgusting my overall experience during trading. and I am losing money when discussing app.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "54daaa98-1389-45fa-aca4-7ba6d932347b",
       "text": "Worst app, feels cheating to customer. Extra charges, why T+1 share immediately show in demat holding and allowed as normal delivery sell with auto converting to intraday? also btst too shows as normal delivery. It's showing wrong details to customer and charging unfair",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "82ffb210-a1e6-46a4-b9ba-80ad0039f8bb",
       "text": "Grow should recommendation option in Stock and F&O",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d5bd98cf-6720-4a93-8b7c-54f549138dfd",
       "text": "I have not created my account some issue but what the issue not tell me grow app 😡😡",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c500ea64-ee19-48ac-a887-aad8f3965adb",
       "text": "easy to use and understand UI DESIGN, FAST & RELIABLE",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "508cad1e-1761-484d-9a10-bb7be926fadd",
       "text": "groww is best app for trading, investment and mutual fund",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "1c78acce-8063-45b6-ae63-5ec2b63b469f",
       "text": "Good app and user friendly",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e2db810d-fb28-4b33-9ce3-b34642481e8c",
       "text": "owsm for stock and share market",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5af2364a-1408-4043-b9d7-f9f494400085",
       "text": "no 1 app for trading",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "72f11246-551d-45bc-aa39-bff478284097",
       "text": "Great app for new beginners",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ddbcb9a9-94dd-4475-82da-d1a36906151d",
       "text": "very nice app for trades please download and try",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ba9cd2e8-fff2-43a4-bc1e-96a2099974f9",
@@ -521,27 +522,27 @@
     {
       "review_id": "c0e8785a-f9b0-4ab7-96d3-6af8dccd1678",
       "text": "I have been using the Groww app since 2021, and it is a good platform for investment. The app is user-friendly, easy to navigate, and suitable for both beginners and experienced investors.",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "fc768e39-52fc-4b73-9240-69f083778e8f",
       "text": "good app to start stock market and mutual funds for beginners",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e8381df9-6d65-43b6-ad06-68689852c199",
       "text": "Nice platform to grow wealth.",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ed8d33b2-ef8c-489e-9487-4558e24f2920",
       "text": "this is really nice app and very good working",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "57343490-b1db-4c2a-8989-fbb401293fa4",
       "text": "this is the great platform for the investing and also great for the bestest and trusted app this is you can earn more and more great",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "faefd40b-ee4b-4f10-b5bb-fa78beb19d6b",
@@ -551,62 +552,62 @@
     {
       "review_id": "8cb60582-0970-4648-86d7-b3b53ab4dd49",
       "text": "Black list Company Not Remove on Groww app(Bharat Global Developers )",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e59cfc72-b6db-494b-a2c6-8835ad1f44a5",
       "text": "easy to access, good response, quick transfer",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9b98bf4a-56e8-40d1-b59c-9d52dd9d2b66",
       "text": "If Groww cannot execute orders at the correct price and repeatedly hits the wrong target, how are traders supposed to trust the platform for professional trading in Nifty 50 F&O? These technical issues can lead to serious financial losses i Will delete my grow account now",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "513b3e95-4750-454c-8a8a-e0548058ef79",
       "text": "third class gutter class app always glitches money loosing, if u r an retailer you lost all of your money if u use grow appp",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c10d1561-7edd-4e23-86e3-af448049e442",
       "text": "thank you for this app",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "12265718-ea54-4cbb-8fb2-e3a12642c64a",
       "text": "this app is a scam. pls don't use",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "49f1638a-77fe-44b7-9379-de9edf3fbcf6",
       "text": "It is too easy to use.",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9b9901d7-20cf-4469-84a6-150e146fe388",
       "text": "great app everything is clean and minimal is it understand",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "852bd622-1652-4b1b-aa97-f29ed552aed8",
       "text": "its a legal looting... mental harrsament.. distracting youth",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "4e65cdc4-3a9c-4d98-acc5-d9f669bd80ea",
       "text": "nice and very easy to handel",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "43a69985-b7ab-4a86-9795-fa3e74f6d430",
       "text": "It is very good app.",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "864fe0a5-8c8d-4b64-8938-8df6929da242",
       "text": "very user-friendly UI and easy to sell/buy . it will be helpful for for new person who wants to open a trading account",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5ba01aa1-e8cd-48b5-831e-be5d832c305a",
@@ -616,77 +617,77 @@
     {
       "review_id": "c793788c-2cd4-4d88-b58e-0c83d4a333ee",
       "text": "very useful especially for beginners",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9246bcc4-2efb-48ea-8116-2b1111fa0176",
       "text": "this app is worst app I have ever installed . sell order auto-cancels every time it took me 6 to 7 days to sell . if you are in profit then sell order will not be executed and if you are in debt ( loss ) it will be executed instantly brokrage charges and GST are also high you can not make profit from this app atleast . Nill reply from customer service",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "da141aab-08f5-43b7-a20b-daddefc75438",
       "text": "Very convenient astrology consultation anytime *",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "dcb0aa82-3a7d-4e89-8d18-d616e2885f52",
       "text": "worst app don't install this because if you call customer care the minimum wait time they say 5min but it takes 30min wait time still they won't connect customer care instead they cut the call and again same procedure, I think grow don't have customer care service if at all may be 01 or 02 person are handling this sevice so my request to you people please don't install this useless app. I rate 0 star ⭐ out of 10.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "f22a734f-0bab-48c8-a698-67a396711fdd",
       "text": "very good app for investing.",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "a5a181eb-3cb1-4e45-a975-45fc24740828",
       "text": "Mtf brokerage charges is high",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "a948b2fb-5914-436f-853c-61f096aa91ce",
       "text": "this is so beautiful aap 😊😊😊😊😊😊",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c756544b-5457-49b5-ad3d-872528d62862",
       "text": "best best best best best platform in the world 🌎🔥💯🥰♥️♥️♥️♥️",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b38c1e62-be2b-452a-bc44-a9855cc7ff51",
       "text": "worst of the worst experience..not recommended.. Specially on Expiry day",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "67159181-f3a0-4019-bcbb-d7995dae9ef4",
       "text": "it's brokerage charge is high even they advertised 0 % delivery charge but actually thay taken charge when you buy delivery stock and sell , even they say there charge call is 5 to 20 by grow charge but when you sell your delivery stocks they charge more then it, and other charge not included that tax and gov. charge is also add it's and your pfrofit is many time none if you investment little money",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "322b8471-ddb1-4be5-929b-0273dd64e30f",
       "text": "This app is so good but hidden charging and government charging so many so Very bad for any treaders",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "6f929ac8-c1f1-4393-b098-e401e866eb63",
       "text": "super fantastic amazing very good",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c65f82c0-6af3-4ef1-bfa4-c35267ec156b",
       "text": "very nice game and app",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "86303aa4-cb13-4334-a931-d5c3494fd092",
       "text": "Some time hang app & not show correct data .",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "7ac2724b-8b63-4cb5-968f-5275674d5f97",
       "text": "update kyc will require 50₹ 🤣 , clown app",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "54eddd36-034e-411c-897b-cc250c1a28bf",
@@ -696,12 +697,12 @@
     {
       "review_id": "e937a6fd-03b1-47e8-ac5b-353cc4ccb270",
       "text": "i am first time mutual fund stood i thing this is good 👍 for me in my future investment 💕💕💕💕💕......",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "66cf73be-5bb0-4a06-b04f-3ba87a9cbb18",
       "text": "grow is best application for murtal funds.",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "1cfdf6b6-9d12-48b5-a0d9-95c2e73a25b9",
@@ -711,37 +712,37 @@
     {
       "review_id": "bd035c88-6f9d-4d87-be7a-08c32b4f4a6c",
       "text": "such a growth the groww",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c2633221-3723-4d92-9253-3fbc06c5c9fa",
       "text": "very helpful and good 👍",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "bda9dc73-6e81-4c8a-bd92-510e838b7e94",
       "text": "thank u so much 😊🙏 Growwwwww 🤞❤️🫶👀",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "107a0008-cbd8-4684-8002-b07400df172d",
       "text": "Use of app, is not much user friendly. lagging behind its Peer, considering filter, sorting features.",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5f6dae67-4dd0-4427-8af3-473fa88ab467",
       "text": "very good experience upar upar",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "687e6658-c518-4358-a890-4e08f54ee12f",
       "text": "it's fake app, do not invest via this, I am struggling in reclaiming my 70k, it's fraud app, do not use",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "a19ed6e4-23c9-482e-b1e2-2f1b35e7d1c0",
       "text": "it's very easy to use",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "db12f078-9948-4d4c-b13b-f0cba73379dd",
@@ -751,82 +752,82 @@
     {
       "review_id": "ae8d3ac6-6e26-422c-a18c-2803755ae79c",
       "text": "Grow is my favourite investment platform. Iam Happy for my broker is grow...",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ead05c71-487f-4caa-b746-58b3cef8e3e4",
       "text": "The easiest and user friendly platform with no error. I will tell others to come and join GROWW once. 🙏",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e6aba7f9-6685-4b82-81cc-c6a38af91430",
       "text": "good for trading it keeps me updated and the return data, news and everything is quite accurate so far I'm enjoying using it ❤️",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "57519b36-8950-4e7b-a2ba-2f76a8af91ee",
       "text": "i don't know what happened but the app is showing ``your journey is in reset process '' . This is my first time of using a trade app and showing this from the start.... I haven't even started my journey.... Not to raise complain but to reach your concern..... kindly rectify the issue",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ecc11042-2a9a-4c17-a4bd-d7e82db330af",
       "text": "Some days, we like to come here just to remind you to straighten your back, stay hydrated, read the disclaimers, and update your Groww app. These regular updates help keep the bugs away and thus enhance your investing journey.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "bcf8929e-edbc-476f-a442-3f578eba950d",
       "text": "A very bad experience chart error happened very often if you are doing chart analysis in nifty50 before 8-dec-25 you can't see charts before 4 Hour time very bad and some time if you shuffle in TF to analysis sometime in one timeframe that specific day's total candle will venice so very very very bad experience 0 Star and I will uninstall this app on Monday and shift to Dhan sold all my shares on this platform just because this error thing",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "fa90cddb-d2ac-4192-ae56-7387cbfa0011",
       "text": "Intraday charges can be ₹10 per order and Delivery charges can be zero. Many platforms offer the same charges.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d06a2ef6-b8cf-4889-a8b4-51302292510f",
       "text": "grow hade not returned my money that I withdraw from it",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "def01260-1f00-45e1-b5e5-15e11013d3c9",
       "text": "nice and easy to manage",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "47d4fd33-300b-4cb6-953c-0406447c1ae2",
       "text": "it's a very trusted appa",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e74c8dbc-bc69-4523-91a6-0482cbeb898b",
       "text": "superb quality and quality ok",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e5d6089f-87ae-476d-a1ca-6390a7b02a45",
       "text": "super easy app to use",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "3c548795-d209-4d1e-ba00-fc67fa6e6eac",
       "text": "it's definitely good for trading",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "13725572-73d7-4d7e-9ccd-f0a440fbe7c3",
       "text": "Apps it's good but I have no money 😞",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "627613c6-8a8e-498b-88d2-f5090fdeec9e",
       "text": "UPI section is not loading i complaint it about 5 to 6 time and many different days but It can't resolve help me 😔 that was not expected from grow.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "70be338d-23fc-4df8-98e1-19485f1c6171",
       "text": "I am very happy with groww",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "7a3b0840-0464-4d90-ac23-4b383580ced3",
@@ -836,87 +837,87 @@
     {
       "review_id": "d4c5a13e-c0df-446e-a48b-cf7f637cd74e",
       "text": "good and easy application for market",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d800e73c-7fcc-492d-a0be-486cddad36a8",
       "text": "I have been using the app for 3 years It is overall good. It need to improve at order execution in the intraday segment , it lags in speed execution.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "687443ea-10d1-4123-8094-eac9b557811a",
       "text": "One Of The Worst Apps For Trading Before Reaching SL Price Automatically Sell Position Also For Buying Buy At High Price ; Don't Use It",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5b3613f2-04f1-4a9f-b8c0-cbd505c97009",
       "text": "easy to invest free demat account very nice platform for investing.",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "eb94e1de-c83d-46ef-a898-34de619d050f",
       "text": "provide more security and solve the problem as early as",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e2e3fb0a-5c5c-4ba9-a0f9-71e7a1ff1192",
       "text": "thanks for helping for poor people",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "32b3d3b7-67f0-465f-8564-8ecb3eb78750",
       "text": "over all Very Good app",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d0116557-ba7e-4b25-840c-bc8a95042e11",
       "text": "Best ui i have seen made me switch from other broker app. UPI payments are surprisingly fast love it. suggestions 1. more features can be added to upi like upi lite, upi widgets etc",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "03d8d045-ebc3-41a4-a7d8-8440a731e06e",
       "text": "now at Great app happy now Sir tnx Long time user",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "0d394246-02fd-48b8-9b33-1475a1426f38",
       "text": "very comfortable for a beginner investment",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "3f1bf14e-e9d9-4eba-a53f-02fe7aa5c60d",
       "text": "this app use very easy and simple. i am understanding easy this app",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "6bd843e8-772e-45e3-98aa-bd4b90c7ab6a",
       "text": "AMC have credited the amount in my old bank account which was freeze. I cannot access it. Despite of telling hundreds times to change my bank account, you did not. You made me do the courier 2 times for account update, but you never update my bank account. It cost me 500 rupee for courier and now 3,123 . Now I'm going to take legal action, it's your fault.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "0e427997-aa93-4177-a6f7-73cd06fbd717",
       "text": "very nice app usefull app",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "fca7c23f-1af0-4d4a-89d3-146802ed36e9",
       "text": "good app easy to use. but need to add more option in filters of stock",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "81aa9e7b-0b9b-45d7-8e2d-4f793bfecf1e",
       "text": "this gu app is charging extra money in the name of groww charges on buying or selling of stocks and the worst thing is that.. they Even don't follow SEBI rules and hold money for extra time and can be withdrawal able after 10am of next to next days if there is a holiday they gonna hold money for more time",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "8450648f-26c1-4974-92c6-f5b3dffa1b13",
       "text": "Every index expiry day asking update. Always asking update.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "53dc0d46-ae1a-41c2-ad94-096fa22fd2ac",
       "text": "no need to add fractions in sl and tgt in position tool😡😡😡... from I'll be no longer groww user😏😏😏",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "64edf278-d9a8-45c3-ad94-58f6352d4504",
@@ -926,17 +927,17 @@
     {
       "review_id": "b8e25884-ded5-4219-b659-45b5d9f6123d",
       "text": "they stole Rs 4 to 5 Or for a large transaction nearly Rs100 every time some one complaint about grow in cyber crime",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "abfb6828-edbf-45a0-9706-1d1ab954f8ed",
       "text": "UI is great , simple handling and fast .",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5057a81e-f513-4f97-b1a0-338a8a044dd6",
       "text": "every time I required to update",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "db261cf1-e757-44da-8dbf-f99ba807a2a5",
@@ -946,92 +947,92 @@
     {
       "review_id": "d9848384-29f8-4c24-8e3d-967c80ad8fa5",
       "text": "I am sharing my personal experience. please don't trade in this application. there are lot of hidden charges. even though you got profit you always in loses side. they won't send mail for hidden charges. no response from customer service because they wantedly eating out money. at beginning one or two trades they don't eat after that they start eating our money. hope this is useful any one. beware of this application.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "f2a4bd02-42a1-4168-aa22-72b3ee3df9c4",
       "text": "Almost everyone think groww charges less brokerage,but guess what, it charges the highest brokerage - 0.2% of the whole transaction for MTF with no capping, so if suppose you have 1 lac ₹ and you get ×4 times MTF = 4 lac₹ equity trade , now if you exit in no profit no loss situation you exit for a price of 4 lac ₹ ,so they charge you for 8 lac₹ ( 4 exit 4 entry) =0.002×800000= 1600 Rs for a single trade and you were also paying interest of 14.95% pa of the complete amount. Crux- YOU LOOSE 2-3%",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "88b2f0db-4e91-40ba-89fe-df84006871e7",
       "text": "one of the best, all the features are excellent.. only feedback is in the Option basket the strike from different weeks is not featured, it's allowing only same week. no other points .. the best.. Edit 17/04/26 after so many years of trading now I am growing 💗 very happy. Thank you team..",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "eb523ac8-7c2f-4591-9674-5a7bcf2b039a",
       "text": "nice app and very helpful 👍🏻 to see tecnical analysis and. buy or sell",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9cd7df05-e891-4846-b9d2-d16f263e2c36",
       "text": "this app is better now",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ccbd2784-4182-4880-893f-003503dccd91",
       "text": "best app I used till now",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d8c9b85a-4b12-415d-9b52-3ab4fab1cdb3",
       "text": "easy to use . best experience 😉.",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "654dabfc-6474-4b3e-9ae3-c73669267a07",
       "text": "good organised App without any issues",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "f5f3c8b9-a244-4172-aba7-b6f27d1efda6",
       "text": "Best .. But Can Change हिंदी Language.",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "38d7a67d-6fc7-4099-b9a0-ff1fecd38f0a",
       "text": "not live showing why ? i have to open it repeatedly.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "1faad6f5-a990-4605-a97b-4540e3d167e7",
       "text": "Groww is a simple, user-friendly app that’s great for beginners starting their investment journey.",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "acf597e3-f44a-448b-8484-fc7e89dd5613",
       "text": "it is very easy to understand for beginners and the charges are low compared to other brokers",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "706e64a9-02be-4291-8022-ef16ef7e678e",
       "text": "very bad app , which not trust worthy at all, in f&o it's all gambling and not genuine at all, you can see it very clearly in commodity tradess, one star is because of its speed, not for its trust full services, don't go for f&o in groww, go for other brokers",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c9bc8c65-e462-4610-b690-cd50b6d522b3",
       "text": "very easy very helpful ☺️",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "1c70c176-ccd4-434b-9e29-711dce2db8dc",
       "text": "Trailing Stop Loss is not Available",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "93d0f932-0ea1-4ef2-a948-8a9d34bd23bf",
       "text": "Hi Everyone Please Don't use the Groww Platform Instead of using Groww prefer someother good broker as in the market we have many options.The thing is I placed a Stoploss order while inwas in trade my SL on 24250 call was 174 rs in the same candle at 1:24 Pm sell order executed but my Stoploss price was 174 triggered candle which never came at the time to 174.50 also... Don't use a Groww many times face a technical issues highly not recommended this broker",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "bec8283b-80a1-4b6d-877f-024305dd7acd",
       "text": "brokarage amount High and Chart and indicator not updated like Dhan",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "35a2e72c-4eb8-4317-aad3-874809a406ea",
       "text": "Earlier it worked very fine but now it seems as it has been well designed so that there's only loss of money inspite of the market being high or low. Not reliable or transparent.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "66cfa349-b327-4d8e-a688-7a0b2f3d4d39",
@@ -1041,12 +1042,12 @@
     {
       "review_id": "85c5734e-d02c-4fd5-8d3c-10ca0d7cd352",
       "text": "on Star less because it's take some hidden charges for using application",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "02f19453-9acf-4016-858d-54dec6be335f",
       "text": "great experience 😃... Groww mobile app pr SWP ka option kab tak aayega ??",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e8b7f1e4-1a67-4594-823f-36ad3da6557d",
@@ -1056,42 +1057,42 @@
     {
       "review_id": "e98ed748-b5b3-4390-ac6c-c13571ec316f",
       "text": "brokerage charges are so high",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "6c3e61b5-553b-4da1-a398-f9917dffedc5",
       "text": "It's too easy and trusted",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d73c3355-433d-43fe-a730-fb02fdffeb77",
       "text": "Everything is fine, but MTF brokerage charges are very high.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e49cc6cb-4602-40a9-ac88-152bca002bc9",
       "text": "option trading main stop loss and target ka option de de to achcha hoga",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "568fd5e9-f150-468b-b546-a2e078a7df2d",
       "text": "all update timley and easy to payment meathed",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e90535e3-6f97-4ecf-b16b-4b59123d9a7e",
       "text": "I've been using this application for the past three years, and it's very easy to learn and use. My overall experience has been excellent. Thanks to the Groww team. 🙂",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "2b94d3c9-125b-4f2b-a3cd-b0626a9a4ef9",
       "text": "easy to understand app. best app",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5169c92e-2055-4910-8c9a-3dd922e5a13b",
       "text": "Verry nice and easy to use",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "8101c143-bece-424c-aeb1-07f411cdd5fc",
@@ -1101,17 +1102,17 @@
     {
       "review_id": "7be44928-6333-46a1-9d59-90c361ebd2bb",
       "text": "very useful in this app",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "afe63998-ffed-41b9-9c8b-29bbf57a1143",
       "text": "easy method for market analysis and trading",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e3e420a5-10f5-42a0-9237-0ffce037c109",
       "text": "it's amazing Application for beginners",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c50fcb67-c94b-4e3e-9a29-09e2d2614edc",
@@ -1126,77 +1127,77 @@
     {
       "review_id": "59f68f75-a7af-4abf-9630-767d86bbec5e",
       "text": "very very very nice and useful application. every thing we can done in a single one platform",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "92d82c21-16e4-4410-93f2-f34d474f1780",
       "text": "Best option for money saving.",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c186cdd8-946a-4a9d-9ec1-0e5891f12121",
       "text": "I was a beginner but groww helped me understand many things.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d7897911-40a9-45af-bfdb-70eb6918c10a",
       "text": "it's good for Intraday trending...",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "1f8d54b9-b002-4a26-a5b4-5342b157de4d",
       "text": "good experience and easily usefull",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "a9b02a7f-09c4-4093-b84e-96667f4a328e",
       "text": "very easy to use. I am loving it. MF investment manages fluently",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b9cc65aa-0f84-4120-8c72-0ffd20f43191",
       "text": "Nice Platform for all investment",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ab603ac8-0c0a-412d-9e03-fd8e72fbce20",
       "text": "the best platform Shere market",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "474089bb-ea5a-4fa6-a426-ae5f16944a11",
       "text": "persent time is very good, but future diside hardworking",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "4ec23af8-6131-4250-8ced-d5aec640494a",
       "text": "Grow is a very good company. Always cooperative. Giving prompt reply to everyone.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "18b83683-266d-4ae3-9c65-7c26e5ec2e32",
       "text": "very good app for trading",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "51011391-a4a7-4c22-97b1-107d46a03f57",
       "text": "this is a great app of investment 😄😄",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "a845afc4-a4d2-465c-b8f6-4f0e2200cc1e",
       "text": "Onboarding was fast and segment activation was quick. Would be nice to have an option to adjust the font type and size. Trades were executed quickly.",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5872b624-f79d-40b0-b6ba-fc144baa8a10",
       "text": "This is the worst service by grow. During trading time how can this happens. Grow doesn't open since a hour. Who will pay my loss?",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "df4072a4-79b2-4654-a5e9-b60e56949590",
       "text": "Please add etf's tab in products and tools and tell me about two different market caps in stock like in screener market cap different in opening the stock from screener market cap why it is my sort and filter option work from last 2 days.",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "fe31776e-b6d9-45dd-bacd-cf959c9a1fbb",
@@ -1206,82 +1207,82 @@
     {
       "review_id": "5d526c95-1fbc-4af6-bfe8-12e2deb649a4",
       "text": "bought a few funds than kyc goes nill? not letting me buy sip",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "4f3ebd72-92d8-45c6-8807-0aac21b4fda3",
       "text": "this is the best app for trading",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c37a62b6-4a2b-423c-b14d-1800ad568c2f",
       "text": "nice 👍 please additional daily Sip liquid fund",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "20273946-faa8-4ba8-b921-3315ee342781",
       "text": "groww app is good 💯 % crystal",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9798a76d-4e61-48be-b630-9b5f88fafc33",
       "text": "Warning: Think twice before using Groww for Active Trading! 🛑 ​​\"Don't use Groww for active trading or options. It's okay for long-term investment or just monitoring stocks, but for execution, it is very unreliable. The app lags almost 100% of the time during live trades, and the data is often inaccurate. Using it for trading is a sure way to lose your money due to technical errors. Stay safe and choose a better platform for trading.\"I have personally suffered a loss of over ₹10+ Lakhs..",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b46dc909-3372-4dda-a251-e6849267ff5c",
       "text": "my life depends on you groww.........all savings invested with you 💗❤️....",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e358ea6c-2828-4b61-9974-a52ff2c839e3",
       "text": "this app good no iam invest amount but more amount cutting",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "55896654-235c-4ee7-966e-0d8a983e1eee",
       "text": "Superb smooth UI, Very easy to sell and buy. I have switched from coin and hdfc",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "3b58fa2c-bd7f-4679-8574-f83fb964d765",
       "text": "it's very nice aap for trading",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ba33ea3e-c750-41ee-ba94-4c3d438abcf6",
       "text": "new update is worst I don't like this i request I to bring the old version thank you",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "4a357045-3ce8-45bf-ac4d-b38708694df4",
       "text": "financial year 26-27 kb aayegi app pr",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "0c725bd7-918f-4c83-ab7f-d0127a733f99",
       "text": "these app good for fund and stock",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "a936fdf6-f477-4810-b2fe-44a9ad87c61e",
       "text": "brokerage fee is too much",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "3a8543e7-622d-447a-95c5-8c1b935e7acb",
       "text": "im sorry to say but this is not an okay app for beginners, not at all! please hear me out i had no idea about the other charges , i added 1470 rupees in my account later on facing market downfall to prevent greater loss , i took it out at the lowest loss as possible and which was around 30 rs and later on when i went to withdraw my money back to my account i gor 1190 rupees back :) ... ima get alotta scolding from my mom",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "a84c46ec-0642-4adb-8d52-b9ed2f5cab42",
       "text": "easy to use this app and beginner friendly too.",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "348b9f9a-d71b-4f04-bd66-2ebb2057e6b1",
       "text": "worst app... too many hidden charges",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "12ab836b-3d99-4be3-a4b2-a4819e11c1d1",
@@ -1291,12 +1292,12 @@
     {
       "review_id": "8195a9f9-754a-4526-b7f9-e3babf3a0673",
       "text": "very bad app I hate this app ek gatiya app hai but 5 star de hi deta hun",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e47721a5-bce2-4612-9e95-e33b46d8d401",
       "text": "I can't place GTT sell order anymore and the app is forcing me to enable DDPI for placing trigger sell orders",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "dfcf81eb-a730-42bd-a62f-326185c61e99",
@@ -1306,97 +1307,97 @@
     {
       "review_id": "a49e19b1-3dd9-4c8d-9468-dd0b87794c21",
       "text": "nice app for investment in stick and mutual funds. easy to use",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "937ac002-0581-497a-9ab4-d5e2d4533913",
       "text": "very high charges from grow it s worst experince from grow ,also there is no way to check iv ,in the live market ,please don t go with grow you take every time loss .",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "f07f63f5-31ab-4efb-a180-846e0d021277",
       "text": "easy to use, minimal charges",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9d7a67e4-9e8f-4ca7-8377-4e8bc1a8b9f6",
       "text": "quick response and timely account transparency",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e1e027d4-afcc-470c-b892-a3fd3b5fae53",
       "text": "good app easy to goooooo",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b1718d69-8580-4298-b659-0c715396311e",
       "text": "very very disturbing ad procedure",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d8b9a223-a522-4a39-9b47-5f83b6e204f6",
       "text": "Groww is super broker app",
-      "primary_theme": "Investments"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "3a8040e5-025b-4280-80c5-5eab3048c0b9",
       "text": "much better than other aap.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "19c9749f-0b19-40ec-9113-8ca5684bd92d",
       "text": "It's a very difficult app for an option trader while the limit orders execute in the market & GTT orders will execute far from the limit we set. SL is also the same, if we keep 10 points as SL it goes nearly 13 to 14 points & hits the SL. while coming to targets if we keep 20 points it will hit nearly 16 to 18 points. And the app does not provide any bracket orders, we can't set our targets & SL before the order activates, we only set the SL & Targets once the order activates.",
-      "primary_theme": "Performance"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "1590c415-43e4-4ff4-8910-f9d131241f86",
       "text": "not satisfied with this update",
-      "primary_theme": "Interface"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b710fad9-c26a-40d4-bdfd-fe9562e9e9bf",
       "text": "My gmail id and mobile number are linked to my Groww demat account. I don't have them yet, so I want to update them. Please help.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b1a1769f-817d-4679-bff0-430bb4e4d388",
       "text": "If possible to guide unknown customer for about ongoing profitable and loss mutual funds. How to invest in profitable mutual funds and gain knowledge about stocks and mutual fund?",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "28c186f6-4ad6-472a-acc7-0bd34a88c761",
       "text": "Please provide trade diary features",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "834e417b-8c67-46bf-aae4-6d208dd23342",
       "text": "toomuch looty brokarage sad plateform",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "351cb86a-79e7-4e66-b36d-ce6d26ec95be",
       "text": "Groww app is not suitable for a trader, this is only for investment purpose. So many glitches, execution problem. You may faces big loss for this and they just assured you by a 'sorry'",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "758d4e33-244e-4ff0-8926-7a6063ad5dbc",
       "text": "very useful for the share market.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "f926356a-0899-458b-91e9-ead9954e428a",
       "text": "I didn't complete the verification and when I login again to complete the account set up, it is showing error, when I refresh the page it is still showing error.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "6cce9a85-da38-4712-af57-0fc5d0e7421b",
       "text": "Unable to activate my account, when doing esign using aadhar error page is coming and unable to proceed further.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5825f9c8-bb4c-498f-918a-44040496720b",
       "text": "easy for everything 👌 very good app no amc bindas use karo",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "2b3f0637-ac5e-4e8b-aec4-e31e62e2b6fc",
@@ -1406,12 +1407,12 @@
     {
       "review_id": "3cb985b3-a92a-4c08-b62d-89c3636a943e",
       "text": "Best App for mutual fund investment essay interfaces any time call customer service",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "e3b3ee3b-57d0-4054-87c1-c218b17f893b",
       "text": "easy and fast withdrawals but there brokerage charges are a little bit high",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5e579ceb-bc00-4f83-875c-64f2c9da4c28",
@@ -1421,12 +1422,12 @@
     {
       "review_id": "43d28ba8-c92a-4282-a2be-0319fae589f7",
       "text": "this app easy to operate.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "755509a6-bef0-4dee-b884-c004cb02b0fb",
       "text": "There is a very market friendly app",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "af1f8cc6-2581-461f-bb50-b05f2cf4f72b",
@@ -1441,67 +1442,67 @@
     {
       "review_id": "d9009671-131a-4af9-9ad8-74808d729c83",
       "text": "easy 2 use friendly app with nice experience",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9b4dbb30-f14b-49a6-a20e-68c78912f289",
       "text": "Easy to operate. Hassel free app.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "07db6c6e-1c76-451c-ab26-b1decd257f36",
       "text": "Suggestion- When Convert MTF position to Delivery, Required amount should exclude cash amount which is Blocked for MTF loss.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "0371bc76-6c4e-483d-abf1-f8e9ce4eb932",
       "text": "more tool like year wise returns, rolling returns,filter using AUM size and a lot more features is missing in mutual fund section.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "124ff12b-0fa4-4933-ad94-f04446793447",
       "text": "Nice App for Instant Deposit and Withdrawal. Thanks to Groww And Staff.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "742c8b53-556d-4972-a806-836410b793fc",
       "text": "cheap broker , high brokerage please never make acount in this broker , low server",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "224c226e-27e7-43e7-af6a-f7202901c83f",
       "text": "Reliable platform overall. Been using it regularly without major issues. A higher watchlist limit would be a nice addition.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "f4b6895d-8418-4942-910f-3b7360d79b47",
       "text": "drawing in chart can't hide.. it's takes too much to hide. and the chart is hanged...",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "eeb93d5d-28a5-42b9-b322-6c70c9ee529c",
       "text": "all is good but , please provide long short tools in scalping mode",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "4408ade3-a057-4950-a16e-afa7af7ac0a5",
       "text": "A very very bad application doesn't execute orders timely,and hanging in between trading causes loss",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5a6eb3ca-e916-4823-b367-3d713f497eea",
       "text": "Sach bolu to yeh app works really fast without lag and connections happen quickly very useful and entertaining.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "f9f5579e-6d53-40af-810a-e0e1345f1bef",
       "text": "good, very quick update of stocks",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "98bcaca2-e75b-47ec-872a-54e539d81192",
       "text": "any new beginner not download grow too much brokerage",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ba4e9f1b-6769-4d69-a4b0-fe9972be31bd",
@@ -1511,7 +1512,7 @@
     {
       "review_id": "225b5d51-6b17-476a-9c61-ac2f2668970a",
       "text": "very best app in the world . I am very happy today because i am secure 5000 in growww",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "fcfe3080-de6e-4560-a906-dc01cc202fd3",
@@ -1521,27 +1522,27 @@
     {
       "review_id": "45c8f9ca-e41a-4e98-b448-111f3f5577db",
       "text": "The app is good.But please provide a different section for ETF's where a investor can see the percentage of money invested in a single company like MF. So,we can diversify our portfolio.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "fec31109-520b-4e00-8396-f8969f0bc286",
       "text": "So many terms and conditions just fed up with the ad",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "cfa33665-c3f9-499a-8c08-e2144d8c0ac5",
       "text": "One of the best app to buy and sell stocks",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ba80f2f7-da94-48c9-a49f-3169983514e7",
       "text": "Good platform with Less transaction charges... Easy to use - User Friendly App... good 👍🏻👍🏻👍🏻😊😊😊",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "dd27e152-9c84-454f-9009-224bb9f472c3",
       "text": "unable to install the app in my new phone. plz help Groww team.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "088573d7-0f5f-4fe7-b7ec-09db15e18b8f",
@@ -1551,12 +1552,12 @@
     {
       "review_id": "9545428b-13a2-4334-a9e7-b4ed311dfee3",
       "text": "very slow chart moving and stoploss not hit perfectly ..",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5a37fa80-9646-4da2-ace5-833bd3460acb",
       "text": "Groww is a great platform, but it lacks an important security feature. Please implement TOTP-based Two-Factor Authentication (2FA) for login and transactions. OTP-only security is not sufficient today. Adding authenticator-based 2FA will significantly improve user safety and trust. Kindly prioritize this feature.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "28b88ed6-879e-4749-9dab-8b0b0f37afcb",
@@ -1566,72 +1567,72 @@
     {
       "review_id": "9b41a555-d846-477d-9c04-57fa2b7cf5d4",
       "text": "it's very good experience! I like it",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b4b60869-8089-48c0-9717-89de898b9cca",
       "text": "March 2022 user 🥰 Top broker application groww 🥰😍 march 2026 I hate brokerage at this time from you groww 🤬",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "fbdaca4b-ca92-4b5c-bc36-650946081224",
       "text": "unable to buy the children's mutual fund like sbi children's investment funds. please advise what should I do????....",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9f689371-3370-4644-9b9f-3500a43a5d50",
       "text": "Best app for Trading and sip",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "88498e95-c2ea-4c47-ae82-8c6d7192c763",
       "text": "app is easy to use.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "32b144a4-4c19-46f5-ac0e-a09fa733a95a",
       "text": "sure friendly. but need improvement",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "38b7a9fc-0bbf-473b-b686-5b96b5ffde9b",
       "text": "this app is good for beginners and also experienced people can trade in this app.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "fa671132-353e-4aae-addf-6b282bda04d8",
       "text": "wonder full Good Very happy",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d6a50375-f9c6-4625-a766-8ce1cb680477",
       "text": "if you are using mtf for margins then this is the worst app,,,groww is charging flat 0.1% brokerage on whole traded amount,,,,except groww every trading app has a upper cap limit of 20 per trade",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "f4dd0be0-4f2c-4777-9307-76323846b464",
       "text": "Unable to track external Stock Portfolios of Zerodha, Mstock, ICICI Direct in the App. On trying to track it always showing as in Progress for the last several week's. I have uninstalled the app and cleared the cache. I suppose there is some Glitch kindly do the needful at the earliest.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9b63ec76-4a37-4b85-a44e-a42793761e21",
       "text": "Worst trading app ever. Charges are more than the selling price.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c4038126-7ffe-48f8-a3bd-4c9d3099f346",
       "text": "good app for beginners as well as for experienced traders.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "58e4a12f-74dc-43c7-9907-167a64beba62",
       "text": "Using it for just a day & I realised it as Third class discount broker services!! Very poor! A lot of hidden charges while Equity Buy & sell that do not show during transactions but later deducted. Around ₹20 DP charges + Brokerage extra while Selling (While Zerodha only charges fixed ₹15.34 DP charges, no other charges). You can't withdraw funds after selling. You've to wait a day to withdraw funds (while Zerodha, instant credit after sell & instant withdrawal)",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b96e8435-8c08-487f-9a46-3b7314f0fca0",
       "text": "love Groww.. with the help of groww i understand how the market works 00.0001%.. without it 0%...",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "b6a8f330-efb8-453d-a368-c50eb0f2e05b",
@@ -1641,37 +1642,37 @@
     {
       "review_id": "d9125782-1434-408d-9a5d-deb95984cf87",
       "text": "Excellent, simple way to understand market analysis.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ac7713dc-2baa-48c9-89c1-f96a4b1eea62",
       "text": "sector is not visible near to stock",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "0cdb1a0f-e3a2-4060-ab6f-ffa918591bd6",
       "text": "very good demate account but my central kyc is not completed",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c9d25ce4-c1e1-4456-94b8-1fda00a4eb86",
       "text": "Very simple App for New & all type of Investors",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "4d31d427-df2e-4a3f-a4d6-f315bdd47dfc",
       "text": "to invest in MF I first download this app and stuck with it, never had second thoughts that I should try other app in the market. groww is really good and easy to use",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5bf98d70-6b99-413b-8fe8-90f6de3c34b4",
       "text": "app is very good 👍 but f&O brokerage is very high",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "80db82f4-7b55-4d14-aa29-6238a90e631b",
       "text": "very bad application,,too much brokrage charge,,,,,,,very bad experience",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ec332c5e-4ef4-4323-a805-da36d4f191e8",
@@ -1681,47 +1682,47 @@
     {
       "review_id": "1435c0fb-9a74-4276-8966-c6597d761420",
       "text": "Groww has to update features like Target and Trailing SL .These features are available on other platforms like dhan and zerodha kite . In Grow the Userinterface is very simple and easy to use ,but it lacks advanced features . Please update the advanced features.Thank you .",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "2d7b2483-1ade-4402-99e4-849eeb32dd1f",
       "text": "awesome app. i like it very much. soo easy to use and easy understanding and soo flexible with more options. i loved it. i rate 10/10. thanks to developers for creating this App. 👍👍",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ca7436da-51ce-4862-9908-8c073fe1a037",
       "text": "all time best and forever good i like this",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "511c89e8-19a9-4d9d-b4c9-f8c4843a8971",
       "text": "This app is very good.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "0574221e-b104-4628-82e7-fe3feebcd54e",
       "text": "Do you guys even realize the top portion of app showing futures and options indices are truncated to half from one week...still I don't see any fix",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "aac3db7a-16b2-4492-aa4c-89d1d5f5f423",
       "text": "overall experience is very good.Especially new update 915 is very good.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "6bd08f19-8505-4c34-a139-bd738349f3c1",
       "text": "Add 2 hour time frame and hide phone's status bar in landscape orientation",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5fbe895c-7bf0-42e9-8b78-7d72dbc10f39",
       "text": "Request to Groww team, kindly provide a option to save my indicator template.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "dc787111-fe7a-4555-9f73-4cb65b51d1c9",
       "text": "it's very good experience and i am using this app last 5 years and jast little bit imprisonment like add paper treding",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "0075f83c-706b-4d4f-8877-71ae8041a984",
@@ -1731,22 +1732,22 @@
     {
       "review_id": "9e7a9afc-b8dd-4918-956e-eced53930a32",
       "text": "Add the Trailing Stop loss feature too.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "8646bcda-4ae9-48d4-a011-7d4bd3a8d237",
       "text": "Groww have stolen my 16k. I have redeem my mutual fund. when i redeem that time it shows 74k when i receive that time only 58k i received. groww has stolen my mutual fund balance.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "a81e9e79-6e40-46e2-94db-c950e86fcd6e",
       "text": "Good , After long discussion I am become stock buyers.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "4280294a-b96e-4dd9-88d5-8fd4e45c0a9f",
       "text": "it's good for understand that you investment in stock market.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "8737a5bd-18ee-4bba-b9a4-dc59b2b67ad5",
@@ -1756,62 +1757,62 @@
     {
       "review_id": "3e8b2c29-06a7-4cf4-957b-61b76c347077",
       "text": "Please update on Trailing loss option. because this feature is usefull one of every one.even when we make profit and inch by inch lock the profit must. so do it now",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "076c2baa-3b0c-4fec-b033-76f84b531749",
       "text": "the withdrawed money does not get credited instantly like other trading apps",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "dfd453b0-b984-40a0-855a-efad0c5c844b",
       "text": "this is good and best app",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "fcc416b9-a206-4311-949f-bc106b48fc71",
       "text": "Yeah, It's a great app for beginners who want to learn or do investing. Recommended for Beginners.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "ee0ce5a3-d9b3-4481-8473-7c33aa854220",
       "text": "Nice App. I have been using this for 2 years but nowadays I am facing one problem and that is, \"scalper option\" keep missing. I have to keep uninstalling then re-installing the App to get the scalper option visible.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "a61c54bb-fce2-4f5d-a44c-4a3e571f16b2",
       "text": "Grow is very good but i request the developers to add charts syncing features , phone and pc chats should sync also add features to save templates",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "78dc38b5-c881-4b43-8926-97e221d99162",
       "text": "Best in the segment. No in-app ads is the best feature. Clean UI and theme, never failed, hanged or crashed on me.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "91df99a1-7f85-40c5-93d7-e3a4896f1062",
       "text": "very good app hustle free investing with groww",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c232a41f-734d-4823-b6a9-220731353c5e",
       "text": "this platform is very useful",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "dfefcea3-3eb3-467d-818d-0b97b064e3fa",
       "text": "why is it necessary to activate DDPI to modify my GTT orders.... cheap tactics for money",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "d0b09578-5146-4718-860d-22f5ac615114",
       "text": "after the first survey the language always changes from english to hindi/bengali which i dont know and its hard for me to answer",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "181c0854-f687-4b48-ad53-e6ad0b2f15d5",
       "text": "very bad 👎 very high brokerage charges 😡😡😡",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "87d113d7-cafe-4ba8-9019-ec2f8e71e15a",
@@ -1826,17 +1827,17 @@
     {
       "review_id": "c6f7b3e2-96b8-46c3-9ebc-7ccfdfdacf90",
       "text": "very useful and user friendly. highly recommended",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "682cfc1b-59b1-48eb-b50f-1325559786ee",
       "text": "Grow is very nice platform for various Investment options. it's also very easy to manage portfolio at one place...",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "bcf310d7-a48d-4cbf-819b-f2eb4119bf97",
       "text": "good software for Android phone",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "c005e42a-dd84-4b69-92b7-dec34a43be3e",
@@ -1846,47 +1847,47 @@
     {
       "review_id": "e3cf1070-e90b-4a53-8b6e-75fbc20171b3",
       "text": "bakwas app not real time price movement show, I have motoedge 60 pro stillni felt that problem",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "0305aa55-2ce1-4bc9-94d8-fddd0a5dfbc3",
       "text": "it's a fabulous app to invest our own money for new learners",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "5277941d-e431-40ff-809a-35baa5af97a1",
       "text": "The technical section is really so helpful. Thanks for adding such details to the technical part of each stock. Just one improvement if you can add a news section in the home screen or news notification will be helpful.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "4e5260e9-0c7d-4514-92cd-162866b750cb",
       "text": "great full app for investing",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "f698e696-ae38-4e90-a292-eca6948f4c1a",
       "text": "pervious is best for trading f&o. now it's difficult, worst update",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9243055d-0ccf-4792-a2d4-8884a484fff7",
       "text": "Bring feature of minor demat account",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "7d8a7adc-e30e-46ff-b37a-159f357a0d0d",
       "text": "New update is not fine as we click it on Option chain it directly confirms the order execution.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "9ffb1c0e-516d-4266-8830-cccb6df1a2fa",
       "text": "had a third class experience while trading options and found out the worst ever customer care service company also. thank you so much f you groww.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "10b29166-3d7e-4970-b6db-c0f6ac1f8f81",
       "text": "As of now the app is doing very well and keeps on updating with new features. Also, Can you provide a 'Notes' option in the app where we can store key notes in the app itself, once login to the application first we should get redirected to the Notes section which reminds 'what we planned earlier and what to plan for the future'. Please take this consideration, it will be very good for the users to maintain short notes in the app itself.",
-      "primary_theme": "Support"
+      "primary_theme": "Fees"
     },
     {
       "review_id": "7e71d852-a2db-4c14-83a5-b3197d34a0fe",
