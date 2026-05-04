@@ -1,0 +1,33 @@
+{
+  "generated_at_utc": "2026-05-04T08:11:46.476824+00:00",
+  "phase": "Phase 5 (Backend): Google Doc Append",
+  "status": "pass",
+  "week": "May-W1-2026",
+  "source_pulse_path": "phase4_insights/outputs/pulse_May-W1-2026.md",
+  "source_insights_path": "phase4_insights/outputs/insights_May-W1-2026.json",
+  "combined_payload_path": "phase5_delivery/outputs/combined_payload_May-W1-2026.json",
+  "doc_id": "1s2O9Ui5UDNftzbugj_0P3EFqH4k5ezIt28ZeR3SNlzM",
+  "doc_url": "https://docs.google.com/document/d/1s2O9Ui5UDNftzbugj_0P3EFqH4k5ezIt28ZeR3SNlzM/edit",
+  "section_title": "",
+  "section_ref": "May-W1-2026",
+  "provider": "google-docs-mcp-stdio",
+  "attempts": [
+    {
+      "attempt": 1,
+      "status": "success",
+      "result": {
+        "status": "doc_appended",
+        "gdocs_action": "append",
+        "week_id": "May-W1-2026",
+        "plain_len_before": 5601,
+        "plain_len_after": 6574,
+        "doc_id": "1s2O9Ui5UDNftzbugj_0P3EFqH4k5ezIt28ZeR3SNlzM",
+        "document_id": "1s2O9Ui5UDNftzbugj_0P3EFqH4k5ezIt28ZeR3SNlzM",
+        "doc_url": "https://docs.google.com/document/d/1s2O9Ui5UDNftzbugj_0P3EFqH4k5ezIt28ZeR3SNlzM/edit",
+        "section_title": "",
+        "section_ref": "May-W1-2026",
+        "provider": "google-docs-mcp-stdio"
+      }
+    }
+  ]
+}

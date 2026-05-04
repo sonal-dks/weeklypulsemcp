@@ -1,0 +1,25 @@
+{
+  "date": "May-W1-2026",
+  "weekly_pulse": {
+    "themes": [
+      "Fees",
+      "Support",
+      "Trading"
+    ],
+    "quotes": [
+      "Please fix the Tax Harvesting option. It keeps showing the login page of Groww. And even when I try to login in that page, it takes no action.",
+      "too much pricing switching to another operator. maket order also they are tkaing price 118 too much for everything. link you adhar 118 lol 😆",
+      "Clean interface and beginner-friendly. Investing and trading are super smooth. Perfect platform for both beginners and experienced users."
+    ],
+    "action_ideas": [
+      "Evaluate and adjust the fee structure for common transactions to improve competitiveness and user satisfaction.",
+      "Resolve critical technical bugs, such as the Tax Harvesting login loop, to ensure feature functionality and reliability.",
+      "Optimize the trading experience by clarifying fee breakdowns and streamlining market order processes for better value perception."
+    ]
+  },
+  "fee_scenario": "",
+  "explanation_bullets": [],
+  "source_links": [],
+  "last_checked": "May-W1-2026",
+  "fee_funds": []
+}

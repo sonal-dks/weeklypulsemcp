@@ -1,18 +1,18 @@
 {
-  "generated_at_utc": "2026-04-27T07:58:15.066512+00:00",
+  "generated_at_utc": "2026-05-04T08:09:59.152498+00:00",
   "phase": "Phase 3 (Backend): Review Clustering (Primary Theme Assignment)",
   "status": "pass",
-  "input_review_theme_map_path": "phase2_theming/outputs/review_theme_map_April-W4-2026.json",
-  "themes_path": "phase2_theming/outputs/themes_April-W4-2026.json",
+  "input_review_theme_map_path": "phase2_theming/outputs/review_theme_map_May-W1-2026.json",
+  "themes_path": "phase2_theming/outputs/themes_May-W1-2026.json",
   "dominance_threshold": 0.55,
-  "review_count": 967,
+  "review_count": 1024,
   "theme_distribution": {
-    "Fees": 531,
-    "Support": 208,
-    "Performance": 51,
-    "Investments": 53,
-    "Interface": 124
+    "Fees": 563,
+    "Support": 153,
+    "Performance": 54,
+    "Trading": 137,
+    "Interface": 117
   },
-  "reassigned_low_confidence_count": 208,
-  "rebalanced_count": 131
+  "reassigned_low_confidence_count": 207,
+  "rebalanced_count": 72
 }

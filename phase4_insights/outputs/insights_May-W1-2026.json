@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-05-04T08:10:14.908292+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_May-W1-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "Fees",
+      "frequency": 563,
+      "avg_sentiment": 0.2845,
+      "negative_share": 0.2487,
+      "score": 347.7467
+    },
+    {
+      "theme": "Support",
+      "frequency": 153,
+      "avg_sentiment": -0.0289,
+      "negative_share": 0.4902,
+      "score": 111.4078
+    },
+    {
+      "theme": "Trading",
+      "frequency": 137,
+      "avg_sentiment": 0.2269,
+      "negative_share": 0.2847,
+      "score": 93.5869
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "89206e1b-5c54-4b5f-a4cf-fd86fd75da7a",
+      "theme": "Fees",
+      "text": "Please fix the Tax Harvesting option. It keeps showing the login page of Groww. And even when I try to login in that page, it takes no action.",
+      "date": "2026-03-30",
+      "rating": 4
+    },
+    {
+      "review_id": "d0725d41-9cf2-403c-ab79-e81cac808e7b",
+      "theme": "Support",
+      "text": "too much pricing switching to another operator. maket order also they are tkaing price 118 too much for everything. link you adhar 118 lol 😆",
+      "date": "2026-04-22",
+      "rating": 1
+    },
+    {
+      "review_id": "5f21269e-a1c9-40a1-a95f-ef89bcbf6480",
+      "theme": "Trading",
+      "text": "Clean interface and beginner-friendly. Investing and trading are super smooth. Perfect platform for both beginners and experienced users.",
+      "date": "2026-04-01",
+      "rating": 5
+    }
+  ],
+  "action_ideas": [
+    "Evaluate and adjust the fee structure for common transactions to improve competitiveness and user satisfaction.",
+    "Resolve critical technical bugs, such as the Tax Harvesting login loop, to ensure feature functionality and reliability.",
+    "Optimize the trading experience by clarifying fee breakdowns and streamlining market order processes for better value perception."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_May-W1-2026.md"
+}

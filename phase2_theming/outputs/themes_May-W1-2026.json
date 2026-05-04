@@ -1,0 +1,18 @@
+{
+  "generated_at_utc": "2026-05-04T08:08:00.984259+00:00",
+  "themes": [
+    "Fees",
+    "Support",
+    "Performance",
+    "Trading",
+    "Interface"
+  ],
+  "theme_count": 5,
+  "theme_summary_counts": {
+    "Fees": 837,
+    "Support": 43,
+    "Performance": 7,
+    "Trading": 94,
+    "Interface": 43
+  }
+}
