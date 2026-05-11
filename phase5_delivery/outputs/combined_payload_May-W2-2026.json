@@ -1,0 +1,25 @@
+{
+  "date": "May-W2-2026",
+  "weekly_pulse": {
+    "themes": [
+      "User Experience",
+      "Fees",
+      "Trading Issues"
+    ],
+    "quotes": [
+      "Third class interface... not at all user friendly. Even when there is high speed internet available, the app doesn't work saying \"No internet\".",
+      "too much pricing switching to another operator. maket order also they are tkaing price 118 too much for everything. link you adhar 118 lol 😆",
+      "Groww is froud app, chart go positive side and call option price go negative side, due to this I lost 300K in 2 month, don't install this app"
+    ],
+    "action_ideas": [
+      "Improve app stability and network connectivity handling to prevent \"No internet\" errors and enhance overall user interface responsiveness.",
+      "Review and clearly communicate all fees, especially for market orders and [REDACTED], to improve pricing transparency.",
+      "Investigate and resolve discrepancies between chart movements and option prices to ensure accurate real-time trading data."
+    ]
+  },
+  "fee_scenario": "",
+  "explanation_bullets": [],
+  "source_links": [],
+  "last_checked": "May-W2-2026",
+  "fee_funds": []
+}

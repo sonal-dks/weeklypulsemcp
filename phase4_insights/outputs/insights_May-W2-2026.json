@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-05-11T08:47:11.549398+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_May-W2-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "User Experience",
+      "frequency": 585,
+      "avg_sentiment": 0.292,
+      "negative_share": 0.2393,
+      "score": 360.5726
+    },
+    {
+      "theme": "Fees",
+      "frequency": 155,
+      "avg_sentiment": 0.0248,
+      "negative_share": 0.4323,
+      "score": 110.2903
+    },
+    {
+      "theme": "Trading Issues",
+      "frequency": 129,
+      "avg_sentiment": 0.0811,
+      "negative_share": 0.3566,
+      "score": 91.6636
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "fcfe3080-de6e-4560-a906-dc01cc202fd3",
+      "theme": "User Experience",
+      "text": "Third class interface... not at all user friendly. Even when there is high speed internet available, the app doesn't work saying \"No internet\".",
+      "date": "2026-04-15",
+      "rating": 1
+    },
+    {
+      "review_id": "d0725d41-9cf2-403c-ab79-e81cac808e7b",
+      "theme": "Fees",
+      "text": "too much pricing switching to another operator. maket order also they are tkaing price 118 too much for everything. link you adhar 118 lol 😆",
+      "date": "2026-04-22",
+      "rating": 1
+    },
+    {
+      "review_id": "4004587a-2425-44e0-afe5-8e2d4d3d817c",
+      "theme": "Trading Issues",
+      "text": "Groww is froud app, chart go positive side and call option price go negative side, due to this I lost 300K in 2 month, don't install this app",
+      "date": "2026-05-04",
+      "rating": 1
+    }
+  ],
+  "action_ideas": [
+    "Improve app stability and network connectivity handling to prevent \"No internet\" errors and enhance overall user interface responsiveness.",
+    "Review and clearly communicate all fees, especially for market orders and [REDACTED], to improve pricing transparency.",
+    "Investigate and resolve discrepancies between chart movements and option prices to ensure accurate real-time trading data."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_May-W2-2026.md"
+}

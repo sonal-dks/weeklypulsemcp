@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-04T08:06:36.760688+00:00",
+  "generated_at_utc": "2026-05-11T08:43:18.829772+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-03-29",
-  "max_review_date": "2026-05-03",
+  "min_review_date": "2026-04-01",
+  "max_review_date": "2026-05-10",
   "sample_records": [
     {
-      "review_id": "7c0af3ad-ec02-4ad1-925b-923c57eb5df6",
+      "review_id": "213dde16-2b77-48ee-9a8f-18655f5613da",
       "rating": 5,
-      "text": "Friendly App",
-      "date": "2026-05-03",
+      "text": "excellent",
+      "date": "2026-05-10",
       "helpful_count": 0,
-      "ingested_at": "2026-05-04T08:06:36.711616+00:00"
+      "ingested_at": "2026-05-11T08:43:18.780448+00:00"
     },
     {
-      "review_id": "be61614b-4702-49fc-b6e0-e5c497fe10c4",
+      "review_id": "2e83652f-fd33-4991-be96-8928adf57bee",
       "rating": 5,
-      "text": "good 👍",
-      "date": "2026-05-03",
+      "text": "perfect but improve chart technologi and fast Technology please improve the technology 🙏",
+      "date": "2026-05-10",
       "helpful_count": 0,
-      "ingested_at": "2026-05-04T08:06:36.711634+00:00"
+      "ingested_at": "2026-05-11T08:43:18.780470+00:00"
     },
     {
-      "review_id": "1214ea55-1bc4-4aef-ac49-3e3db4bc4504",
+      "review_id": "d10b6b75-9164-4968-8cd7-0582028c6a72",
       "rating": 5,
-      "text": "Good app",
-      "date": "2026-05-03",
+      "text": "best app",
+      "date": "2026-05-10",
       "helpful_count": 0,
-      "ingested_at": "2026-05-04T08:06:36.711640+00:00"
+      "ingested_at": "2026-05-11T08:43:18.780477+00:00"
     },
     {
-      "review_id": "e8902017-644f-4c33-81ca-7e396456e474",
-      "rating": 1,
-      "text": "faltu time west",
-      "date": "2026-05-03",
+      "review_id": "1bce3450-c44f-43f9-a304-0a4b27e8796c",
+      "rating": 5,
+      "text": "best",
+      "date": "2026-05-10",
       "helpful_count": 0,
-      "ingested_at": "2026-05-04T08:06:36.711646+00:00"
+      "ingested_at": "2026-05-11T08:43:18.780482+00:00"
     },
     {
-      "review_id": "d8af1e92-fbde-4802-bb0b-5b04d09e0c6a",
+      "review_id": "3246b570-1f53-4368-a803-40af197014f3",
       "rating": 5,
-      "text": "good app app",
-      "date": "2026-05-03",
+      "text": "very useful app and good service.",
+      "date": "2026-05-10",
       "helpful_count": 0,
-      "ingested_at": "2026-05-04T08:06:36.711651+00:00"
+      "ingested_at": "2026-05-11T08:43:18.780489+00:00"
     }
   ]
 }
