@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-05-18T09:01:33.586446+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_May-W3-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "User Experience",
+      "frequency": 562,
+      "avg_sentiment": 0.1883,
+      "negative_share": 0.3185,
+      "score": 349.9402
+    },
+    {
+      "theme": "Fees",
+      "frequency": 153,
+      "avg_sentiment": 0.2093,
+      "negative_share": 0.281,
+      "score": 103.0418
+    },
+    {
+      "theme": "Customer Support",
+      "frequency": 109,
+      "avg_sentiment": -0.0484,
+      "negative_share": 0.5138,
+      "score": 85.9505
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "d0725d41-9cf2-403c-ab79-e81cac808e7b",
+      "theme": "User Experience",
+      "text": "too much pricing switching to another operator. maket order also they are tkaing price 118 too much for everything. link you adhar 118 lol 😆",
+      "date": "2026-04-22",
+      "rating": 1
+    },
+    {
+      "review_id": "42a09a3a-5d3e-4bad-be12-2e3400da3147",
+      "theme": "Fees",
+      "text": "This app is good for mutual funds but very bad for stocks. Grow app charges Rs 400 for a profit of Rs 500. The most costlly grow app for stock.",
+      "date": "2026-05-15",
+      "rating": 2
+    },
+    {
+      "review_id": "d8f69bf1-e7a6-49db-81f0-b02f45e06f91",
+      "theme": "Customer Support",
+      "text": "Don't Install this app this big frod । I'm staying with my Comments this app is always Chit with Consumers like me i add my comments. to Care",
+      "date": "2026-05-14",
+      "rating": 1
+    }
+  ],
+  "action_ideas": [
+    "Review and simplify fee structures, particularly for stock trading, ensuring clear and transparent communication to users.",
+    "Enhance customer support responsiveness and resolution processes to rebuild user trust and address fraud concerns.",
+    "Improve the stock trading experience by optimizing the interface and addressing specific cost concerns for users."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_May-W3-2026.md"
+}
