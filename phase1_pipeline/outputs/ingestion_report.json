@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-18T08:57:53.606208+00:00",
+  "generated_at_utc": "2026-05-25T09:37:37.554782+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-04-09",
-  "max_review_date": "2026-05-17",
+  "min_review_date": "2026-04-15",
+  "max_review_date": "2026-05-24",
   "sample_records": [
     {
-      "review_id": "b523e271-4486-4311-ab46-6f03bb1b578a",
+      "review_id": "8164a7e0-20c6-4dc1-9e63-63f9bf922f94",
       "rating": 5,
-      "text": "off course",
-      "date": "2026-05-17",
+      "text": "this is best apps",
+      "date": "2026-05-24",
       "helpful_count": 0,
-      "ingested_at": "2026-05-18T08:57:53.340049+00:00"
+      "ingested_at": "2026-05-25T09:37:37.507735+00:00"
     },
     {
-      "review_id": "65212ec9-fd25-4237-b9e1-3d3ad15df443",
+      "review_id": "b62b5b05-9c1b-4e7d-901a-7725b011926e",
       "rating": 5,
-      "text": "best",
-      "date": "2026-05-17",
+      "text": "best app for all india",
+      "date": "2026-05-24",
       "helpful_count": 0,
-      "ingested_at": "2026-05-18T08:57:53.340061+00:00"
+      "ingested_at": "2026-05-25T09:37:37.507751+00:00"
     },
     {
-      "review_id": "027a4469-b30a-41f2-9c83-e42b149ab769",
+      "review_id": "b7e604bb-3d53-4203-bcf6-6fb7a754204d",
+      "rating": 5,
+      "text": "Good",
+      "date": "2026-05-24",
+      "helpful_count": 0,
+      "ingested_at": "2026-05-25T09:37:37.507757+00:00"
+    },
+    {
+      "review_id": "58438f59-278e-4390-ab27-f0580ec13be9",
+      "rating": 3,
+      "text": "why isn't there a sorting option in mutual fund watchlist???",
+      "date": "2026-05-24",
+      "helpful_count": 0,
+      "ingested_at": "2026-05-25T09:37:37.507765+00:00"
+    },
+    {
+      "review_id": "e3b2ad37-c295-47ea-9679-535d13f0adb8",
       "rating": 5,
       "text": "good",
-      "date": "2026-05-17",
+      "date": "2026-05-24",
       "helpful_count": 0,
-      "ingested_at": "2026-05-18T08:57:53.340066+00:00"
-    },
-    {
-      "review_id": "fbfc65ab-a1bd-4814-8e02-ff3bf58123ae",
-      "rating": 5,
-      "text": "very nice",
-      "date": "2026-05-17",
-      "helpful_count": 0,
-      "ingested_at": "2026-05-18T08:57:53.340070+00:00"
-    },
-    {
-      "review_id": "a795f395-6373-46c5-bcb7-bb1f01516f0d",
-      "rating": 5,
-      "text": "very good experience this app",
-      "date": "2026-05-17",
-      "helpful_count": 0,
-      "ingested_at": "2026-05-18T08:57:53.340075+00:00"
+      "ingested_at": "2026-05-25T09:37:37.507769+00:00"
     }
   ]
 }
