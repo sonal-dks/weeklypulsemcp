@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-06-01T10:42:56.975913+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_June-W1-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "User Experience",
+      "frequency": 588,
+      "avg_sentiment": 0.1659,
+      "negative_share": 0.3299,
+      "score": 365.9973
+    },
+    {
+      "theme": "Customer Support",
+      "frequency": 253,
+      "avg_sentiment": 0.2089,
+      "negative_share": 0.3004,
+      "score": 163.8158
+    },
+    {
+      "theme": "Trading Issues",
+      "frequency": 109,
+      "avg_sentiment": -0.0166,
+      "negative_share": 0.4037,
+      "score": 81.5468
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "0077a9ab-2582-459d-90e6-9a3f97d6272e",
+      "theme": "User Experience",
+      "text": "Please add Tagging feature in the MF section. This would ease one to tag the MFs on its purpose. Example: Studies, Retirement, Education etc",
+      "date": "2026-05-12",
+      "rating": 5
+    },
+    {
+      "review_id": "c698b31e-9910-494a-acac-4cfbc0298770",
+      "theme": "Customer Support",
+      "text": "new update me financial me revenue and profit wala old model acha tha. new model dekh kar headache hota hai. old model le aao next update me.",
+      "date": "2026-05-27",
+      "rating": 5
+    },
+    {
+      "review_id": "fbe5daad-2fb6-4579-8525-61671dba7cce",
+      "theme": "Trading Issues",
+      "text": "very bkwass app don't use for trading so many brokerage and glitch don't use grow you can use delta exchange it's not promotion it's reality",
+      "date": "2026-05-13",
+      "rating": 1
+    }
+  ],
+  "action_ideas": [
+    "Investigate and resolve reported trading glitches and performance issues to improve reliability.",
+    "Implement a tagging feature for mutual funds to allow users to categorize investments by purpose.",
+    "Re-evaluate recent UI updates, specifically the financial revenue/profit display, considering user preference for the old model."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_June-W1-2026.md"
+}

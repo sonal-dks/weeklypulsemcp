@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-05-25T09:37:37.554782+00:00",
+  "generated_at_utc": "2026-06-01T10:39:18.304853+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-04-15",
-  "max_review_date": "2026-05-24",
+  "min_review_date": "2026-04-20",
+  "max_review_date": "2026-05-31",
   "sample_records": [
     {
-      "review_id": "8164a7e0-20c6-4dc1-9e63-63f9bf922f94",
-      "rating": 5,
-      "text": "this is best apps",
-      "date": "2026-05-24",
-      "helpful_count": 0,
-      "ingested_at": "2026-05-25T09:37:37.507735+00:00"
-    },
-    {
-      "review_id": "b62b5b05-9c1b-4e7d-901a-7725b011926e",
-      "rating": 5,
-      "text": "best app for all india",
-      "date": "2026-05-24",
-      "helpful_count": 0,
-      "ingested_at": "2026-05-25T09:37:37.507751+00:00"
-    },
-    {
-      "review_id": "b7e604bb-3d53-4203-bcf6-6fb7a754204d",
-      "rating": 5,
-      "text": "Good",
-      "date": "2026-05-24",
-      "helpful_count": 0,
-      "ingested_at": "2026-05-25T09:37:37.507757+00:00"
-    },
-    {
-      "review_id": "58438f59-278e-4390-ab27-f0580ec13be9",
-      "rating": 3,
-      "text": "why isn't there a sorting option in mutual fund watchlist???",
-      "date": "2026-05-24",
-      "helpful_count": 0,
-      "ingested_at": "2026-05-25T09:37:37.507765+00:00"
-    },
-    {
-      "review_id": "e3b2ad37-c295-47ea-9679-535d13f0adb8",
+      "review_id": "d11474e7-3c48-4afd-9364-7c7ef44d9559",
       "rating": 5,
       "text": "good",
-      "date": "2026-05-24",
+      "date": "2026-05-31",
       "helpful_count": 0,
-      "ingested_at": "2026-05-25T09:37:37.507769+00:00"
+      "ingested_at": "2026-06-01T10:39:18.256001+00:00"
+    },
+    {
+      "review_id": "c2f49f7b-06b7-4017-acf8-c97795c284a6",
+      "rating": 5,
+      "text": "very good easy manage",
+      "date": "2026-05-31",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-01T10:39:18.256019+00:00"
+    },
+    {
+      "review_id": "297ed784-d86a-4c84-8727-37838db75018",
+      "rating": 5,
+      "text": "great",
+      "date": "2026-05-31",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-01T10:39:18.256025+00:00"
+    },
+    {
+      "review_id": "19d10221-8af9-4395-ab66-c2da0ba40774",
+      "rating": 5,
+      "text": "Easy Application",
+      "date": "2026-05-31",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-01T10:39:18.256030+00:00"
+    },
+    {
+      "review_id": "609968b1-975c-45b6-b5f6-6816740b4262",
+      "rating": 5,
+      "text": "good",
+      "date": "2026-05-31",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-01T10:39:18.256035+00:00"
     }
   ]
 }
