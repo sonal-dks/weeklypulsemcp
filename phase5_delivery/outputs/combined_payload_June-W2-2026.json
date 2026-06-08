@@ -1,0 +1,25 @@
+{
+  "date": "June-W2-2026",
+  "weekly_pulse": {
+    "themes": [
+      "User Experience",
+      "Trading Issues",
+      "Fees"
+    ],
+    "quotes": [
+      "Please add Tagging feature in the MF section. This would ease one to tag the MFs on its purpose. Example: Studies, Retirement, Education etc",
+      "I trade through MTF, and wallet balance showing anything in any time. Even if market closed balance not showing correct amount, it decreased",
+      "I am loving the interactive layout. The EMI calculator helped me figure out my exact repayment capacity before choosing the best partner bank. 🤗"
+    ],
+    "action_ideas": [
+      "Prioritize fixing real-time wallet balance display accuracy, especially for MTF trading, to resolve critical trading issues.",
+      "Implement a tagging feature for Mutual Funds to improve user organization and portfolio management capabilities.",
+      "Enhance interactive data visualization and tools across the platform, mirroring successful features like the EMI calculator."
+    ]
+  },
+  "fee_scenario": "",
+  "explanation_bullets": [],
+  "source_links": [],
+  "last_checked": "June-W2-2026",
+  "fee_funds": []
+}

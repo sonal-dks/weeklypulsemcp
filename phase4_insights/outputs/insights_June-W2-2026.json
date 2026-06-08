@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-06-08T10:09:52.880246+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_June-W2-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "User Experience",
+      "frequency": 534,
+      "avg_sentiment": 0.2619,
+      "negative_share": 0.2453,
+      "score": 330.2127
+    },
+    {
+      "theme": "Trading Issues",
+      "frequency": 133,
+      "avg_sentiment": -0.0074,
+      "negative_share": 0.3985,
+      "score": 95.7398
+    },
+    {
+      "theme": "Fees",
+      "frequency": 140,
+      "avg_sentiment": 0.2777,
+      "negative_share": 0.2143,
+      "score": 92.5714
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "0077a9ab-2582-459d-90e6-9a3f97d6272e",
+      "theme": "User Experience",
+      "text": "Please add Tagging feature in the MF section. This would ease one to tag the MFs on its purpose. Example: Studies, Retirement, Education etc",
+      "date": "2026-05-12",
+      "rating": 5
+    },
+    {
+      "review_id": "92efb7db-cf6c-4e9b-9e8e-e4534330e866",
+      "theme": "Trading Issues",
+      "text": "I trade through MTF, and wallet balance showing anything in any time. Even if market closed balance not showing correct amount, it decreased",
+      "date": "2026-06-06",
+      "rating": 1
+    },
+    {
+      "review_id": "7b5d19bf-a850-492c-b847-f36c20e66046",
+      "theme": "Fees",
+      "text": "I am loving the interactive layout. The EMI calculator helped me figure out my exact repayment capacity before choosing the best partner bank. 🤗",
+      "date": "2026-05-30",
+      "rating": 5
+    }
+  ],
+  "action_ideas": [
+    "Prioritize fixing real-time wallet balance display accuracy, especially for MTF trading, to resolve critical trading issues.",
+    "Implement a tagging feature for Mutual Funds to improve user organization and portfolio management capabilities.",
+    "Enhance interactive data visualization and tools across the platform, mirroring successful features like the EMI calculator."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_June-W2-2026.md"
+}

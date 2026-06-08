@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-01T10:39:18.304853+00:00",
+  "generated_at_utc": "2026-06-08T10:06:27.303309+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-04-20",
-  "max_review_date": "2026-05-31",
+  "min_review_date": "2026-05-07",
+  "max_review_date": "2026-06-07",
   "sample_records": [
     {
-      "review_id": "d11474e7-3c48-4afd-9364-7c7ef44d9559",
+      "review_id": "f0d49ab9-1b16-4ca9-a346-138fa89bfefe",
       "rating": 5,
-      "text": "good",
-      "date": "2026-05-31",
+      "text": "easy to use , company logos are good , retailers easy to use",
+      "date": "2026-06-07",
       "helpful_count": 0,
-      "ingested_at": "2026-06-01T10:39:18.256001+00:00"
+      "ingested_at": "2026-06-08T10:06:27.258512+00:00"
     },
     {
-      "review_id": "c2f49f7b-06b7-4017-acf8-c97795c284a6",
+      "review_id": "075697ea-85b5-4f36-b492-2b08c88c86ba",
       "rating": 5,
-      "text": "very good easy manage",
-      "date": "2026-05-31",
+      "text": "great app",
+      "date": "2026-06-07",
       "helpful_count": 0,
-      "ingested_at": "2026-06-01T10:39:18.256019+00:00"
+      "ingested_at": "2026-06-08T10:06:27.258526+00:00"
     },
     {
-      "review_id": "297ed784-d86a-4c84-8727-37838db75018",
+      "review_id": "cbc3f958-8df6-4404-8ec4-ac45a64fe56f",
       "rating": 5,
-      "text": "great",
-      "date": "2026-05-31",
+      "text": "exilnt",
+      "date": "2026-06-07",
       "helpful_count": 0,
-      "ingested_at": "2026-06-01T10:39:18.256025+00:00"
+      "ingested_at": "2026-06-08T10:06:27.258532+00:00"
     },
     {
-      "review_id": "19d10221-8af9-4395-ab66-c2da0ba40774",
+      "review_id": "0f6f3c4f-5fdf-4f5e-8ba4-ce300bdcc027",
       "rating": 5,
-      "text": "Easy Application",
-      "date": "2026-05-31",
+      "text": "🙂👍🏻",
+      "date": "2026-06-07",
       "helpful_count": 0,
-      "ingested_at": "2026-06-01T10:39:18.256030+00:00"
+      "ingested_at": "2026-06-08T10:06:27.258537+00:00"
     },
     {
-      "review_id": "609968b1-975c-45b6-b5f6-6816740b4262",
+      "review_id": "35545dd4-72f9-4b3a-ab99-5d4438cf66ba",
       "rating": 5,
-      "text": "good",
-      "date": "2026-05-31",
+      "text": "this app is best",
+      "date": "2026-06-07",
       "helpful_count": 0,
-      "ingested_at": "2026-06-01T10:39:18.256035+00:00"
+      "ingested_at": "2026-06-08T10:06:27.258543+00:00"
     }
   ]
 }
