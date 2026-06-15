@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-01T10:44:32.070685+00:00",
+  "generated_at_utc": "2026-06-15T11:36:28.526976+00:00",
   "phase": "Phase 5 (Backend): Google Doc Append",
   "status": "pass",
   "week": "June-W1-2026",
@@ -16,11 +16,11 @@
       "attempt": 1,
       "status": "success",
       "result": {
-        "status": "doc_appended",
-        "gdocs_action": "append",
+        "status": "doc_updated",
+        "gdocs_action": "update",
         "week_id": "June-W1-2026",
-        "plain_len_before": 9484,
-        "plain_len_after": 10450,
+        "plain_len_before": 11450,
+        "plain_len_after": 11450,
         "doc_id": "1s2O9Ui5UDNftzbugj_0P3EFqH4k5ezIt28ZeR3SNlzM",
         "document_id": "1s2O9Ui5UDNftzbugj_0P3EFqH4k5ezIt28ZeR3SNlzM",
         "doc_url": "https://docs.google.com/document/d/1s2O9Ui5UDNftzbugj_0P3EFqH4k5ezIt28ZeR3SNlzM/edit",

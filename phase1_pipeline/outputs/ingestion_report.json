@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-08T10:06:27.303309+00:00",
+  "generated_at_utc": "2026-06-15T11:31:37.468896+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-05-07",
-  "max_review_date": "2026-06-07",
+  "min_review_date": "2026-05-13",
+  "max_review_date": "2026-06-14",
   "sample_records": [
     {
-      "review_id": "f0d49ab9-1b16-4ca9-a346-138fa89bfefe",
+      "review_id": "61777b9b-871c-40e8-89be-4fae63ccadfc",
       "rating": 5,
-      "text": "easy to use , company logos are good , retailers easy to use",
-      "date": "2026-06-07",
+      "text": "good app",
+      "date": "2026-06-14",
       "helpful_count": 0,
-      "ingested_at": "2026-06-08T10:06:27.258512+00:00"
+      "ingested_at": "2026-06-15T11:31:37.421497+00:00"
     },
     {
-      "review_id": "075697ea-85b5-4f36-b492-2b08c88c86ba",
-      "rating": 5,
-      "text": "great app",
-      "date": "2026-06-07",
+      "review_id": "95de5b1a-ecb9-4cc5-8f91-74c6d8f7bc5b",
+      "rating": 1,
+      "text": "very very bad 100/0 👎🏼👎🏼👎🏼",
+      "date": "2026-06-14",
       "helpful_count": 0,
-      "ingested_at": "2026-06-08T10:06:27.258526+00:00"
+      "ingested_at": "2026-06-15T11:31:37.421516+00:00"
     },
     {
-      "review_id": "cbc3f958-8df6-4404-8ec4-ac45a64fe56f",
+      "review_id": "5c4c8dfa-c863-4fb5-8012-153cfb47ae6b",
       "rating": 5,
-      "text": "exilnt",
-      "date": "2026-06-07",
+      "text": "The best app for beginners and primary customer who want to begin his journey in capital Market. i enjoy very much with this app . i grow with this grow app. thanks groww .",
+      "date": "2026-06-14",
       "helpful_count": 0,
-      "ingested_at": "2026-06-08T10:06:27.258532+00:00"
+      "ingested_at": "2026-06-15T11:31:37.421531+00:00"
     },
     {
-      "review_id": "0f6f3c4f-5fdf-4f5e-8ba4-ce300bdcc027",
+      "review_id": "0269800d-a222-46be-9893-b615e953e4bc",
       "rating": 5,
-      "text": "🙂👍🏻",
-      "date": "2026-06-07",
+      "text": "nice 👍 e",
+      "date": "2026-06-14",
       "helpful_count": 0,
-      "ingested_at": "2026-06-08T10:06:27.258537+00:00"
+      "ingested_at": "2026-06-15T11:31:37.421537+00:00"
     },
     {
-      "review_id": "35545dd4-72f9-4b3a-ab99-5d4438cf66ba",
+      "review_id": "e2af5a59-56a4-4838-9f0f-94a6e8652ce7",
       "rating": 5,
-      "text": "this app is best",
-      "date": "2026-06-07",
+      "text": "lovely",
+      "date": "2026-06-14",
       "helpful_count": 0,
-      "ingested_at": "2026-06-08T10:06:27.258543+00:00"
+      "ingested_at": "2026-06-15T11:31:37.421542+00:00"
     }
   ]
 }

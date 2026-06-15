@@ -1,0 +1,86 @@
+{
+  "generated_at_utc": "2026-06-15T11:36:28.793893+00:00",
+  "phase": "Phase 6 (Backend): Orchestration, Observability, and QA",
+  "week": "June-W3-2026",
+  "status": "fail",
+  "inputs": {
+    "config_check": "phase1_pipeline/outputs/config_check.json",
+    "themes": "phase2_theming/outputs/themes_June-W3-2026.json",
+    "insights": "phase4_insights/outputs/insights_June-W3-2026.json",
+    "pulse": "phase4_insights/outputs/pulse_June-W3-2026.md",
+    "combined_payload": "phase5_delivery/outputs/combined_payload_June-W3-2026.json",
+    "doc_append_report": "phase5_delivery/outputs/doc_append_report_June-W3-2026.json"
+  },
+  "high_level_metrics": {
+    "theme_summary_counts": {
+      "User Experience": 786,
+      "Fees": 6,
+      "Customer Support": 68,
+      "Investment Options": 48,
+      "Trading Issues": 81
+    },
+    "word_count": 0,
+    "doc_append_status": "missing"
+  },
+  "combined_payload_snapshot": {
+    "fee_scenario": null,
+    "last_checked": null,
+    "source_links": []
+  },
+  "gates": [
+    {
+      "gate": "run_completeness",
+      "status": "fail",
+      "details": {
+        "missing": [
+          "phase4_pulse",
+          "phase5_doc_report",
+          "phase5_combined_payload"
+        ]
+      }
+    },
+    {
+      "gate": "themes_exactly_5",
+      "status": "pass",
+      "details": {
+        "theme_count": 5,
+        "themes": [
+          "User Experience",
+          "Fees",
+          "Customer Support",
+          "Investment Options",
+          "Trading Issues"
+        ]
+      }
+    },
+    {
+      "gate": "insights_3_quotes_3_actions",
+      "status": "fail",
+      "details": {
+        "quotes_count": 0,
+        "action_ideas_count": 0
+      }
+    },
+    {
+      "gate": "pulse_wordcount_and_pii",
+      "status": "pass",
+      "details": {
+        "word_count": 0,
+        "pii_pattern_matches": 0
+      }
+    },
+    {
+      "gate": "doc_append_status",
+      "status": "fail",
+      "details": {
+        "doc_report_status": "missing",
+        "doc_id": null
+      }
+    }
+  ],
+  "upstream_status": {
+    "phase1": "pass",
+    "phase4": "fail",
+    "phase5_doc": "missing"
+  }
+}

@@ -1,14 +1,14 @@
 {
-  "generated_at_utc": "2026-06-08T10:06:44.177909+00:00",
+  "generated_at_utc": "2026-06-15T11:31:53.791607+00:00",
   "phase": "Phase 1.2: Cleaning, Deduplication, and Spam Filtering",
   "status": "pass",
   "raw_count": 4000,
-  "processed_count": 972,
-  "omitted_count": 3028,
+  "processed_count": 989,
+  "omitted_count": 3011,
   "reasons": {
-    "non_english": 2503,
-    "short_text_lt_5_words": 523,
-    "exact_duplicate": 2
+    "short_text_lt_5_words": 547,
+    "non_english": 2463,
+    "exact_duplicate": 1
   },
   "processed_json_path": "phase1_pipeline/outputs/processed_reviews.json",
   "omitted_json_path": "phase1_pipeline/outputs/omitted_reviews.json"
