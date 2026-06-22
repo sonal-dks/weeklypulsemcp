@@ -1,0 +1,18 @@
+{
+  "generated_at_utc": "2026-06-22T11:17:55.206338+00:00",
+  "themes": [
+    "User Experience",
+    "Fees",
+    "Investment Options",
+    "Customer Support",
+    "Trading Platform"
+  ],
+  "theme_count": 5,
+  "theme_summary_counts": {
+    "User Experience": 771,
+    "Fees": 4,
+    "Investment Options": 59,
+    "Customer Support": 58,
+    "Trading Platform": 109
+  }
+}

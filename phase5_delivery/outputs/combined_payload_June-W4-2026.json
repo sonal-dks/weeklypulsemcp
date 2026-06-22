@@ -1,0 +1,25 @@
+{
+  "date": "June-W4-2026",
+  "weekly_pulse": {
+    "themes": [
+      "User Experience",
+      "Trading Platform",
+      "Fees"
+    ],
+    "quotes": [
+      "I trade through MTF, and wallet balance showing anything in any time. Even if market closed balance not showing correct amount, it decreased",
+      "Avoid purchasing Bonds from Groww aap, no Update, No response, No Details, No Upcoming Payout Msg/ Mail etc. Use Another platform for Bonds",
+      "Hidden charges bhut hai jitna profit hota hai half se jyada to ye charges kat lete hai 0000000Rating Dikhate kuch or hai kr kuch or hi rhe hai"
+    ],
+    "action_ideas": [
+      "Improve real-time and post-market wallet balance accuracy and display on the trading platform.",
+      "Enhance fee transparency and clearly communicate all charges to users before transactions.",
+      "Develop robust communication channels for investment updates, especially for products like bonds."
+    ]
+  },
+  "fee_scenario": "",
+  "explanation_bullets": [],
+  "source_links": [],
+  "last_checked": "June-W4-2026",
+  "fee_funds": []
+}

@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-06-22T11:20:07.730436+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_June-W4-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "User Experience",
+      "frequency": 550,
+      "avg_sentiment": 0.2467,
+      "negative_share": 0.2436,
+      "score": 339.7455
+    },
+    {
+      "theme": "Trading Platform",
+      "frequency": 161,
+      "avg_sentiment": 0.2488,
+      "negative_share": 0.2298,
+      "score": 105.7925
+    },
+    {
+      "theme": "Fees",
+      "frequency": 116,
+      "avg_sentiment": 0.3308,
+      "negative_share": 0.2241,
+      "score": 78.5655
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "92efb7db-cf6c-4e9b-9e8e-e4534330e866",
+      "theme": "User Experience",
+      "text": "I trade through MTF, and wallet balance showing anything in any time. Even if market closed balance not showing correct amount, it decreased",
+      "date": "2026-06-06",
+      "rating": 1
+    },
+    {
+      "review_id": "877bb478-7baf-42f5-8ee7-7ddcfeaabfa4",
+      "theme": "Trading Platform",
+      "text": "Avoid purchasing Bonds from Groww aap, no Update, No response, No Details, No Upcoming Payout Msg/ Mail etc. Use Another platform for Bonds",
+      "date": "2026-06-21",
+      "rating": 3
+    },
+    {
+      "review_id": "da6e360d-c28c-490d-8a8a-a68a7290ca98",
+      "theme": "Fees",
+      "text": "Hidden charges bhut hai jitna profit hota hai half se jyada to ye charges kat lete hai 0000000Rating Dikhate kuch or hai kr kuch or hi rhe hai",
+      "date": "2026-06-18",
+      "rating": 1
+    }
+  ],
+  "action_ideas": [
+    "Improve real-time and post-market wallet balance accuracy and display on the trading platform.",
+    "Enhance fee transparency and clearly communicate all charges to users before transactions.",
+    "Develop robust communication channels for investment updates, especially for products like bonds."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_June-W4-2026.md"
+}

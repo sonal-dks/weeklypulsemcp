@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-15T11:31:37.468896+00:00",
+  "generated_at_utc": "2026-06-22T11:16:41.604565+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-05-13",
-  "max_review_date": "2026-06-14",
+  "min_review_date": "2026-05-18",
+  "max_review_date": "2026-06-21",
   "sample_records": [
     {
-      "review_id": "61777b9b-871c-40e8-89be-4fae63ccadfc",
+      "review_id": "d496dc18-622a-47f6-8aad-1e7fde570065",
       "rating": 5,
-      "text": "good app",
-      "date": "2026-06-14",
+      "text": "good",
+      "date": "2026-06-21",
       "helpful_count": 0,
-      "ingested_at": "2026-06-15T11:31:37.421497+00:00"
+      "ingested_at": "2026-06-22T11:16:41.559771+00:00"
     },
     {
-      "review_id": "95de5b1a-ecb9-4cc5-8f91-74c6d8f7bc5b",
+      "review_id": "3c2d598e-1ec7-4921-ad4a-d919e5865908",
+      "rating": 5,
+      "text": "good",
+      "date": "2026-06-21",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-22T11:16:41.559785+00:00"
+    },
+    {
+      "review_id": "4f15eac6-14e5-43cd-95b5-c0a04a57c555",
       "rating": 1,
-      "text": "very very bad 100/0 👎🏼👎🏼👎🏼",
-      "date": "2026-06-14",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-15T11:31:37.421516+00:00"
+      "text": "worst update in 17.91.1 version as it's UI is not like previous one.. it should be when we touch equity row with price row..ie first row anywhere it should be open.. but is taking only left hand side if we touch equity.. UI is very lagging and slow.. plz improve app speed..",
+      "date": "2026-06-21",
+      "helpful_count": 50,
+      "ingested_at": "2026-06-22T11:16:41.559819+00:00"
     },
     {
-      "review_id": "5c4c8dfa-c863-4fb5-8012-153cfb47ae6b",
+      "review_id": "f6081b6b-bd48-4274-8359-9f981e6592b2",
       "rating": 5,
-      "text": "The best app for beginners and primary customer who want to begin his journey in capital Market. i enjoy very much with this app . i grow with this grow app. thanks groww .",
-      "date": "2026-06-14",
+      "text": "Best Aap Grow tranding and upi",
+      "date": "2026-06-21",
       "helpful_count": 0,
-      "ingested_at": "2026-06-15T11:31:37.421531+00:00"
+      "ingested_at": "2026-06-22T11:16:41.559827+00:00"
     },
     {
-      "review_id": "0269800d-a222-46be-9893-b615e953e4bc",
+      "review_id": "25c4c4a8-b36f-4192-a932-e3bb897fc961",
       "rating": 5,
-      "text": "nice 👍 e",
-      "date": "2026-06-14",
+      "text": "ok",
+      "date": "2026-06-21",
       "helpful_count": 0,
-      "ingested_at": "2026-06-15T11:31:37.421537+00:00"
-    },
-    {
-      "review_id": "e2af5a59-56a4-4838-9f0f-94a6e8652ce7",
-      "rating": 5,
-      "text": "lovely",
-      "date": "2026-06-14",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-15T11:31:37.421542+00:00"
+      "ingested_at": "2026-06-22T11:16:41.559831+00:00"
     }
   ]
 }
