@@ -1,0 +1,25 @@
+{
+  "date": "June-W5-2026",
+  "weekly_pulse": {
+    "themes": [
+      "User Experience",
+      "Fees",
+      "Investment Options"
+    ],
+    "quotes": [
+      "I trade through MTF, and wallet balance showing anything in any time. Even if market closed balance not showing correct amount, it decreased",
+      "new chart where quarterly and early profit and revenue are posted the new profit and revenue chart is so bad the privious chart was so good.",
+      "total holding Qty investment Amount Current Amount Total Gain/Loss (Amount + %) Today Gain/loss (Amount + %) Should Visible In Hohlding ."
+    ],
+    "action_ideas": [
+      "Improve real-time wallet balance accuracy and display, especially for MTF trades and after market close.",
+      "Redesign profit/revenue charts to enhance clarity and user preference, potentially reverting to previous versions.",
+      "Enhance portfolio holdings view to prominently display total gain/loss, today's gain/loss, and investment amounts."
+    ]
+  },
+  "fee_scenario": "",
+  "explanation_bullets": [],
+  "source_links": [],
+  "last_checked": "June-W5-2026",
+  "fee_funds": []
+}

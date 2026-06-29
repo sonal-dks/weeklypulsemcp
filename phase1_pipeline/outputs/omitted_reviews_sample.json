@@ -2,273 +2,273 @@
   "sample": [
     {
       "reason": "non_english",
-      "review_id": "bd2faaa9-53fa-4f92-bc18-d215d851507c",
-      "rating": 4,
-      "text": "good 👍 il",
-      "date": "2026-06-21",
+      "review_id": "08cbaba6-2fa3-443e-805d-76833ba687d0",
+      "rating": 5,
+      "text": "very good",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559985+00:00"
-    },
-    {
-      "reason": "short_text_lt_5_words",
-      "review_id": "6418f0ed-f73d-43ec-8337-e71098f9b0b9",
-      "rating": 4,
-      "text": "very easy to operate",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559981+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426397+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "14469f0e-bbf0-4bac-b14c-82ca8646a965",
+      "review_id": "cb13e4ca-d2e6-4e5e-a32e-11ff6ba06398",
       "rating": 5,
-      "text": "nice",
-      "date": "2026-06-21",
+      "text": "best",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559977+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426394+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "5d6ca1f1-6923-4502-882e-8f0e7b5bbc17",
+      "review_id": "889cd293-51df-47a8-b393-24939ec5e238",
       "rating": 5,
-      "text": "fabulous",
-      "date": "2026-06-21",
+      "text": "very good",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426374+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "8ead8fb3-8f22-44a3-b35c-943b54e5bcc9",
+      "rating": 4,
+      "text": "vrey nice",
+      "date": "2026-06-28",
       "helpful_count": 1,
-      "ingested_at": "2026-06-22T11:16:41.559973+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426370+00:00"
     },
     {
       "reason": "short_text_lt_5_words",
-      "review_id": "82387ea9-a9f0-4572-88dc-65d067749a7d",
+      "review_id": "8b2d87d4-c349-4d72-90be-6a6dd6fe562e",
       "rating": 5,
-      "text": "excellent platform for trading",
-      "date": "2026-06-21",
+      "text": "very good app",
+      "date": "2026-06-28",
+      "helpful_count": 1,
+      "ingested_at": "2026-06-29T10:10:43.426366+00:00"
+    },
+    {
+      "reason": "short_text_lt_5_words",
+      "review_id": "c32642a2-d4ef-49c5-bc52-fe6f1b8384d4",
+      "rating": 5,
+      "text": "it soo good app",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559970+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426362+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "14429713-727e-42b8-99bd-f07cd72d7b44",
+      "review_id": "bae8448a-8116-41a4-a791-a6592f20c364",
       "rating": 5,
-      "text": "very good",
-      "date": "2026-06-21",
+      "text": "best apps",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559965+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426353+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "b8390f72-3996-4a4d-9700-df3589009d55",
-      "rating": 5,
-      "text": "best app groww",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559962+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "64e6aff4-231b-498f-a5e8-65c428660cec",
-      "rating": 5,
-      "text": "Nice 👍",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559958+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "dda27c94-fb52-42b5-a466-80ea2027a316",
+      "review_id": "4c37a1bb-f154-490b-93a4-6373675d81d1",
       "rating": 5,
       "text": "very good",
-      "date": "2026-06-21",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559953+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426344+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "3f233258-9d7a-454c-81b8-dd667823baa4",
+      "review_id": "33793dba-cad4-44ca-9169-78aa87744023",
       "rating": 5,
-      "text": "very good",
-      "date": "2026-06-21",
+      "text": "nice app",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559949+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426340+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "8101db30-960a-43cc-8457-e1bfb6ff653e",
-      "rating": 5,
-      "text": "good 👍",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559945+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "e9213256-3d3b-4207-9d91-3a14e02189e4",
+      "review_id": "425682c1-aac6-43bd-964e-4a79a8a195e2",
       "rating": 5,
       "text": "good",
-      "date": "2026-06-21",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559942+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426336+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "04096d3a-f4d2-4f9b-bc07-980848da20f0",
-      "rating": 5,
-      "text": "nice app 💯",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559938+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "b7b172e6-6315-4564-bfaa-c63dee604108",
-      "rating": 5,
-      "text": "best 👌",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559927+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "639ba9df-a4f4-4b3a-ae0f-ff6d0e420c61",
-      "rating": 5,
-      "text": "its tu good 👍",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559922+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "113aeafe-626c-421b-9b21-1f45c9cd1a90",
-      "rating": 5,
-      "text": "trust",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559918+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "eebfbbb4-c6ed-493c-a48b-30ace49affcc",
-      "rating": 5,
-      "text": "good 👍",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559914+00:00"
-    },
-    {
-      "reason": "short_text_lt_5_words",
-      "review_id": "aeaf0c49-465f-48d8-88db-22974a9d6fcd",
-      "rating": 5,
-      "text": "Very good platform",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559909+00:00"
-    },
-    {
-      "reason": "short_text_lt_5_words",
-      "review_id": "9ba2afc3-7dd3-4716-b153-40f69843cc95",
+      "review_id": "f982d468-3161-4829-87f1-4d8914e24c2f",
       "rating": 4,
+      "text": "nice app",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426333+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "9f3eac66-4153-4662-a605-c245912dcb29",
+      "rating": 5,
+      "text": "good",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426329+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "1295c96e-7b57-42fd-a5af-c7e6b2e713ab",
+      "rating": 5,
+      "text": "best app ❌",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426325+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "f16724a9-7425-404d-a5e0-2ec632eb4d04",
+      "rating": 5,
+      "text": "very nice 👍",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426321+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "baed048f-b555-4dbe-8c2d-ac8f798704fe",
+      "rating": 5,
+      "text": "খুবই ভালো",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426316+00:00"
+    },
+    {
+      "reason": "short_text_lt_5_words",
+      "review_id": "667ec4f7-7c63-4fcd-a632-1932dd11ff56",
+      "rating": 5,
+      "text": "best service",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426308+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "cabf8fb1-531b-4b79-9480-f417379ad127",
+      "rating": 5,
+      "text": "sip nhii ho rahi he kya Karu",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426304+00:00"
+    },
+    {
+      "reason": "short_text_lt_5_words",
+      "review_id": "b5c394c3-c061-4194-8e5e-683730f9e784",
+      "rating": 4,
+      "text": "easy for set up",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426300+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "57a395ef-1e5e-4427-ba93-e0f6712b06c2",
+      "rating": 5,
+      "text": "all good",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426295+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "bdde813a-9eeb-4949-aa97-041e7bffba5c",
+      "rating": 5,
+      "text": "good",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426292+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "b832538d-6766-4276-b4e4-d8a15c0785ec",
+      "rating": 5,
+      "text": "nice..",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426288+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "70fa18be-be9f-4370-9707-3ed8b4b84bb6",
+      "rating": 5,
+      "text": "no extra charges best app",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426284+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "e785b632-49a0-4678-aeaa-04f67eb42183",
+      "rating": 5,
+      "text": "nis❤️",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426275+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "2b2d1f62-1cfe-41cd-b35c-e94df55b840c",
+      "rating": 3,
+      "text": "improve you charts 💹",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426271+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "b5cbafd9-1790-46dc-9477-65e3102a819a",
+      "rating": 5,
+      "text": "👍",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426266+00:00"
+    },
+    {
+      "reason": "short_text_lt_5_words",
+      "review_id": "5d26af35-0667-4702-8e83-7d254dbf9f3c",
+      "rating": 5,
       "text": "good app",
-      "date": "2026-06-21",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559905+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426262+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "a343993e-aca4-4ecd-bd63-cbaf15e055bc",
+      "review_id": "f5ab1cc6-b295-4905-9a5f-bea214e78244",
       "rating": 5,
-      "text": "Excellent app.",
-      "date": "2026-06-21",
+      "text": "innovation",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559893+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "9ae604e0-ea48-4caf-8527-c4ce631b7227",
-      "rating": 1,
-      "text": "annoying ad",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559889+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "baa28c86-7f2a-411f-8d9a-ff54c93504bb",
-      "rating": 5,
-      "text": "Best",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559885+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426251+00:00"
     },
     {
       "reason": "short_text_lt_5_words",
-      "review_id": "2a669908-d5b4-4993-a68a-29076910548c",
+      "review_id": "d4763501-11e3-4267-9c77-0577f1861067",
       "rating": 5,
-      "text": "have nice app",
-      "date": "2026-06-21",
+      "text": "very good app",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559881+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426247+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "87a48397-1544-494f-b76c-7727ad2bbd28",
+      "review_id": "0a096c56-c595-4daf-b3ae-dea8e0c3036d",
       "rating": 5,
-      "text": "trust",
-      "date": "2026-06-21",
+      "text": "fine app",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559867+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426243+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "37bc1fea-fcf8-4582-9613-633aa5af4c1e",
+      "review_id": "8236d7d0-e7c8-4abe-aaa1-2b8003c266d4",
       "rating": 5,
-      "text": "good response",
-      "date": "2026-06-21",
+      "text": "good",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559864+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "db3a6a34-943c-436c-b962-fe8179fc0dbe",
-      "rating": 5,
-      "text": "very good",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559859+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "f02cebf4-9dd8-4254-bc90-e1248ef00223",
-      "rating": 1,
-      "text": "বালের অ্যাপ",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559854+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "b9080ca5-83fb-40e5-993d-b4ed92d3a4c9",
-      "rating": 5,
-      "text": "super",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559848+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "9aa87f9c-26c3-42f5-95c1-da7188276ed0",
-      "rating": 4,
-      "text": "nise",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559835+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "25c4c4a8-b36f-4192-a932-e3bb897fc961",
-      "rating": 5,
-      "text": "ok",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559831+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426239+00:00"
     }
   ]
 }

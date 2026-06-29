@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-22T11:16:41.604565+00:00",
+  "generated_at_utc": "2026-06-29T10:10:43.470102+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-05-18",
-  "max_review_date": "2026-06-21",
+  "min_review_date": "2026-05-26",
+  "max_review_date": "2026-06-28",
   "sample_records": [
     {
-      "review_id": "d496dc18-622a-47f6-8aad-1e7fde570065",
+      "review_id": "e664a83f-4758-47ac-b7ed-4ae36a68b7b5",
+      "rating": 5,
+      "text": "good app",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426153+00:00"
+    },
+    {
+      "review_id": "c5b4e8aa-4898-47c1-9944-1c11dd861cef",
+      "rating": 5,
+      "text": "all time good",
+      "date": "2026-06-28",
+      "helpful_count": 0,
+      "ingested_at": "2026-06-29T10:10:43.426167+00:00"
+    },
+    {
+      "review_id": "95f298e6-f319-4a6d-9487-77cb38ada653",
       "rating": 5,
       "text": "good",
-      "date": "2026-06-21",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559771+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426173+00:00"
     },
     {
-      "review_id": "3c2d598e-1ec7-4921-ad4a-d919e5865908",
+      "review_id": "c26a9f9e-7974-4b17-9966-54a5d727005e",
       "rating": 5,
-      "text": "good",
-      "date": "2026-06-21",
+      "text": "good app",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559785+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426178+00:00"
     },
     {
-      "review_id": "4f15eac6-14e5-43cd-95b5-c0a04a57c555",
-      "rating": 1,
-      "text": "worst update in 17.91.1 version as it's UI is not like previous one.. it should be when we touch equity row with price row..ie first row anywhere it should be open.. but is taking only left hand side if we touch equity.. UI is very lagging and slow.. plz improve app speed..",
-      "date": "2026-06-21",
-      "helpful_count": 50,
-      "ingested_at": "2026-06-22T11:16:41.559819+00:00"
-    },
-    {
-      "review_id": "f6081b6b-bd48-4274-8359-9f981e6592b2",
+      "review_id": "6a2bb42e-b3bf-4292-be32-8188edd84651",
       "rating": 5,
-      "text": "Best Aap Grow tranding and upi",
-      "date": "2026-06-21",
+      "text": "all good",
+      "date": "2026-06-28",
       "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559827+00:00"
-    },
-    {
-      "review_id": "25c4c4a8-b36f-4192-a932-e3bb897fc961",
-      "rating": 5,
-      "text": "ok",
-      "date": "2026-06-21",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-22T11:16:41.559831+00:00"
+      "ingested_at": "2026-06-29T10:10:43.426183+00:00"
     }
   ]
 }

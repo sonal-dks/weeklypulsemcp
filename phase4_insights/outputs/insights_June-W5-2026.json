@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-06-29T10:14:05.098315+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_June-W5-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "User Experience",
+      "frequency": 546,
+      "avg_sentiment": 0.2372,
+      "negative_share": 0.2546,
+      "score": 337.7832
+    },
+    {
+      "theme": "Fees",
+      "frequency": 262,
+      "avg_sentiment": 0.2588,
+      "negative_share": 0.2252,
+      "score": 166.2076
+    },
+    {
+      "theme": "Investment Options",
+      "frequency": 95,
+      "avg_sentiment": 0.3061,
+      "negative_share": 0.2211,
+      "score": 65.8421
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "92efb7db-cf6c-4e9b-9e8e-e4534330e866",
+      "theme": "User Experience",
+      "text": "I trade through MTF, and wallet balance showing anything in any time. Even if market closed balance not showing correct amount, it decreased",
+      "date": "2026-06-06",
+      "rating": 1
+    },
+    {
+      "review_id": "3ed28122-97b5-4c38-912a-929a16b400e2",
+      "theme": "Fees",
+      "text": "new chart where quarterly and early profit and revenue are posted the new profit and revenue chart is so bad the privious chart was so good.",
+      "date": "2026-06-25",
+      "rating": 2
+    },
+    {
+      "review_id": "2bf77f31-c50d-4e2c-ae4a-77240b4e4a34",
+      "theme": "Investment Options",
+      "text": "total holding Qty investment Amount Current Amount Total Gain/Loss (Amount + %) Today Gain/loss (Amount + %) Should Visible In Hohlding .",
+      "date": "2026-06-02",
+      "rating": 4
+    }
+  ],
+  "action_ideas": [
+    "Improve real-time wallet balance accuracy and display, especially for MTF trades and after market close.",
+    "Redesign profit/revenue charts to enhance clarity and user preference, potentially reverting to previous versions.",
+    "Enhance portfolio holdings view to prominently display total gain/loss, today's gain/loss, and investment amounts."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_June-W5-2026.md"
+}
