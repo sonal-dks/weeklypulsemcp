@@ -1,0 +1,25 @@
+{
+  "date": "July-W1-2026",
+  "weekly_pulse": {
+    "themes": [
+      "User Experience",
+      "Trading Platform",
+      "Investment Options"
+    ],
+    "quotes": [
+      "new chart where quarterly and early profit and revenue are posted the new profit and revenue chart is so bad the privious chart was so good.",
+      "scalper mode me jaise kisi bhi index ya stock ko select option tha pahle waise hi kar do. anhi ek hi index rakh rahe ho. please solve that.",
+      "good application but fund comparison is the worst one. please add something like overlap % companies, last 5yr return reason etc if possible."
+    ],
+    "action_ideas": [
+      "Redesign the profit/revenue chart, incorporating elements from the previously preferred version for better UX.",
+      "Restore multi-index and stock selection functionality within the scalper mode for improved flexibility.",
+      "Enhance fund comparison tools by adding key metrics like overlap percentage and detailed return reasons."
+    ]
+  },
+  "fee_scenario": "",
+  "explanation_bullets": [],
+  "source_links": [],
+  "last_checked": "July-W1-2026",
+  "fee_funds": []
+}

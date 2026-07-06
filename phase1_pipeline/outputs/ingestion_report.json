@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-06-29T10:10:43.470102+00:00",
+  "generated_at_utc": "2026-07-06T09:36:54.004318+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-05-26",
-  "max_review_date": "2026-06-28",
+  "min_review_date": "2026-06-06",
+  "max_review_date": "2026-07-05",
   "sample_records": [
     {
-      "review_id": "e664a83f-4758-47ac-b7ed-4ae36a68b7b5",
-      "rating": 5,
-      "text": "good app",
-      "date": "2026-06-28",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-29T10:10:43.426153+00:00"
+      "review_id": "5e22c41a-1869-4b30-8889-003af63ce6a9",
+      "rating": 4,
+      "text": "so good 😊👍",
+      "date": "2026-07-05",
+      "helpful_count": 1,
+      "ingested_at": "2026-07-06T09:36:53.961208+00:00"
     },
     {
-      "review_id": "c5b4e8aa-4898-47c1-9944-1c11dd861cef",
+      "review_id": "7337df18-0ce7-4798-8135-ac841aaacb88",
       "rating": 5,
-      "text": "all time good",
-      "date": "2026-06-28",
-      "helpful_count": 0,
-      "ingested_at": "2026-06-29T10:10:43.426167+00:00"
+      "text": "good investment platform and live trading view experience is very good",
+      "date": "2026-07-05",
+      "helpful_count": 1,
+      "ingested_at": "2026-07-06T09:36:53.961225+00:00"
     },
     {
-      "review_id": "95f298e6-f319-4a6d-9487-77cb38ada653",
+      "review_id": "d021a9ef-4e08-4f15-8c4b-e4b376dbe29c",
       "rating": 5,
-      "text": "good",
-      "date": "2026-06-28",
+      "text": "great app",
+      "date": "2026-07-05",
       "helpful_count": 0,
-      "ingested_at": "2026-06-29T10:10:43.426173+00:00"
+      "ingested_at": "2026-07-06T09:36:53.961232+00:00"
     },
     {
-      "review_id": "c26a9f9e-7974-4b17-9966-54a5d727005e",
+      "review_id": "e283b86c-b979-4897-b6b2-638dbc6b4042",
       "rating": 5,
-      "text": "good app",
-      "date": "2026-06-28",
+      "text": "nice 👍 🙂",
+      "date": "2026-07-05",
       "helpful_count": 0,
-      "ingested_at": "2026-06-29T10:10:43.426178+00:00"
+      "ingested_at": "2026-07-06T09:36:53.961237+00:00"
     },
     {
-      "review_id": "6a2bb42e-b3bf-4292-be32-8188edd84651",
-      "rating": 5,
-      "text": "all good",
-      "date": "2026-06-28",
+      "review_id": "fab2ea5f-9531-47d0-9a1e-664ec78be738",
+      "rating": 4,
+      "text": "good application but fund comparison is the worst one. please add something like overlap % companies, last 5yr return reason etc if possible.",
+      "date": "2026-07-05",
       "helpful_count": 0,
-      "ingested_at": "2026-06-29T10:10:43.426183+00:00"
+      "ingested_at": "2026-07-06T09:36:53.961247+00:00"
     }
   ]
 }

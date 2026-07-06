@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-07-06T09:39:59.389324+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_July-W1-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "User Experience",
+      "frequency": 473,
+      "avg_sentiment": 0.3077,
+      "negative_share": 0.2241,
+      "score": 292.7641
+    },
+    {
+      "theme": "Trading Platform",
+      "frequency": 145,
+      "avg_sentiment": 0.2718,
+      "negative_share": 0.2276,
+      "score": 96.1034
+    },
+    {
+      "theme": "Investment Options",
+      "frequency": 93,
+      "avg_sentiment": 0.2883,
+      "negative_share": 0.2043,
+      "score": 63.972
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "3ed28122-97b5-4c38-912a-929a16b400e2",
+      "theme": "User Experience",
+      "text": "new chart where quarterly and early profit and revenue are posted the new profit and revenue chart is so bad the privious chart was so good.",
+      "date": "2026-06-25",
+      "rating": 2
+    },
+    {
+      "review_id": "d37cabbe-a149-4869-9c30-1c84eaa6c78e",
+      "theme": "Trading Platform",
+      "text": "scalper mode me jaise kisi bhi index ya stock ko select option tha pahle waise hi kar do. anhi ek hi index rakh rahe ho. please solve that.",
+      "date": "2026-06-28",
+      "rating": 5
+    },
+    {
+      "review_id": "fab2ea5f-9531-47d0-9a1e-664ec78be738",
+      "theme": "Investment Options",
+      "text": "good application but fund comparison is the worst one. please add something like overlap % companies, last 5yr return reason etc if possible.",
+      "date": "2026-07-05",
+      "rating": 4
+    }
+  ],
+  "action_ideas": [
+    "Redesign the profit/revenue chart, incorporating elements from the previously preferred version for better UX.",
+    "Restore multi-index and stock selection functionality within the scalper mode for improved flexibility.",
+    "Enhance fund comparison tools by adding key metrics like overlap percentage and detailed return reasons."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_July-W1-2026.md"
+}
