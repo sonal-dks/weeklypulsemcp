@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-07-13T08:37:37.691677+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_July-W2-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "User Experience",
+      "frequency": 458,
+      "avg_sentiment": 0.3307,
+      "negative_share": 0.2009,
+      "score": 282.8349
+    },
+    {
+      "theme": "Trading Platform",
+      "frequency": 135,
+      "avg_sentiment": 0.1946,
+      "negative_share": 0.3037,
+      "score": 93.1481
+    },
+    {
+      "theme": "Customer Support",
+      "frequency": 75,
+      "avg_sentiment": -0.0076,
+      "negative_share": 0.48,
+      "score": 64.2
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "3ed28122-97b5-4c38-912a-929a16b400e2",
+      "theme": "User Experience",
+      "text": "new chart where quarterly and early profit and revenue are posted the new profit and revenue chart is so bad the privious chart was so good.",
+      "date": "2026-06-25",
+      "rating": 2
+    },
+    {
+      "review_id": "24b0b6b4-0d13-4646-a9bf-516559475866",
+      "theme": "Trading Platform",
+      "text": "Groww is one of the worst trading apps right now. Its brokerage and other charges are very high, which can significantly reduce your profits.",
+      "date": "2026-06-22",
+      "rating": 1
+    },
+    {
+      "review_id": "97559cd5-74b5-424f-b7ce-31eef430791c",
+      "theme": "Customer Support",
+      "text": "keep it up.. please bill and recharge should start in grow app.. share and mutual fund customer are enjoying this app.. Thanks Grow team...",
+      "date": "2026-06-29",
+      "rating": 5
+    }
+  ],
+  "action_ideas": [
+    "Revert or redesign the new profit/revenue chart based on user feedback to restore previous usability.",
+    "Review and optimize brokerage fees and charges to enhance competitiveness and user profitability.",
+    "Evaluate integrating bill payment and recharge features to expand app utility for users."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_July-W2-2026.md"
+}
