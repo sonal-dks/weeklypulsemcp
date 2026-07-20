@@ -1,0 +1,25 @@
+{
+  "date": "July-W3-2026",
+  "weekly_pulse": {
+    "themes": [
+      "User Experience",
+      "Customer Support",
+      "Trading Issues"
+    ],
+    "quotes": [
+      "new chart where quarterly and early profit and revenue are posted the new profit and revenue chart is so bad the privious chart was so good.",
+      "Platform is getting worst day by day. Customer service is worst. They don't have any solution for any of the issues being faced by the user.",
+      "colours of candle is making wrong... In a day chart, the candle which should be red, Groww shows in Green.. i have noticed this soo many times"
+    ],
+    "action_ideas": [
+      "Revert or redesign recent chart UI changes, particularly profit/revenue displays, based on negative user feedback.",
+      "Improve customer support's issue resolution capabilities and response times to address user frustration.",
+      "Fix critical chart display errors, such as incorrect candle colors, to ensure data accuracy for users."
+    ]
+  },
+  "fee_scenario": "",
+  "explanation_bullets": [],
+  "source_links": [],
+  "last_checked": "July-W3-2026",
+  "fee_funds": []
+}

@@ -1,0 +1,18 @@
+{
+  "generated_at_utc": "2026-07-20T08:26:44.144143+00:00",
+  "themes": [
+    "User Experience",
+    "Customer Support",
+    "Fees",
+    "Investment Options",
+    "Trading Issues"
+  ],
+  "theme_count": 5,
+  "theme_summary_counts": {
+    "User Experience": 658,
+    "Customer Support": 63,
+    "Fees": 2,
+    "Investment Options": 49,
+    "Trading Issues": 50
+  }
+}
