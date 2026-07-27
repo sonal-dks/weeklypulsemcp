@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-20T08:25:50.322650+00:00",
+  "generated_at_utc": "2026-07-27T08:56:23.380173+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-06-25",
-  "max_review_date": "2026-07-19",
+  "min_review_date": "2026-06-30",
+  "max_review_date": "2026-07-26",
   "sample_records": [
     {
-      "review_id": "e68eb2be-bd17-4f50-ba8c-afc98f0f6388",
+      "review_id": "5ff1a261-7337-4b91-a222-5f0475865197",
       "rating": 5,
-      "text": "good",
-      "date": "2026-07-19",
+      "text": "good application",
+      "date": "2026-07-26",
       "helpful_count": 0,
-      "ingested_at": "2026-07-20T08:25:50.278082+00:00"
+      "ingested_at": "2026-07-27T08:56:23.336018+00:00"
     },
     {
-      "review_id": "b7c2a418-ebbe-4e0a-81e6-7e8e686cbc41",
-      "rating": 4,
+      "review_id": "e387db0a-6b8f-4750-9bf3-6c68267d665a",
+      "rating": 5,
+      "text": "ok",
+      "date": "2026-07-26",
+      "helpful_count": 0,
+      "ingested_at": "2026-07-27T08:56:23.336031+00:00"
+    },
+    {
+      "review_id": "f8640d61-9da2-42aa-8abf-5af77809f0db",
+      "rating": 5,
+      "text": "best",
+      "date": "2026-07-26",
+      "helpful_count": 0,
+      "ingested_at": "2026-07-27T08:56:23.336037+00:00"
+    },
+    {
+      "review_id": "60216ad3-3cb8-47da-b81b-11d441277922",
+      "rating": 5,
       "text": "nice",
-      "date": "2026-07-19",
+      "date": "2026-07-26",
       "helpful_count": 0,
-      "ingested_at": "2026-07-20T08:25:50.278095+00:00"
+      "ingested_at": "2026-07-27T08:56:23.336041+00:00"
     },
     {
-      "review_id": "f812c5c9-918f-47ea-9022-3865f9da0c7c",
-      "rating": 4,
-      "text": "thanks you",
-      "date": "2026-07-19",
+      "review_id": "bb0a7cc5-ffa0-4120-8657-629a0f7232f0",
+      "rating": 3,
+      "text": "charges bhot high hai our app 1 no hai",
+      "date": "2026-07-26",
       "helpful_count": 0,
-      "ingested_at": "2026-07-20T08:25:50.278101+00:00"
-    },
-    {
-      "review_id": "407a2948-5cc7-498e-84b7-2f1420aaa588",
-      "rating": 5,
-      "text": "good",
-      "date": "2026-07-19",
-      "helpful_count": 0,
-      "ingested_at": "2026-07-20T08:25:50.278106+00:00"
-    },
-    {
-      "review_id": "a469059d-01ab-44e1-b816-12c6da02a7fd",
-      "rating": 5,
-      "text": "good",
-      "date": "2026-07-19",
-      "helpful_count": 0,
-      "ingested_at": "2026-07-20T08:25:50.278110+00:00"
+      "ingested_at": "2026-07-27T08:56:23.336047+00:00"
     }
   ]
 }

@@ -1,13 +1,13 @@
 {
-  "generated_at_utc": "2026-07-20T08:26:07.534691+00:00",
+  "generated_at_utc": "2026-07-27T08:56:40.615466+00:00",
   "phase": "Phase 1.2: Cleaning, Deduplication, and Spam Filtering",
   "status": "pass",
   "raw_count": 4000,
-  "processed_count": 822,
-  "omitted_count": 3178,
+  "processed_count": 831,
+  "omitted_count": 3169,
   "reasons": {
-    "non_english": 2629,
-    "short_text_lt_5_words": 547,
+    "non_english": 2651,
+    "short_text_lt_5_words": 516,
     "near_duplicate": 2
   },
   "processed_json_path": "phase1_pipeline/outputs/processed_reviews.json",
