@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-07-27T08:56:23.380173+00:00",
+  "generated_at_utc": "2026-08-03T08:48:40.766910+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-06-30",
-  "max_review_date": "2026-07-26",
+  "min_review_date": "2026-07-07",
+  "max_review_date": "2026-08-02",
   "sample_records": [
     {
-      "review_id": "5ff1a261-7337-4b91-a222-5f0475865197",
+      "review_id": "0d56ba97-7416-485a-8b53-5e2d6493b832",
       "rating": 5,
-      "text": "good application",
-      "date": "2026-07-26",
+      "text": "exlent",
+      "date": "2026-08-02",
       "helpful_count": 0,
-      "ingested_at": "2026-07-27T08:56:23.336018+00:00"
+      "ingested_at": "2026-08-03T08:48:40.724042+00:00"
     },
     {
-      "review_id": "e387db0a-6b8f-4750-9bf3-6c68267d665a",
+      "review_id": "b4b2d53a-e351-4ee6-955f-76ce1372c713",
       "rating": 5,
-      "text": "ok",
-      "date": "2026-07-26",
+      "text": "good 👍",
+      "date": "2026-08-02",
       "helpful_count": 0,
-      "ingested_at": "2026-07-27T08:56:23.336031+00:00"
+      "ingested_at": "2026-08-03T08:48:40.724055+00:00"
     },
     {
-      "review_id": "f8640d61-9da2-42aa-8abf-5af77809f0db",
+      "review_id": "d027f70c-ccaa-4aba-9b18-1031acb974f6",
       "rating": 5,
-      "text": "best",
-      "date": "2026-07-26",
+      "text": "fast withdrawal",
+      "date": "2026-08-02",
       "helpful_count": 0,
-      "ingested_at": "2026-07-27T08:56:23.336037+00:00"
+      "ingested_at": "2026-08-03T08:48:40.724062+00:00"
     },
     {
-      "review_id": "60216ad3-3cb8-47da-b81b-11d441277922",
+      "review_id": "a2f86d55-40a6-43ea-a3ec-255af86fdcf7",
       "rating": 5,
-      "text": "nice",
-      "date": "2026-07-26",
+      "text": "very good",
+      "date": "2026-08-02",
       "helpful_count": 0,
-      "ingested_at": "2026-07-27T08:56:23.336041+00:00"
+      "ingested_at": "2026-08-03T08:48:40.724067+00:00"
     },
     {
-      "review_id": "bb0a7cc5-ffa0-4120-8657-629a0f7232f0",
-      "rating": 3,
-      "text": "charges bhot high hai our app 1 no hai",
-      "date": "2026-07-26",
+      "review_id": "d2a33b80-8893-46d8-a71b-e26dce0b000e",
+      "rating": 4,
+      "text": "the most everything super app",
+      "date": "2026-08-02",
       "helpful_count": 0,
-      "ingested_at": "2026-07-27T08:56:23.336047+00:00"
+      "ingested_at": "2026-08-03T08:48:40.724072+00:00"
     }
   ]
 }
