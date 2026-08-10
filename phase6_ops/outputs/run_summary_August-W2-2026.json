@@ -1,0 +1,82 @@
+{
+  "generated_at_utc": "2026-08-10T06:57:57.318752+00:00",
+  "phase": "Phase 6 (Backend): Orchestration, Observability, and QA",
+  "week": "August-W2-2026",
+  "status": "fail",
+  "inputs": {
+    "config_check": "phase1_pipeline/outputs/config_check.json",
+    "themes": "phase2_theming/outputs/themes_August-W2-2026.json",
+    "insights": "phase4_insights/outputs/insights_August-W2-2026.json",
+    "pulse": "phase4_insights/outputs/pulse_August-W2-2026.md",
+    "combined_payload": "phase5_delivery/outputs/combined_payload_August-W2-2026.json",
+    "doc_append_report": "phase5_delivery/outputs/doc_append_report_August-W2-2026.json"
+  },
+  "high_level_metrics": {
+    "theme_summary_counts": {
+      "User Experience": 653,
+      "Fees": 2,
+      "Trading Platform": 104,
+      "Investment Options": 44,
+      "Customer Support": 57
+    },
+    "word_count": 217,
+    "doc_append_status": "doc_append_failed"
+  },
+  "combined_payload_snapshot": {
+    "fee_scenario": "",
+    "last_checked": "August-W2-2026",
+    "source_links": []
+  },
+  "gates": [
+    {
+      "gate": "run_completeness",
+      "status": "pass",
+      "details": {
+        "missing": []
+      }
+    },
+    {
+      "gate": "themes_exactly_5",
+      "status": "pass",
+      "details": {
+        "theme_count": 5,
+        "themes": [
+          "User Experience",
+          "Fees",
+          "Trading Platform",
+          "Investment Options",
+          "Customer Support"
+        ]
+      }
+    },
+    {
+      "gate": "insights_3_quotes_3_actions",
+      "status": "pass",
+      "details": {
+        "quotes_count": 3,
+        "action_ideas_count": 3
+      }
+    },
+    {
+      "gate": "pulse_wordcount_and_pii",
+      "status": "pass",
+      "details": {
+        "word_count": 217,
+        "pii_pattern_matches": 0
+      }
+    },
+    {
+      "gate": "doc_append_status",
+      "status": "fail",
+      "details": {
+        "doc_report_status": "doc_append_failed",
+        "doc_id": null
+      }
+    }
+  ],
+  "upstream_status": {
+    "phase1": "pass",
+    "phase4": "pass",
+    "phase5_doc": "doc_append_failed"
+  }
+}

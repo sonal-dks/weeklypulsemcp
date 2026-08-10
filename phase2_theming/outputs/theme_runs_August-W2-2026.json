@@ -1,0 +1,150 @@
+{
+  "generated_at_utc": "2026-08-10T06:54:15.176901+00:00",
+  "phase": "Phase 2 (Backend): Theme Generation (LLM)",
+  "status": "pass",
+  "input_processed_reviews_path": "phase1_pipeline/outputs/processed_reviews.json",
+  "theme_count": 5,
+  "model": "llama-3.3-70b-versatile",
+  "review_count_input": 860,
+  "review_count_used": 860,
+  "batch_count": 6,
+  "candidate_theme_count": 30,
+  "batch_results": [
+    {
+      "batch_index": 1,
+      "batch_size": 160,
+      "review_count_used": 160,
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "pass"
+        }
+      ],
+      "themes": [
+        "User Experience",
+        "Fees and Charges",
+        "Trading Platform",
+        "Investment Options",
+        "Customer Support"
+      ]
+    },
+    {
+      "batch_index": 2,
+      "batch_size": 160,
+      "review_count_used": 160,
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "pass"
+        }
+      ],
+      "themes": [
+        "User Experience",
+        "Fees and Charges",
+        "Customer Support",
+        "Trading Platform",
+        "Investment Options"
+      ]
+    },
+    {
+      "batch_index": 3,
+      "batch_size": 160,
+      "review_count_used": 160,
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "pass"
+        }
+      ],
+      "themes": [
+        "User Experience",
+        "Customer Support",
+        "Fees and Charges",
+        "Trading Issues",
+        "Investment Options"
+      ]
+    },
+    {
+      "batch_index": 4,
+      "batch_size": 160,
+      "review_count_used": 160,
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "fail",
+          "error": "Groq API error 429: {\"error\":{\"message\":\"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kmfgsy1vea9t3hbtyhjjf9xf` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11206, Requested 3258. Please try again in 12.32s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n"
+        },
+        {
+          "attempt": 2,
+          "status": "pass"
+        }
+      ],
+      "themes": [
+        "User Experience",
+        "Fees and Charges",
+        "Trading Platform",
+        "Customer Support",
+        "Investment Options"
+      ]
+    },
+    {
+      "batch_index": 5,
+      "batch_size": 160,
+      "review_count_used": 160,
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "fail",
+          "error": "Groq API error 429: {\"error\":{\"message\":\"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kmfgsy1vea9t3hbtyhjjf9xf` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11827, Requested 3760. Please try again in 17.935s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n"
+        },
+        {
+          "attempt": 2,
+          "status": "pass"
+        }
+      ],
+      "themes": [
+        "User Experience",
+        "Fees and Charges",
+        "Trading Issues",
+        "Customer Support",
+        "Investment Options"
+      ]
+    },
+    {
+      "batch_index": 6,
+      "batch_size": 60,
+      "review_count_used": 60,
+      "attempts": [
+        {
+          "attempt": 1,
+          "status": "fail",
+          "error": "Groq API error 429: {\"error\":{\"message\":\"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kmfgsy1vea9t3hbtyhjjf9xf` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11779, Requested 1566. Please try again in 6.725s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n"
+        },
+        {
+          "attempt": 2,
+          "status": "pass"
+        }
+      ],
+      "themes": [
+        "User Experience",
+        "Fees Charges",
+        "Trading Features",
+        "Investment Options",
+        "Customer Support"
+      ]
+    }
+  ],
+  "final_attempts": [
+    {
+      "attempt": 1,
+      "status": "fail",
+      "error": "Groq API error 429: {\"error\":{\"message\":\"Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kmfgsy1vea9t3hbtyhjjf9xf` service tier `on_demand` on tokens per minute (TPM): Limit 12000, Used 11807, Requested 271. Please try again in 389.999999ms. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing\",\"type\":\"tokens\",\"code\":\"rate_limit_exceeded\"}}\n"
+    },
+    {
+      "attempt": 2,
+      "status": "pass"
+    }
+  ],
+  "themes_path": "phase2_theming/outputs/themes_August-W2-2026.json",
+  "review_theme_map_path": "phase2_theming/outputs/review_theme_map_August-W2-2026.json"
+}

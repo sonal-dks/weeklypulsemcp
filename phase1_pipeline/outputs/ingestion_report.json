@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-03T08:48:40.766910+00:00",
+  "generated_at_utc": "2026-08-10T06:53:12.859896+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-07-07",
-  "max_review_date": "2026-08-02",
+  "min_review_date": "2026-07-14",
+  "max_review_date": "2026-08-09",
   "sample_records": [
     {
-      "review_id": "0d56ba97-7416-485a-8b53-5e2d6493b832",
+      "review_id": "5825a086-d9be-4833-ba83-62e542997be8",
       "rating": 5,
-      "text": "exlent",
-      "date": "2026-08-02",
+      "text": "Best apps.",
+      "date": "2026-08-09",
       "helpful_count": 0,
-      "ingested_at": "2026-08-03T08:48:40.724042+00:00"
+      "ingested_at": "2026-08-10T06:53:12.814441+00:00"
     },
     {
-      "review_id": "b4b2d53a-e351-4ee6-955f-76ce1372c713",
+      "review_id": "933b59d0-3778-4ac2-b6c6-44cd541c3852",
       "rating": 5,
-      "text": "good 👍",
-      "date": "2026-08-02",
+      "text": "exilent",
+      "date": "2026-08-09",
       "helpful_count": 0,
-      "ingested_at": "2026-08-03T08:48:40.724055+00:00"
+      "ingested_at": "2026-08-10T06:53:12.814455+00:00"
     },
     {
-      "review_id": "d027f70c-ccaa-4aba-9b18-1031acb974f6",
-      "rating": 5,
-      "text": "fast withdrawal",
-      "date": "2026-08-02",
+      "review_id": "13154f23-d7ad-4927-a456-b065f401045c",
+      "rating": 1,
+      "text": "to muche brokrage",
+      "date": "2026-08-09",
       "helpful_count": 0,
-      "ingested_at": "2026-08-03T08:48:40.724062+00:00"
+      "ingested_at": "2026-08-10T06:53:12.814461+00:00"
     },
     {
-      "review_id": "a2f86d55-40a6-43ea-a3ec-255af86fdcf7",
+      "review_id": "83126385-4de5-4792-a9a1-429e19889866",
       "rating": 5,
-      "text": "very good",
-      "date": "2026-08-02",
+      "text": "nice to handle",
+      "date": "2026-08-09",
       "helpful_count": 0,
-      "ingested_at": "2026-08-03T08:48:40.724067+00:00"
+      "ingested_at": "2026-08-10T06:53:12.814466+00:00"
     },
     {
-      "review_id": "d2a33b80-8893-46d8-a71b-e26dce0b000e",
+      "review_id": "e6127345-e188-4668-82ee-05239114cd0d",
       "rating": 4,
-      "text": "the most everything super app",
-      "date": "2026-08-02",
+      "text": "very easy to use.",
+      "date": "2026-08-09",
       "helpful_count": 0,
-      "ingested_at": "2026-08-03T08:48:40.724072+00:00"
+      "ingested_at": "2026-08-10T06:53:12.814471+00:00"
     }
   ]
 }
