@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-10T06:53:12.859896+00:00",
+  "generated_at_utc": "2026-08-17T06:02:21.195033+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-07-14",
-  "max_review_date": "2026-08-09",
+  "min_review_date": "2026-07-21",
+  "max_review_date": "2026-08-16",
   "sample_records": [
     {
-      "review_id": "5825a086-d9be-4833-ba83-62e542997be8",
-      "rating": 5,
-      "text": "Best apps.",
-      "date": "2026-08-09",
+      "review_id": "bbc1092a-bf9a-4768-9128-9942a1b3b48d",
+      "rating": 3,
+      "text": "Good",
+      "date": "2026-08-16",
       "helpful_count": 0,
-      "ingested_at": "2026-08-10T06:53:12.814441+00:00"
+      "ingested_at": "2026-08-17T06:02:21.157527+00:00"
     },
     {
-      "review_id": "933b59d0-3778-4ac2-b6c6-44cd541c3852",
+      "review_id": "267c9980-9a81-4f59-b974-4afde28aaa81",
       "rating": 5,
-      "text": "exilent",
-      "date": "2026-08-09",
+      "text": "good",
+      "date": "2026-08-16",
       "helpful_count": 0,
-      "ingested_at": "2026-08-10T06:53:12.814455+00:00"
+      "ingested_at": "2026-08-17T06:02:21.157541+00:00"
     },
     {
-      "review_id": "13154f23-d7ad-4927-a456-b065f401045c",
+      "review_id": "80fae099-d3b4-48cb-988e-6eecee268694",
+      "rating": 5,
+      "text": "User friendly app very easy to purchase mutual fund as well as exit",
+      "date": "2026-08-16",
+      "helpful_count": 0,
+      "ingested_at": "2026-08-17T06:02:21.157550+00:00"
+    },
+    {
+      "review_id": "b71f4c31-5d3f-44ae-a70c-76ad6c66f7a1",
+      "rating": 5,
+      "text": "best apps Groww",
+      "date": "2026-08-16",
+      "helpful_count": 0,
+      "ingested_at": "2026-08-17T06:02:21.157554+00:00"
+    },
+    {
+      "review_id": "91b5c34c-b46f-4a19-bef1-489043c557b9",
       "rating": 1,
-      "text": "to muche brokrage",
-      "date": "2026-08-09",
+      "text": "don't install very bad show app loss 70000 this intraday",
+      "date": "2026-08-16",
       "helpful_count": 0,
-      "ingested_at": "2026-08-10T06:53:12.814461+00:00"
-    },
-    {
-      "review_id": "83126385-4de5-4792-a9a1-429e19889866",
-      "rating": 5,
-      "text": "nice to handle",
-      "date": "2026-08-09",
-      "helpful_count": 0,
-      "ingested_at": "2026-08-10T06:53:12.814466+00:00"
-    },
-    {
-      "review_id": "e6127345-e188-4668-82ee-05239114cd0d",
-      "rating": 4,
-      "text": "very easy to use.",
-      "date": "2026-08-09",
-      "helpful_count": 0,
-      "ingested_at": "2026-08-10T06:53:12.814471+00:00"
+      "ingested_at": "2026-08-17T06:02:21.157560+00:00"
     }
   ]
 }

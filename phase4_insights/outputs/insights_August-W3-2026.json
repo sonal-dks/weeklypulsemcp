@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-08-17T06:05:31.584629+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_August-W3-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "User Experience",
+      "frequency": 468,
+      "avg_sentiment": 0.3439,
+      "negative_share": 0.1944,
+      "score": 288.5778
+    },
+    {
+      "theme": "Trading Performance",
+      "frequency": 111,
+      "avg_sentiment": 0.1751,
+      "negative_share": 0.2883,
+      "score": 78.1315
+    },
+    {
+      "theme": "Customer Support",
+      "frequency": 86,
+      "avg_sentiment": -0.1209,
+      "negative_share": 0.5465,
+      "score": 73.4605
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "2e46bb18-29ce-40a9-bbf2-ba5922e14368",
+      "theme": "User Experience",
+      "text": "very easy to navigate app and seen that many news things is coming just like heatmap that's awesome. I am looking for more improvement on it.",
+      "date": "2026-08-07",
+      "rating": 5
+    },
+    {
+      "review_id": "cd917423-4c69-4d99-bd11-0358b60a2ea9",
+      "theme": "Trading Performance",
+      "text": "Not new indicator not templet for indicator save not brokrej scheme for scalper bad stop loss system over all groww not for option trading👎😡",
+      "date": "2026-08-05",
+      "rating": 1
+    },
+    {
+      "review_id": "3fe28dab-df57-4633-9ae0-a586f242f80d",
+      "theme": "Customer Support",
+      "text": "Worst customer service. At the beginning of groww 2 3 years back it was nice. now it is the worst. I am thinking to switch to other apps.",
+      "date": "2026-08-02",
+      "rating": 1
+    }
+  ],
+  "action_ideas": [
+    "Revamp customer support processes to improve response times and resolution quality, preventing user churn.",
+    "Enhance trading tools with advanced indicators, customizable templates, and improved stop-loss for options traders.",
+    "Continue innovating UX by adding requested features like advanced charting tools and expanding existing popular features."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_August-W3-2026.md"
+}
