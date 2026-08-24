@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-17T06:02:21.195033+00:00",
+  "generated_at_utc": "2026-08-24T06:05:35.049873+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-07-21",
-  "max_review_date": "2026-08-16",
+  "min_review_date": "2026-07-30",
+  "max_review_date": "2026-08-23",
   "sample_records": [
     {
-      "review_id": "bbc1092a-bf9a-4768-9128-9942a1b3b48d",
-      "rating": 3,
-      "text": "Good",
-      "date": "2026-08-16",
+      "review_id": "377b6ba1-afbc-47e5-803f-c12590aeb7b6",
+      "rating": 5,
+      "text": "good application and easily drive",
+      "date": "2026-08-23",
       "helpful_count": 0,
-      "ingested_at": "2026-08-17T06:02:21.157527+00:00"
+      "ingested_at": "2026-08-24T06:05:35.006915+00:00"
     },
     {
-      "review_id": "267c9980-9a81-4f59-b974-4afde28aaa81",
+      "review_id": "d4111d25-115d-442a-b809-27b134b9ece0",
+      "rating": 1,
+      "text": "not able to operating app its not getting open after permissions stage keep crashing in loading loop.",
+      "date": "2026-08-23",
+      "helpful_count": 0,
+      "ingested_at": "2026-08-24T06:05:35.006931+00:00"
+    },
+    {
+      "review_id": "72d60118-c3ca-41d9-97e3-ef3d0421c037",
+      "rating": 5,
+      "text": "best",
+      "date": "2026-08-23",
+      "helpful_count": 0,
+      "ingested_at": "2026-08-24T06:05:35.006937+00:00"
+    },
+    {
+      "review_id": "b9de0bde-a9ea-4fb0-9086-738b3dd33301",
       "rating": 5,
       "text": "good",
-      "date": "2026-08-16",
+      "date": "2026-08-23",
       "helpful_count": 0,
-      "ingested_at": "2026-08-17T06:02:21.157541+00:00"
+      "ingested_at": "2026-08-24T06:05:35.006942+00:00"
     },
     {
-      "review_id": "80fae099-d3b4-48cb-988e-6eecee268694",
-      "rating": 5,
-      "text": "User friendly app very easy to purchase mutual fund as well as exit",
-      "date": "2026-08-16",
-      "helpful_count": 0,
-      "ingested_at": "2026-08-17T06:02:21.157550+00:00"
-    },
-    {
-      "review_id": "b71f4c31-5d3f-44ae-a70c-76ad6c66f7a1",
-      "rating": 5,
-      "text": "best apps Groww",
-      "date": "2026-08-16",
-      "helpful_count": 0,
-      "ingested_at": "2026-08-17T06:02:21.157554+00:00"
-    },
-    {
-      "review_id": "91b5c34c-b46f-4a19-bef1-489043c557b9",
+      "review_id": "74eb09af-6720-41b4-82ea-b19a0c9614ec",
       "rating": 1,
-      "text": "don't install very bad show app loss 70000 this intraday",
-      "date": "2026-08-16",
+      "text": "bad brokrage tax very high sahi best ap h isse",
+      "date": "2026-08-23",
       "helpful_count": 0,
-      "ingested_at": "2026-08-17T06:02:21.157560+00:00"
+      "ingested_at": "2026-08-24T06:05:35.006948+00:00"
     }
   ]
 }

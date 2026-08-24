@@ -1,18 +1,8 @@
 {
-  "generated_at_utc": "2026-08-17T06:05:15.351927+00:00",
+  "generated_at_utc": "2026-08-24T06:05:52.596164+00:00",
   "phase": "Phase 3 (Backend): Review Clustering (Primary Theme Assignment)",
-  "status": "pass",
-  "input_review_theme_map_path": "phase2_theming/outputs/review_theme_map_August-W3-2026.json",
-  "themes_path": "phase2_theming/outputs/themes_August-W3-2026.json",
-  "dominance_threshold": 0.55,
-  "review_count": 852,
-  "theme_distribution": {
-    "User Experience": 468,
-    "Fees": 99,
-    "Customer Support": 86,
-    "Trading Performance": 111,
-    "Investment Options": 88
-  },
-  "reassigned_low_confidence_count": 120,
-  "rebalanced_count": 70
+  "status": "fail",
+  "input_review_theme_map_path": "phase2_theming/outputs/review_theme_map_May-W4-2026.json",
+  "themes_path": "phase2_theming/outputs/themes_June-W3-2026.json",
+  "error": "Groq API error 404: {\"error\":{\"message\":\"The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.\",\"type\":\"invalid_request_error\",\"code\":\"model_not_found\"}}\n"
 }
