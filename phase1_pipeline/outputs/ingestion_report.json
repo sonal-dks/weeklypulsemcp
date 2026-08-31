@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-24T06:05:35.049873+00:00",
+  "generated_at_utc": "2026-08-31T11:47:37.545422+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-07-30",
-  "max_review_date": "2026-08-23",
+  "min_review_date": "2026-08-06",
+  "max_review_date": "2026-08-30",
   "sample_records": [
     {
-      "review_id": "377b6ba1-afbc-47e5-803f-c12590aeb7b6",
+      "review_id": "8dc1e6af-2347-430e-aa21-20e7c3a97b87",
       "rating": 5,
-      "text": "good application and easily drive",
-      "date": "2026-08-23",
+      "text": "nice",
+      "date": "2026-08-30",
       "helpful_count": 0,
-      "ingested_at": "2026-08-24T06:05:35.006915+00:00"
+      "ingested_at": "2026-08-31T11:47:37.499260+00:00"
     },
     {
-      "review_id": "d4111d25-115d-442a-b809-27b134b9ece0",
-      "rating": 1,
-      "text": "not able to operating app its not getting open after permissions stage keep crashing in loading loop.",
-      "date": "2026-08-23",
-      "helpful_count": 0,
-      "ingested_at": "2026-08-24T06:05:35.006931+00:00"
-    },
-    {
-      "review_id": "72d60118-c3ca-41d9-97e3-ef3d0421c037",
+      "review_id": "f20f9eb6-8500-4078-b284-2581e46436fa",
       "rating": 5,
-      "text": "best",
-      "date": "2026-08-23",
+      "text": "The app is super user friendly, and is an easy recco for all beginners.",
+      "date": "2026-08-30",
       "helpful_count": 0,
-      "ingested_at": "2026-08-24T06:05:35.006937+00:00"
+      "ingested_at": "2026-08-31T11:47:37.499277+00:00"
     },
     {
-      "review_id": "b9de0bde-a9ea-4fb0-9086-738b3dd33301",
+      "review_id": "2afa0a37-5778-4cdc-a073-bb8b9724bac6",
       "rating": 5,
-      "text": "good",
-      "date": "2026-08-23",
+      "text": "easy to use",
+      "date": "2026-08-30",
       "helpful_count": 0,
-      "ingested_at": "2026-08-24T06:05:35.006942+00:00"
+      "ingested_at": "2026-08-31T11:47:37.499283+00:00"
     },
     {
-      "review_id": "74eb09af-6720-41b4-82ea-b19a0c9614ec",
-      "rating": 1,
-      "text": "bad brokrage tax very high sahi best ap h isse",
-      "date": "2026-08-23",
+      "review_id": "f25aa170-4e3f-4217-a7d8-22ab0fa715c2",
+      "rating": 5,
+      "text": "Abhi Tak start Nhi Hua But star De Deta Hu Kya Pta Hai Ishki",
+      "date": "2026-08-30",
       "helpful_count": 0,
-      "ingested_at": "2026-08-24T06:05:35.006948+00:00"
+      "ingested_at": "2026-08-31T11:47:37.499290+00:00"
+    },
+    {
+      "review_id": "0e3e5ad4-6ca6-4748-be0a-c190fcd19ef8",
+      "rating": 5,
+      "text": "very good",
+      "date": "2026-08-30",
+      "helpful_count": 0,
+      "ingested_at": "2026-08-31T11:47:37.499295+00:00"
     }
   ]
 }

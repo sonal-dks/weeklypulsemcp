@@ -1,12 +1,12 @@
 {
-  "generated_at_utc": "2026-08-24T06:05:51.639513+00:00",
+  "generated_at_utc": "2026-08-31T11:47:53.875220+00:00",
   "phase": "Phase 1.2: Cleaning, Deduplication, and Spam Filtering",
   "status": "pass",
   "raw_count": 4000,
-  "processed_count": 864,
-  "omitted_count": 3136,
+  "processed_count": 891,
+  "omitted_count": 3109,
   "reasons": {
-    "non_english": 2617,
+    "non_english": 2590,
     "short_text_lt_5_words": 518,
     "near_duplicate": 1
   },

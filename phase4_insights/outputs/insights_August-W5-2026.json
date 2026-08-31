@@ -1,0 +1,60 @@
+{
+  "generated_at_utc": "2026-08-31T11:48:10.643726+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_June-W3-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "Customer Support",
+      "frequency": 0,
+      "avg_sentiment": -0.1209,
+      "negative_share": 0.5465,
+      "score": 21.8605
+    },
+    {
+      "theme": "Fees",
+      "frequency": 0,
+      "avg_sentiment": 0.2696,
+      "negative_share": 0.202,
+      "score": 8.0808
+    },
+    {
+      "theme": "User Experience",
+      "frequency": 0,
+      "avg_sentiment": 0.3439,
+      "negative_share": 0.1944,
+      "score": 7.7778
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "3fe28dab-df57-4633-9ae0-a586f242f80d",
+      "theme": "Customer Support",
+      "text": "Worst customer service. At the beginning of groww 2 3 years back it was nice. now it is the worst. I am thinking to switch to other apps.",
+      "date": "unknown",
+      "rating": 0
+    },
+    {
+      "review_id": "c2284630-e2a5-4e2c-8172-a0643eb74fc0",
+      "theme": "Fees",
+      "text": "scam app...they charged 1500 rs more for only brokerage charges for just 3trades...and doesn't mention charges fully on statement they hide",
+      "date": "2026-08-07",
+      "rating": 1
+    },
+    {
+      "review_id": "2e46bb18-29ce-40a9-bbf2-ba5922e14368",
+      "theme": "User Experience",
+      "text": "very easy to navigate app and seen that many news things is coming just like heatmap that's awesome. I am looking for more improvement on it.",
+      "date": "2026-08-07",
+      "rating": 5
+    }
+  ],
+  "action_ideas": [
+    "Implement a rapid response customer support initiative to reduce wait times and improve resolution quality.",
+    "Enhance fee transparency by clearly itemizing all brokerage charges within the app and statements.",
+    "Continue innovating UX with new features like heatmaps, ensuring intuitive navigation and clear communication of updates."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_August-W5-2026.md"
+}

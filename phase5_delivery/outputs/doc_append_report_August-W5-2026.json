@@ -1,0 +1,8 @@
+{
+  "generated_at_utc": "2026-08-31T11:49:47.605360+00:00",
+  "phase": "Phase 5 (Backend): Google Doc Append",
+  "status": "doc_append_failed",
+  "source_pulse_path": "phase4_insights/outputs/pulse_August-W5-2026.md",
+  "source_insights_path": "phase4_insights/outputs/insights_August-W5-2026.json",
+  "error": "Google Docs MCP (stdio) failed: Google Docs MCP stdio failed: ExceptionGroup('unhandled errors in a TaskGroup', [TypeError(\"unsupported operand type(s) for +: 'float' and 'datetime.timedelta'\")]) | unsupported operand type(s) for +: 'float' and 'datetime.timedelta'"
+}

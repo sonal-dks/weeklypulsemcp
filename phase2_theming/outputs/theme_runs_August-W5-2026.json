@@ -1,0 +1,9 @@
+{
+  "generated_at_utc": "2026-08-31T11:47:54.642898+00:00",
+  "phase": "Phase 2 (Backend): Theme Generation (LLM)",
+  "status": "fail",
+  "input_processed_reviews_path": "phase1_pipeline/outputs/processed_reviews.json",
+  "theme_count": 5,
+  "model": "llama-3.3-70b-versatile",
+  "error": "Theme generation failed after 3 attempts: Groq API error 404: {\"error\":{\"message\":\"The model `llama-3.3-70b-versatile` does not exist or you do not have access to it.\",\"type\":\"invalid_request_error\",\"code\":\"model_not_found\"}}\n"
+}
