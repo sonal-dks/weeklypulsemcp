@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-08-31T11:47:37.545422+00:00",
+  "generated_at_utc": "2026-09-07T10:40:11.672288+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-08-06",
-  "max_review_date": "2026-08-30",
+  "min_review_date": "2026-08-13",
+  "max_review_date": "2026-09-06",
   "sample_records": [
     {
-      "review_id": "8dc1e6af-2347-430e-aa21-20e7c3a97b87",
+      "review_id": "ab05a872-1ccb-4fae-8118-06b4d1a20e5a",
+      "rating": 5,
+      "text": "good",
+      "date": "2026-09-06",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-07T10:40:11.627177+00:00"
+    },
+    {
+      "review_id": "3e7970ef-194e-4cbd-9d81-9b109a5acc1e",
+      "rating": 5,
+      "text": "best app",
+      "date": "2026-09-06",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-07T10:40:11.627193+00:00"
+    },
+    {
+      "review_id": "8a74ea39-66bf-4534-ac08-57ae8e3d62ae",
+      "rating": 1,
+      "text": "this app is my SL orders automatically averaged, not to good, Coustemer support very bad",
+      "date": "2026-09-06",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-07T10:40:11.627203+00:00"
+    },
+    {
+      "review_id": "2cbc90d5-81fc-4d1d-947a-1639c34cfc2e",
+      "rating": 1,
+      "text": "not able to login. it is showing as journey reset is in progress . Ticket ID 27645981",
+      "date": "2026-09-06",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-07T10:40:11.627211+00:00"
+    },
+    {
+      "review_id": "4edc69bd-18b0-4c54-85dc-9545811d3691",
       "rating": 5,
       "text": "nice",
-      "date": "2026-08-30",
+      "date": "2026-09-06",
       "helpful_count": 0,
-      "ingested_at": "2026-08-31T11:47:37.499260+00:00"
-    },
-    {
-      "review_id": "f20f9eb6-8500-4078-b284-2581e46436fa",
-      "rating": 5,
-      "text": "The app is super user friendly, and is an easy recco for all beginners.",
-      "date": "2026-08-30",
-      "helpful_count": 0,
-      "ingested_at": "2026-08-31T11:47:37.499277+00:00"
-    },
-    {
-      "review_id": "2afa0a37-5778-4cdc-a073-bb8b9724bac6",
-      "rating": 5,
-      "text": "easy to use",
-      "date": "2026-08-30",
-      "helpful_count": 0,
-      "ingested_at": "2026-08-31T11:47:37.499283+00:00"
-    },
-    {
-      "review_id": "f25aa170-4e3f-4217-a7d8-22ab0fa715c2",
-      "rating": 5,
-      "text": "Abhi Tak start Nhi Hua But star De Deta Hu Kya Pta Hai Ishki",
-      "date": "2026-08-30",
-      "helpful_count": 0,
-      "ingested_at": "2026-08-31T11:47:37.499290+00:00"
-    },
-    {
-      "review_id": "0e3e5ad4-6ca6-4748-be0a-c190fcd19ef8",
-      "rating": 5,
-      "text": "very good",
-      "date": "2026-08-30",
-      "helpful_count": 0,
-      "ingested_at": "2026-08-31T11:47:37.499295+00:00"
+      "ingested_at": "2026-09-07T10:40:11.627215+00:00"
     }
   ]
 }
