@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-07T10:40:11.672288+00:00",
+  "generated_at_utc": "2026-09-14T10:56:07.695444+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-08-13",
-  "max_review_date": "2026-09-06",
+  "min_review_date": "2026-08-20",
+  "max_review_date": "2026-09-13",
   "sample_records": [
     {
-      "review_id": "ab05a872-1ccb-4fae-8118-06b4d1a20e5a",
-      "rating": 5,
-      "text": "good",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627177+00:00"
-    },
-    {
-      "review_id": "3e7970ef-194e-4cbd-9d81-9b109a5acc1e",
-      "rating": 5,
-      "text": "best app",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627193+00:00"
-    },
-    {
-      "review_id": "8a74ea39-66bf-4534-ac08-57ae8e3d62ae",
-      "rating": 1,
-      "text": "this app is my SL orders automatically averaged, not to good, Coustemer support very bad",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627203+00:00"
-    },
-    {
-      "review_id": "2cbc90d5-81fc-4d1d-947a-1639c34cfc2e",
-      "rating": 1,
-      "text": "not able to login. it is showing as journey reset is in progress . Ticket ID 27645981",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627211+00:00"
-    },
-    {
-      "review_id": "4edc69bd-18b0-4c54-85dc-9545811d3691",
+      "review_id": "2dadb0db-38a6-4238-a7f9-92ee1449e3cc",
       "rating": 5,
       "text": "nice",
-      "date": "2026-09-06",
+      "date": "2026-09-13",
       "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627215+00:00"
+      "ingested_at": "2026-09-14T10:56:07.647457+00:00"
+    },
+    {
+      "review_id": "5fb63e3e-1794-41d8-ae7a-e7ebdc469101",
+      "rating": 1,
+      "text": "I can't proceed to the e sighing please",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647475+00:00"
+    },
+    {
+      "review_id": "0322fc4e-47d7-42aa-b660-bef2554a0dea",
+      "rating": 1,
+      "text": "too much promotions",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647481+00:00"
+    },
+    {
+      "review_id": "2b04ada5-cad5-42b7-a597-ecdfabfddc9e",
+      "rating": 5,
+      "text": "your service good fast working network",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647487+00:00"
+    },
+    {
+      "review_id": "2d6d80ae-873d-4310-ba94-ecf03e4e52c8",
+      "rating": 4,
+      "text": "good app",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647491+00:00"
     }
   ]
 }

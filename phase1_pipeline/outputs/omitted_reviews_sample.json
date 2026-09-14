@@ -2,273 +2,273 @@
   "sample": [
     {
       "reason": "non_english",
-      "review_id": "86745eb4-edb7-4d32-b6a8-912297ac2e9c",
+      "review_id": "f4da37f4-0659-4c8b-bc0b-a7a61e5fbd55",
       "rating": 5,
-      "text": "nice",
-      "date": "2026-09-06",
+      "text": "good👍",
+      "date": "2026-09-13",
       "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627478+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "bda2e54d-69b3-4b20-976d-ca74140750ea",
-      "rating": 5,
-      "text": "excellent 👍",
-      "date": "2026-09-06",
-      "helpful_count": 1,
-      "ingested_at": "2026-09-07T10:40:11.627475+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "c46f4d12-5833-4fff-ad6c-6764b5a5b408",
-      "rating": 5,
-      "text": "good 👍",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627471+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "4bc71d70-a227-4ea4-98df-f1dabcb86b0c",
-      "rating": 4,
-      "text": "good 👍",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627467+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "91e9e0c4-cea7-47a3-b2a7-718157fff473",
-      "rating": 5,
-      "text": "super",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627462+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "b03ba0ee-9aeb-492b-8869-ac36812929ae",
-      "rating": 5,
-      "text": "nice",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627459+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "e83c9616-768b-4c40-88ac-e03a8c8f6eea",
-      "rating": 5,
-      "text": "nice app",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627456+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "cb6da29c-bc2b-4c6f-9407-5222a7e73fff",
-      "rating": 5,
-      "text": "very nice",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627452+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "6e74a52a-d4a1-4218-836a-8bcf1a103748",
-      "rating": 5,
-      "text": "nice",
-      "date": "2026-09-06",
-      "helpful_count": 1,
-      "ingested_at": "2026-09-07T10:40:11.627448+00:00"
+      "ingested_at": "2026-09-14T10:56:07.647758+00:00"
     },
     {
       "reason": "short_text_lt_5_words",
-      "review_id": "5746dfd3-8a8e-4556-9c13-c81e2cd4d80b",
-      "rating": 1,
-      "text": "service is not good",
-      "date": "2026-09-06",
+      "review_id": "d00e0d2a-5d5a-4038-a36e-aba35471c14e",
+      "rating": 4,
+      "text": "good app",
+      "date": "2026-09-13",
       "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627445+00:00"
+      "ingested_at": "2026-09-14T10:56:07.647755+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "9d786007-f5d5-440c-9bcd-514bd8b6e12e",
+      "review_id": "dc56f9ee-cd21-4460-8c12-3a9de4606f4f",
       "rating": 5,
-      "text": "nic",
-      "date": "2026-09-06",
+      "text": "most app",
+      "date": "2026-09-13",
       "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627440+00:00"
+      "ingested_at": "2026-09-14T10:56:07.647751+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "d9a7e182-bd5d-476a-8290-a8b49320ff2b",
-      "rating": 5,
-      "text": "very good",
-      "date": "2026-09-06",
-      "helpful_count": 1,
-      "ingested_at": "2026-09-07T10:40:11.627435+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "54dbaa80-42c7-4d23-8850-1f517dc3055e",
-      "rating": 5,
-      "text": "good",
-      "date": "2026-09-06",
+      "review_id": "ac1c0f2d-b0b1-4df0-ac75-b802dde559ec",
+      "rating": 2,
+      "text": "ha vv2 by xxx26",
+      "date": "2026-09-13",
       "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627431+00:00"
+      "ingested_at": "2026-09-14T10:56:07.647748+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "4b335dc3-cd7c-4deb-be5b-4dda36d665ae",
-      "rating": 5,
-      "text": "fantastic",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627391+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "1a20c961-859e-4383-8d7c-44427eda9d7a",
-      "rating": 5,
-      "text": ", ,, , , r ঈ",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627383+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "924cd043-534f-434f-992e-8211768b41a1",
+      "review_id": "650a59ec-e75f-400f-856b-a91b822bef7c",
       "rating": 5,
       "text": "good",
-      "date": "2026-09-06",
+      "date": "2026-09-13",
       "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627371+00:00"
+      "ingested_at": "2026-09-14T10:56:07.647744+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "5438f35b-1627-4830-8934-8a6625f774ca",
+      "rating": 5,
+      "text": "nice",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647740+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "5d624452-bfb9-4fa8-bd7c-53ae1d649793",
+      "rating": 5,
+      "text": "good",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647737+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "a99ff8a0-f25e-47c9-bd69-493a8c0c9b62",
+      "rating": 5,
+      "text": "good💯℅",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647733+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "4be8b1d6-2e6d-4385-ac4f-800123430719",
+      "rating": 5,
+      "text": "Best app",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647730+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "c7632b23-682e-450a-a0ea-778ee28b2077",
+      "rating": 5,
+      "text": "groww super",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647726+00:00"
     },
     {
       "reason": "short_text_lt_5_words",
-      "review_id": "c5fd17f4-8789-461c-9cd8-52a9ef006fd6",
+      "review_id": "c6453497-6491-4bb9-84d2-d6f6ea897747",
       "rating": 5,
-      "text": "very smooth usefull app",
-      "date": "2026-09-06",
+      "text": "Simple and best",
+      "date": "2026-09-13",
       "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627368+00:00"
+      "ingested_at": "2026-09-14T10:56:07.647717+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "7eba4803-fd4f-47f6-a125-912c0e805d00",
+      "review_id": "0e18606b-a5e7-4f89-a57a-6b47957117ac",
       "rating": 5,
-      "text": "very good",
-      "date": "2026-09-06",
+      "text": "nice I like it",
+      "date": "2026-09-13",
       "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627364+00:00"
+      "ingested_at": "2026-09-14T10:56:07.647701+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "893e8079-71f4-442b-8a2f-6ac469591dbe",
-      "rating": 3,
-      "text": "oo kk",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627354+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "ba7085a0-57ea-415c-96b4-35602f32c4db",
+      "review_id": "dd16dede-eb0f-48ec-b429-8e62ad1809c1",
       "rating": 5,
-      "text": "good",
-      "date": "2026-09-06",
+      "text": "best",
+      "date": "2026-09-13",
       "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627350+00:00"
+      "ingested_at": "2026-09-14T10:56:07.647696+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "fa8b2ad3-59dd-4f8c-ac3d-03a599973de6",
-      "rating": 5,
-      "text": "v good",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627347+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "898024ec-542a-4f5a-8810-48803e88dd00",
-      "rating": 5,
-      "text": "super",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627343+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "5a696d13-3fcc-4918-a766-ee839bfd8eda",
-      "rating": 5,
-      "text": "good",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627332+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "9fcd013f-fc3d-4780-b1e1-edae90d265d1",
-      "rating": 5,
-      "text": "nice app",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627329+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "76d67173-f522-419e-adbc-8c956028c9db",
-      "rating": 5,
-      "text": "good",
-      "date": "2026-09-06",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627317+00:00"
-    },
-    {
-      "reason": "non_english",
-      "review_id": "30750b62-e7e4-4dde-86fc-c89c122bc411",
+      "review_id": "d27eafe6-8de0-4f72-831b-2e5fc810a38e",
       "rating": 4,
+      "text": "Nice",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647693+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "5aedeaae-88a6-442a-83e4-02e4a98daf63",
+      "rating": 5,
+      "text": "Excellent",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647689+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "454af8f9-459c-400c-b422-dc74312cc45a",
+      "rating": 5,
       "text": "👍",
-      "date": "2026-09-06",
+      "date": "2026-09-13",
       "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627314+00:00"
+      "ingested_at": "2026-09-14T10:56:07.647686+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "fab658cc-0410-4b85-bb0f-a8a4ffb0fb80",
+      "review_id": "ac0c87de-00f1-44af-82d6-9c4b9561c675",
+      "rating": 4,
+      "text": "Nice",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647683+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "16bb8a65-087e-483b-8bc3-e995a1c69ff3",
+      "rating": 5,
+      "text": "great",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647679+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "58ec7d2d-17fa-4c6b-9a2b-3b8d3392bc31",
+      "rating": 2,
+      "text": "new 3D fh एलए एटी 5गज ए 4, 3झा री टीके 1,))५४६,",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647676+00:00"
+    },
+    {
+      "reason": "short_text_lt_5_words",
+      "review_id": "55aabbdc-f703-478a-92d4-08d04ddadbd7",
+      "rating": 3,
+      "text": "Need more improvisation",
+      "date": "2026-09-13",
+      "helpful_count": 1,
+      "ingested_at": "2026-09-14T10:56:07.647667+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "d193053e-7a09-4510-9f33-0f402d402683",
+      "rating": 5,
+      "text": "ok",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647663+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "b4fc7994-9563-4f72-9207-774d2d5679fb",
+      "rating": 5,
+      "text": "user friendly 💛",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647659+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "c08d6979-ae9c-4914-a1a9-0ef26890492e",
+      "rating": 5,
+      "text": "😲",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647655+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "f27da96d-8c67-4ab3-8dfe-f53d664868b4",
+      "rating": 5,
+      "text": "Good",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647651+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "20bbbe16-456d-415e-a95c-cb6c8adcba0b",
       "rating": 5,
       "text": "good",
-      "date": "2026-09-06",
+      "date": "2026-09-13",
       "helpful_count": 0,
-      "ingested_at": "2026-09-07T10:40:11.627309+00:00"
+      "ingested_at": "2026-09-14T10:56:07.647648+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "68ba187a-8d55-4fcb-a248-3f1480d34e38",
+      "review_id": "59db4153-c3c2-4ed8-8d0c-1c245cbb7063",
       "rating": 5,
-      "text": "excellent performance",
-      "date": "2026-09-06",
-      "helpful_count": 1,
-      "ingested_at": "2026-09-07T10:40:11.627306+00:00"
+      "text": "Sunny Singh",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647644+00:00"
+    },
+    {
+      "reason": "short_text_lt_5_words",
+      "review_id": "25d820e8-13c7-4ee7-b090-6a13ef9a090a",
+      "rating": 5,
+      "text": "good app",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647640+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "9a7c6f36-3d91-4ca2-b88b-30204d0c124f",
+      "review_id": "38100fd3-19c2-4c45-afef-40d6bbb86437",
       "rating": 5,
-      "text": "best",
-      "date": "2026-09-06",
-      "helpful_count": 1,
-      "ingested_at": "2026-09-07T10:40:11.627302+00:00"
+      "text": "good",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647636+00:00"
     },
     {
       "reason": "non_english",
-      "review_id": "40df011d-c7f4-4c6f-ab85-476e1fd65d86",
+      "review_id": "427e61c3-4468-4c82-8850-d7a69897c6e2",
       "rating": 5,
-      "text": "best",
-      "date": "2026-09-06",
-      "helpful_count": 1,
-      "ingested_at": "2026-09-07T10:40:11.627298+00:00"
+      "text": "good",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647627+00:00"
+    },
+    {
+      "reason": "non_english",
+      "review_id": "b84252c4-4532-4d8c-9844-1a0a7932029a",
+      "rating": 5,
+      "text": "very good 👍",
+      "date": "2026-09-13",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-14T10:56:07.647624+00:00"
     }
   ]
 }

@@ -1,0 +1,9 @@
+{
+  "generated_at_utc": "2026-09-14T10:56:42.881067+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "fail",
+  "input_themes_path": "phase2_theming/outputs/themes_May-W1-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "error": "Pulse validation failed: ['User Voice section must have 3 bullets']"
+}
