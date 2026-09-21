@@ -1,0 +1,9 @@
+{
+  "generated_at_utc": "2026-09-21T11:03:18.351899+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "fail",
+  "input_themes_path": "phase2_theming/outputs/themes_July-W1-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "error": "HTTPSConnectionPool(host='generativelanguage.googleapis.com', port=443): Read timed out. (read timeout=60)"
+}

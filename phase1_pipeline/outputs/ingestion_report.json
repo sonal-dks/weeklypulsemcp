@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-14T10:56:07.695444+00:00",
+  "generated_at_utc": "2026-09-21T11:01:22.551123+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-08-20",
-  "max_review_date": "2026-09-13",
+  "min_review_date": "2026-08-27",
+  "max_review_date": "2026-09-20",
   "sample_records": [
     {
-      "review_id": "2dadb0db-38a6-4238-a7f9-92ee1449e3cc",
+      "review_id": "63064ad7-96e6-4532-bd17-bdffb51eeb4f",
       "rating": 5,
-      "text": "nice",
-      "date": "2026-09-13",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-14T10:56:07.647457+00:00"
+      "text": "The Best",
+      "date": "2026-09-20",
+      "helpful_count": 1,
+      "ingested_at": "2026-09-21T11:01:22.464680+00:00"
     },
     {
-      "review_id": "5fb63e3e-1794-41d8-ae7a-e7ebdc469101",
-      "rating": 1,
-      "text": "I can't proceed to the e sighing please",
-      "date": "2026-09-13",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-14T10:56:07.647475+00:00"
-    },
-    {
-      "review_id": "0322fc4e-47d7-42aa-b660-bef2554a0dea",
-      "rating": 1,
-      "text": "too much promotions",
-      "date": "2026-09-13",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-14T10:56:07.647481+00:00"
-    },
-    {
-      "review_id": "2b04ada5-cad5-42b7-a597-ecdfabfddc9e",
+      "review_id": "e52b6c55-9268-499b-a504-a49bc82f47aa",
       "rating": 5,
-      "text": "your service good fast working network",
-      "date": "2026-09-13",
+      "text": "Nice App",
+      "date": "2026-09-20",
       "helpful_count": 0,
-      "ingested_at": "2026-09-14T10:56:07.647487+00:00"
+      "ingested_at": "2026-09-21T11:01:22.464694+00:00"
     },
     {
-      "review_id": "2d6d80ae-873d-4310-ba94-ecf03e4e52c8",
-      "rating": 4,
-      "text": "good app",
-      "date": "2026-09-13",
+      "review_id": "53e04fa5-dd7e-4a4a-a180-de7b86fc4d76",
+      "rating": 5,
+      "text": "Ok",
+      "date": "2026-09-20",
       "helpful_count": 0,
-      "ingested_at": "2026-09-14T10:56:07.647491+00:00"
+      "ingested_at": "2026-09-21T11:01:22.464699+00:00"
+    },
+    {
+      "review_id": "e7815679-5fc5-4bcb-8f09-574dcd641467",
+      "rating": 5,
+      "text": "good platform",
+      "date": "2026-09-20",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-21T11:01:22.464703+00:00"
+    },
+    {
+      "review_id": "0c637f0e-3ad9-442f-a3e3-ab26d2b2da1e",
+      "rating": 1,
+      "text": "j uu ji oo rr ruutkh me. . . ..., ,n th HH BB",
+      "date": "2026-09-20",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-21T11:01:22.464708+00:00"
     }
   ]
 }
