@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-09-21T11:01:22.551123+00:00",
+  "generated_at_utc": "2026-09-28T11:55:52.558087+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-08-27",
-  "max_review_date": "2026-09-20",
+  "min_review_date": "2026-09-01",
+  "max_review_date": "2026-09-27",
   "sample_records": [
     {
-      "review_id": "63064ad7-96e6-4532-bd17-bdffb51eeb4f",
+      "review_id": "b9ad9774-1a49-4272-9ee3-895e70f4a1d9",
       "rating": 5,
-      "text": "The Best",
-      "date": "2026-09-20",
+      "text": "it's interface is very easy to understand",
+      "date": "2026-09-27",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-28T11:55:52.513215+00:00"
+    },
+    {
+      "review_id": "cfa774dc-e643-4097-b3d9-984a273a0777",
+      "rating": 5,
+      "text": "nice trading aap",
+      "date": "2026-09-27",
+      "helpful_count": 0,
+      "ingested_at": "2026-09-28T11:55:52.513229+00:00"
+    },
+    {
+      "review_id": "c28602ca-f6a9-431f-85bd-70f60d71c2a9",
+      "rating": 5,
+      "text": "Nice",
+      "date": "2026-09-27",
       "helpful_count": 1,
-      "ingested_at": "2026-09-21T11:01:22.464680+00:00"
+      "ingested_at": "2026-09-28T11:55:52.513234+00:00"
     },
     {
-      "review_id": "e52b6c55-9268-499b-a504-a49bc82f47aa",
+      "review_id": "9d9cb099-d0e9-4393-98b6-91192920d03d",
       "rating": 5,
-      "text": "Nice App",
-      "date": "2026-09-20",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-21T11:01:22.464694+00:00"
+      "text": "Super App",
+      "date": "2026-09-27",
+      "helpful_count": 1,
+      "ingested_at": "2026-09-28T11:55:52.513239+00:00"
     },
     {
-      "review_id": "53e04fa5-dd7e-4a4a-a180-de7b86fc4d76",
-      "rating": 5,
-      "text": "Ok",
-      "date": "2026-09-20",
+      "review_id": "8e1cbdd2-b2ba-47c5-883f-9a5b059f5479",
+      "rating": 4,
+      "text": "nice app",
+      "date": "2026-09-27",
       "helpful_count": 0,
-      "ingested_at": "2026-09-21T11:01:22.464699+00:00"
-    },
-    {
-      "review_id": "e7815679-5fc5-4bcb-8f09-574dcd641467",
-      "rating": 5,
-      "text": "good platform",
-      "date": "2026-09-20",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-21T11:01:22.464703+00:00"
-    },
-    {
-      "review_id": "0c637f0e-3ad9-442f-a3e3-ab26d2b2da1e",
-      "rating": 1,
-      "text": "j uu ji oo rr ruutkh me. . . ..., ,n th HH BB",
-      "date": "2026-09-20",
-      "helpful_count": 0,
-      "ingested_at": "2026-09-21T11:01:22.464708+00:00"
+      "ingested_at": "2026-09-28T11:55:52.513244+00:00"
     }
   ]
 }
