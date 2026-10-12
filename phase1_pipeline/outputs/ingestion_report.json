@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-05T12:32:55.127296+00:00",
+  "generated_at_utc": "2026-10-12T13:27:01.241372+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-09-06",
-  "max_review_date": "2026-10-04",
+  "min_review_date": "2026-09-12",
+  "max_review_date": "2026-10-11",
   "sample_records": [
     {
-      "review_id": "6691f6f4-56ab-46de-8512-e552eda5151c",
+      "review_id": "f5811813-e4e1-426c-b6cd-d2f35e19d0ea",
+      "rating": 5,
+      "text": "superb. appp i love u groww",
+      "date": "2026-10-11",
+      "helpful_count": 0,
+      "ingested_at": "2026-10-12T13:27:01.194105+00:00"
+    },
+    {
+      "review_id": "98d2aaf2-11c8-4458-b059-1456be68f83d",
+      "rating": 1,
+      "text": "ticket no 28158720 they will block all your securities under loan against securities and Keep creating tickets to solve the problem even If you do not use the funds u unable to sell your securities.... customer care will keep saying we will close it as soon as possible but they dont",
+      "date": "2026-10-11",
+      "helpful_count": 0,
+      "ingested_at": "2026-10-12T13:27:01.194132+00:00"
+    },
+    {
+      "review_id": "34721e16-86d8-4f64-95b8-03bc66fa655a",
+      "rating": 5,
+      "text": "very good app and Trasttet apk",
+      "date": "2026-10-11",
+      "helpful_count": 0,
+      "ingested_at": "2026-10-12T13:27:01.194139+00:00"
+    },
+    {
+      "review_id": "2c0989d6-1ec8-4a0f-8eca-e35872631365",
+      "rating": 5,
+      "text": "Very good app",
+      "date": "2026-10-11",
+      "helpful_count": 0,
+      "ingested_at": "2026-10-12T13:27:01.194144+00:00"
+    },
+    {
+      "review_id": "18a3eb70-c455-4e68-a07b-5958cd702fd7",
       "rating": 4,
-      "text": "ok",
-      "date": "2026-10-04",
+      "text": "fantastic app but if app will give benefit like subscription plan on platform and do zero brokerage then it will so good for traders and investors, because Stoxkart is given monthly or yearly subscription plan,so many trades are shifting to on their platforms",
+      "date": "2026-10-11",
       "helpful_count": 0,
-      "ingested_at": "2026-10-05T12:32:55.082988+00:00"
-    },
-    {
-      "review_id": "c1e07935-77dc-47bf-adbe-4430d050103b",
-      "rating": 5,
-      "text": "thanku",
-      "date": "2026-10-04",
-      "helpful_count": 1,
-      "ingested_at": "2026-10-05T12:32:55.083001+00:00"
-    },
-    {
-      "review_id": "4eac74f8-5969-4d1d-bac5-6596bb296c2e",
-      "rating": 5,
-      "text": "Groww is Great, Trustable and I m using it from a long time, but one request please add GOLD Electronic Receips Soon, otherwise all good❤",
-      "date": "2026-10-04",
-      "helpful_count": 0,
-      "ingested_at": "2026-10-05T12:32:55.083019+00:00"
-    },
-    {
-      "review_id": "3cd371d0-6e68-4566-a431-3e0709a7e20d",
-      "rating": 5,
-      "text": "This is the best app for trading in Indian market stocks and indices, this app is smooth and cool experience. I Recommend People To Download This App. Thank You",
-      "date": "2026-10-04",
-      "helpful_count": 0,
-      "ingested_at": "2026-10-05T12:32:55.083031+00:00"
-    },
-    {
-      "review_id": "c42f3914-0127-45e9-8e39-bc2aed80a51e",
-      "rating": 5,
-      "text": "best appp hai",
-      "date": "2026-10-04",
-      "helpful_count": 0,
-      "ingested_at": "2026-10-05T12:32:55.083036+00:00"
+      "ingested_at": "2026-10-12T13:27:01.194156+00:00"
     }
   ]
 }
