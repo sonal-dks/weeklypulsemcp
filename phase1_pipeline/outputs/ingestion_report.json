@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-12T13:27:01.241372+00:00",
+  "generated_at_utc": "2026-10-19T11:09:02.644804+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-09-12",
-  "max_review_date": "2026-10-11",
+  "min_review_date": "2026-09-18",
+  "max_review_date": "2026-10-18",
   "sample_records": [
     {
-      "review_id": "f5811813-e4e1-426c-b6cd-d2f35e19d0ea",
+      "review_id": "886e39e7-5c37-47bc-abdd-24cc0e962ddb",
       "rating": 5,
-      "text": "superb. appp i love u groww",
-      "date": "2026-10-11",
+      "text": "ok",
+      "date": "2026-10-18",
       "helpful_count": 0,
-      "ingested_at": "2026-10-12T13:27:01.194105+00:00"
+      "ingested_at": "2026-10-19T11:09:02.617126+00:00"
     },
     {
-      "review_id": "98d2aaf2-11c8-4458-b059-1456be68f83d",
-      "rating": 1,
-      "text": "ticket no 28158720 they will block all your securities under loan against securities and Keep creating tickets to solve the problem even If you do not use the funds u unable to sell your securities.... customer care will keep saying we will close it as soon as possible but they dont",
-      "date": "2026-10-11",
-      "helpful_count": 0,
-      "ingested_at": "2026-10-12T13:27:01.194132+00:00"
-    },
-    {
-      "review_id": "34721e16-86d8-4f64-95b8-03bc66fa655a",
+      "review_id": "27fc5205-fbd2-49fb-8366-9ebbb945742f",
       "rating": 5,
-      "text": "very good app and Trasttet apk",
-      "date": "2026-10-11",
+      "text": "very good",
+      "date": "2026-10-18",
       "helpful_count": 0,
-      "ingested_at": "2026-10-12T13:27:01.194139+00:00"
+      "ingested_at": "2026-10-19T11:09:02.617143+00:00"
     },
     {
-      "review_id": "2c0989d6-1ec8-4a0f-8eca-e35872631365",
-      "rating": 5,
-      "text": "Very good app",
-      "date": "2026-10-11",
-      "helpful_count": 0,
-      "ingested_at": "2026-10-12T13:27:01.194144+00:00"
-    },
-    {
-      "review_id": "18a3eb70-c455-4e68-a07b-5958cd702fd7",
+      "review_id": "eb9c1e84-9673-4bb9-8b04-65dd11a5f83e",
       "rating": 4,
-      "text": "fantastic app but if app will give benefit like subscription plan on platform and do zero brokerage then it will so good for traders and investors, because Stoxkart is given monthly or yearly subscription plan,so many trades are shifting to on their platforms",
-      "date": "2026-10-11",
+      "text": "your service so very helpful thanks to you",
+      "date": "2026-10-18",
       "helpful_count": 0,
-      "ingested_at": "2026-10-12T13:27:01.194156+00:00"
+      "ingested_at": "2026-10-19T11:09:02.617148+00:00"
+    },
+    {
+      "review_id": "274644b4-27ef-43ca-8e26-881dd4bb68ae",
+      "rating": 1,
+      "text": "she's not annoying 😭",
+      "date": "2026-10-18",
+      "helpful_count": 0,
+      "ingested_at": "2026-10-19T11:09:02.617155+00:00"
+    },
+    {
+      "review_id": "cca15d31-f066-4872-a053-f8e00557e482",
+      "rating": 5,
+      "text": "best",
+      "date": "2026-10-18",
+      "helpful_count": 0,
+      "ingested_at": "2026-10-19T11:09:02.617157+00:00"
     }
   ]
 }
