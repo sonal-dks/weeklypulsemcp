@@ -1,5 +1,5 @@
 {
-  "generated_at_utc": "2026-10-19T11:09:02.644804+00:00",
+  "generated_at_utc": "2026-10-26T11:27:55.839355+00:00",
   "phase": "Phase 1.1: Data Ingestion",
   "status": "pass",
   "raw_json_path": "phase1_pipeline/outputs/raw_reviews.json",
@@ -10,48 +10,48 @@
     "skipped_existing_review_id": 0,
     "skipped_duplicate_in_batch": 0
   },
-  "min_review_date": "2026-09-18",
-  "max_review_date": "2026-10-18",
+  "min_review_date": "2026-09-24",
+  "max_review_date": "2026-10-25",
   "sample_records": [
     {
-      "review_id": "886e39e7-5c37-47bc-abdd-24cc0e962ddb",
+      "review_id": "5fd2ec02-dbef-4109-a253-a8d2a34b5ba3",
       "rating": 5,
-      "text": "ok",
-      "date": "2026-10-18",
+      "text": "Awesome",
+      "date": "2026-10-25",
       "helpful_count": 0,
-      "ingested_at": "2026-10-19T11:09:02.617126+00:00"
+      "ingested_at": "2026-10-26T11:27:55.797935+00:00"
     },
     {
-      "review_id": "27fc5205-fbd2-49fb-8366-9ebbb945742f",
+      "review_id": "6f4007fc-b70a-4b4f-a79e-8109c3e86645",
+      "rating": 5,
+      "text": "good aap",
+      "date": "2026-10-25",
+      "helpful_count": 0,
+      "ingested_at": "2026-10-26T11:27:55.797951+00:00"
+    },
+    {
+      "review_id": "bcec862a-6b11-47d3-89ed-14a4b5187a80",
+      "rating": 5,
+      "text": "super",
+      "date": "2026-10-25",
+      "helpful_count": 0,
+      "ingested_at": "2026-10-26T11:27:55.797956+00:00"
+    },
+    {
+      "review_id": "35391d21-5ab1-4841-9c09-e4db702f1cd3",
       "rating": 5,
       "text": "very good",
-      "date": "2026-10-18",
+      "date": "2026-10-25",
       "helpful_count": 0,
-      "ingested_at": "2026-10-19T11:09:02.617143+00:00"
+      "ingested_at": "2026-10-26T11:27:55.797960+00:00"
     },
     {
-      "review_id": "eb9c1e84-9673-4bb9-8b04-65dd11a5f83e",
-      "rating": 4,
-      "text": "your service so very helpful thanks to you",
-      "date": "2026-10-18",
-      "helpful_count": 0,
-      "ingested_at": "2026-10-19T11:09:02.617148+00:00"
-    },
-    {
-      "review_id": "274644b4-27ef-43ca-8e26-881dd4bb68ae",
-      "rating": 1,
-      "text": "she's not annoying 😭",
-      "date": "2026-10-18",
-      "helpful_count": 0,
-      "ingested_at": "2026-10-19T11:09:02.617155+00:00"
-    },
-    {
-      "review_id": "cca15d31-f066-4872-a053-f8e00557e482",
+      "review_id": "bfa179b4-8c70-4a30-a145-2034b79c1d0b",
       "rating": 5,
-      "text": "best",
-      "date": "2026-10-18",
+      "text": "good 👍😊",
+      "date": "2026-10-25",
       "helpful_count": 0,
-      "ingested_at": "2026-10-19T11:09:02.617157+00:00"
+      "ingested_at": "2026-10-26T11:27:55.797966+00:00"
     }
   ]
 }
