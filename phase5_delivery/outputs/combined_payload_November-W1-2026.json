@@ -1,0 +1,23 @@
+{
+  "date": "November-W1-2026",
+  "weekly_pulse": {
+    "themes": [
+      "Fees",
+      "Trading",
+      "Support"
+    ],
+    "quotes": [
+      "scam app...they charged 1500 rs more for only brokerage charges for just 3trades...and doesn't mention charges fully on statement they hide"
+    ],
+    "action_ideas": [
+      "Enhance fee transparency: Clearly display all potential brokerage and transaction fees upfront before trade execution and on statements.",
+      "Audit brokerage charges: Investigate the current brokerage fee structure to ensure it's competitive and accurately applied per user expectations.",
+      "Redesign statements: Improve statement clarity by itemizing all charges, including brokerage, with clear explanations for each transaction."
+    ]
+  },
+  "fee_scenario": "",
+  "explanation_bullets": [],
+  "source_links": [],
+  "last_checked": "November-W1-2026",
+  "fee_funds": []
+}
