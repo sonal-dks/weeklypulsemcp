@@ -1,0 +1,46 @@
+{
+  "generated_at_utc": "2026-11-09T14:15:22.564693+00:00",
+  "phase": "Phase 4 (Backend): Insights + One-Page Composition (Integrated)",
+  "status": "pass",
+  "input_themes_path": "phase2_theming/outputs/themes_April-W4-2026.json",
+  "input_review_theme_map_path": "phase3_clustering/outputs/review_theme_map.json",
+  "input_cluster_distribution_path": "phase3_clustering/outputs/cluster_distribution.json",
+  "top_themes": [
+    {
+      "theme": "Fees",
+      "frequency": 0,
+      "avg_sentiment": 0.2696,
+      "negative_share": 0.202,
+      "score": 8.0808
+    },
+    {
+      "theme": "Support",
+      "frequency": 0,
+      "avg_sentiment": 0.0,
+      "negative_share": 0.0,
+      "score": 0.0
+    },
+    {
+      "theme": "Performance",
+      "frequency": 0,
+      "avg_sentiment": 0.0,
+      "negative_share": 0.0,
+      "score": 0.0
+    }
+  ],
+  "quotes": [
+    {
+      "review_id": "c2284630-e2a5-4e2c-8172-a0643eb74fc0",
+      "theme": "Fees",
+      "text": "scam app...they charged 1500 rs more for only brokerage charges for just 3trades...and doesn't mention charges fully on statement they hide",
+      "date": "unknown",
+      "rating": 0
+    }
+  ],
+  "action_ideas": [
+    "Enhance fee transparency by clearly displaying all potential charges upfront before transactions are executed.",
+    "Audit brokerage fee calculations and communication to prevent unexpected high charges for users.",
+    "Redesign transaction statements to explicitly detail all applied fees and their calculation breakdown."
+  ],
+  "pulse_path": "phase4_insights/outputs/pulse_November-W2-2026.md"
+}
